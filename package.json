@@ -17,5 +17,6 @@
                 "path": "./snippets/snippets.code-snippets"
             }
         ]
-    }
+    },
+    "repository": {"url": "https://github.com/Adesii/source2-hammer-vscript"}
 }
