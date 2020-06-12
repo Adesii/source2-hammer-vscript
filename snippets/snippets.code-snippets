@@ -1,0 +1,2857 @@
+{
+    "  AngleDiff\n": {
+        "prefix": "  AngleDiff\n",
+        "body": "AngleDiff(${4:ang1},${6:ang2})",
+        "description": " float AngleDiff(float ang1, float ang2) \n Returns the number of degrees difference between two yaw angles\n"
+    },
+    "  AnglesToVector\n": {
+        "prefix": "  AnglesToVector\n",
+        "body": "AnglesToVector(${4:QAngle_1})",
+        "description": " Vector AnglesToVector(QAngle QAngle_1)\n Generate a vector given a QAngles\n"
+    },
+    "  AxisAngleToQuaternion\n": {
+        "prefix": "  AxisAngleToQuaternion\n",
+        "body": "AxisAngleToQuaternion(${4:Vector_1},${6:float_2})",
+        "description": " Quaternion AxisAngleToQuaternion(Vector Vector_1, float float_2) \n (vector,float) constructs a quaternion representing a rotation by angle around the specified vector axis.  Bug:\u00c2\u00a0 The Quaternion class is non-functional\n"
+    },
+    "  CalcClosestPointOnEntityOBB\n": {
+        "prefix": "  CalcClosestPointOnEntityOBB\n",
+        "body": "CalcClosestPointOnEntityOBB(${4:entity},${6:position})",
+        "description": " Vector CalcClosestPointOnEntityOBB(handle entity, Vector position) \n Compute the closest point relative to a vector on the OBB of an entity.\n"
+    },
+    "  CalcDistanceBetweenEntityOBB\n": {
+        "prefix": "  CalcDistanceBetweenEntityOBB\n",
+        "body": "CalcDistanceBetweenEntityOBB(${4:entity1},${6:entity2})",
+        "description": " float CalcDistanceBetweenEntityOBB(handle entity1, handle entity2) \n Compute the distance between two entity OBB. A negative return value indicates an input error. A return value of zero indicates that the OBBs are overlapping.\n"
+    },
+    "  CrossVectors\n": {
+        "prefix": "  CrossVectors\n",
+        "body": "CrossVectors(${4:v1},${6:v2})",
+        "description": " Vector CrossVectors(Vector v1, Vector v2) \n Calculate the cross product between two vectors (also available as a Vector class method).\n"
+    },
+    "  CalcDistanceToLineSegment2D\n": {
+        "prefix": "  CalcDistanceToLineSegment2D\n",
+        "body": "CalcDistanceToLineSegment2D(${4:unknown1},${6:unknown2},${8:unknown3})",
+        "description": " float CalcDistanceToLineSegment2D(Vector unknown1, Vector unknown2, Vector unknown3) \n To do:\u00c2\u00a0Calculates the distance from a point to a line\n"
+    },
+    "  ExponentialDecay\n": {
+        "prefix": "  ExponentialDecay\n",
+        "body": "ExponentialDecay(${4:inValue},${6:startValue},${8:lambda})",
+        "description": " float ExponentialDecay(float inValue, float startValue, float lambda) \n Smooth curve decreasing slower as it approaches zero.\n"
+    },
+    "  LerpVectors\n": {
+        "prefix": "  LerpVectors\n",
+        "body": "LerpVectors(${4:v1},${6:v2},${8:t})",
+        "description": " Vector LerpVectors(Vector v1, Vector v2, float t) \n Linear interpolation of vector values over [0,1].\n"
+    },
+    "  RandomFloat\n": {
+        "prefix": "  RandomFloat\n",
+        "body": "RandomFloat(${4:min},${6:max})",
+        "description": " float RandomFloat(float min, float max) \n Get a random float within a range.\n"
+    },
+    "  RandomInt\n": {
+        "prefix": "  RandomInt\n",
+        "body": "RandomInt(${4:min},${6:max})",
+        "description": " int RandomInt(int min, int max) \n Get a random int within a range.\n"
+    },
+    "  RotateOrientation\n": {
+        "prefix": "  RotateOrientation\n",
+        "body": "RotateOrientation(${4:angle1},${6:angle2})",
+        "description": " QAngle RotateOrientation(QAngle angle1, QAngle angle2) \n Rotate a QAngle by another QAngle.\n"
+    },
+    "  RotatePosition\n": {
+        "prefix": "  RotatePosition\n",
+        "body": "RotatePosition(${4:rotationOrigin},${6:rotationAngle},${8:vectorToRotate})",
+        "description": " Vector RotatePosition(Vector rotationOrigin, QAngle rotationAngle, Vector vectorToRotate) \n Rotate a Vector around a point.\n"
+    },
+    "  RotateQuaternionByAxisAngle\n": {
+        "prefix": "  RotateQuaternionByAxisAngle\n",
+        "body": "RotateQuaternionByAxisAngle(${4:Quaternion_1},${6:Vector_2},${8:float_3})",
+        "description": " Quaternion RotateQuaternionByAxisAngle(Quaternion Quaternion_1, Vector Vector_2, float float_3) \n Rotates a quaternion by the specified angle around the specified vector axis.  Bug:\u00c2\u00a0 The Quaternion class is non-functional\n"
+    },
+    "  RotationDelta\n": {
+        "prefix": "  RotationDelta\n",
+        "body": "RotationDelta(${4:angle1},${6:angle2})",
+        "description": " QAngle RotationDelta(Qangle angle1, Qangle angle2,) \n Find the delta between two QAngles.\n"
+    },
+    "  RotationDeltaAsAngularVelocity\n": {
+        "prefix": "  RotationDeltaAsAngularVelocity\n",
+        "body": "RotationDeltaAsAngularVelocity(${4:angle1},${6:angle2})",
+        "description": " Vector RotationDeltaAsAngularVelocity(Qangle angle1, Qangle angle2,) \n converts delta QAngle to an angular velocity Vector.\n"
+    },
+    "  SplineQuaternions\n": {
+        "prefix": "  SplineQuaternions\n",
+        "body": "SplineQuaternions(${4:q0},${6:q1},${8:'t'})",
+        "description": " Quaternion SplineQuaternions(Quaternion q0, Quaternion q1, float 't') \n Very basic interpolation of quaternions q0 to q1 over time 't' on [0,1].  Bug:\u00c2\u00a0 The Quaternion class is non-functional\n"
+    },
+    "  SplineVectors\n": {
+        "prefix": "  SplineVectors\n",
+        "body": "SplineVectors(${4:v0},${6:v1},${8:t})",
+        "description": " Vector SplineVectors(Vector v0, Vector v1, float t) \n Very basic interpolation of vectors v0 to v1 over time t on [0,1].\n"
+    },
+    "  VectorToAngles\n": {
+        "prefix": "  VectorToAngles\n",
+        "body": "VectorToAngles(${4:input})",
+        "description": " QAngle VectorToAngles(Vector input) \n Get Qangles (with no roll) for a Vector.\n"
+    },
+    "  AppendToLogFile\n": {
+        "prefix": "  AppendToLogFile\n",
+        "body": "AppendToLogFile(${4:string_1},${6:string_2})",
+        "description": " void AppendToLogFile(string string_1, string string_2) \n Appends a string to a log file on the server\n"
+    },
+    "  DebugDrawBox\n": {
+        "prefix": "  DebugDrawBox\n",
+        "body": "DebugDrawBox(${4:origin},${6:min},${8:max},${10:r},${12:g},${14:b},${16:a},${18:duration})",
+        "description": " void DebugDrawBox(Vector origin, Vector min, Vector max, int r, int g, int b, int a, float duration) \n Draw a debug overlay box\n"
+    },
+    "  DebugDrawBoxDirection\n": {
+        "prefix": "  DebugDrawBoxDirection\n",
+        "body": "DebugDrawBoxDirection(${4:Vector_1},${6:Vector_2},${8:Vector_3},${10:Vector_4},${12:Vector_5},${14:float_6},${16:float_7})",
+        "description": " void DebugDrawBoxDirection(Vector Vector_1, Vector Vector_2, Vector Vector_3, Vector Vector_4, Vector Vector_5, float float_6, float float_7) \n Draw a debug forward box (cent, min, max, forward, vRgb, a, duration)\n"
+    },
+    "  DebugDrawCircle\n": {
+        "prefix": "  DebugDrawCircle\n",
+        "body": "DebugDrawCircle(${4:Vector_1},${6:Vector_2},${8:float_3},${10:float_4},${12:bool_5},${14:float_6})",
+        "description": " void DebugDrawCircle(Vector Vector_1, Vector Vector_2, float float_3, float float_4, bool bool_5, float float_6) \n Draw a debug circle (center, vRgb, a, rad, ztest, duration)\n"
+    },
+    "  DebugDrawClear\n": {
+        "prefix": "  DebugDrawClear\n",
+        "body": "DebugDrawClear()",
+        "description": " void DebugDrawClear() \n Try to clear all the debug overlay info\n"
+    },
+    "  DebugDrawLine\n": {
+        "prefix": "  DebugDrawLine\n",
+        "body": "DebugDrawLine(${4:Vector_1},${6:Vector_2},${8:int_3},${10:int_4},${12:int_5},${14:bool_6},${16:float_7})",
+        "description": " void DebugDrawLine(Vector Vector_1, Vector Vector_2, int int_3, int int_4, int int_5, bool bool_6, float float_7) \n Draw a debug overlay line (origin, target, r, g, b, ztest, duration)\n"
+    },
+    "  DebugDrawLine_vCol\n": {
+        "prefix": "  DebugDrawLine_vCol\n",
+        "body": "DebugDrawLine_vCol(${4:Vector_1},${6:Vector_2},${8:Vector_3},${10:bool_4},${12:float_5})",
+        "description": " void DebugDrawLine_vCol(Vector Vector_1, Vector Vector_2, Vector Vector_3, bool bool_4, float float_5) \n Draw a debug line using color vec (start, end, vRgb, a, ztest, duration)\n"
+    },
+    "  DebugDrawScreenTextLine\n": {
+        "prefix": "  DebugDrawScreenTextLine\n",
+        "body": "DebugDrawScreenTextLine(${4:float_1},${6:float_2},${8:int_3},${10:string_4},${12:int_5},${14:int_6},${16:int_7},${18:int_8},${20:float_9})",
+        "description": " void DebugDrawScreenTextLine(float float_1, float float_2, int int_3, string string_4, int int_5, int int_6, int int_7, int int_8, float float_9) \n Draw text with a line offset (x, y, lineOffset, text, r, g, b, a, duration)\n"
+    },
+    "  DebugDrawSphere\n": {
+        "prefix": "  DebugDrawSphere\n",
+        "body": "DebugDrawSphere(${4:Vector_1},${6:Vector_2},${8:float_3},${10:float_4},${12:bool_5},${14:float_6})",
+        "description": " void DebugDrawSphere(Vector Vector_1, Vector Vector_2, float float_3, float float_4, bool bool_5, float float_6) \n Draw a debug sphere (center, vRgb, a, rad, ztest, duration)\n"
+    },
+    "  DebugDrawText\n": {
+        "prefix": "  DebugDrawText\n",
+        "body": "DebugDrawText(${4:Vector_1},${6:string_2},${8:bool_3},${10:float_4})",
+        "description": " void DebugDrawText(Vector Vector_1, string string_2, bool bool_3, float float_4) \n Draw text in 3d (origin, text, bViewCheck, duration)\n"
+    },
+    "  DebugScreenTextPretty\n": {
+        "prefix": "  DebugScreenTextPretty\n",
+        "body": "DebugScreenTextPretty(${4:float_1},${6:float_2},${8:int_3},${10:string_4},${12:int_5},${14:int_6},${16:int_7},${18:int_8},${20:float_9},${22:string_10},${24:int_11},${26:bool_12})",
+        "description": " void DebugScreenTextPretty(float float_1, float float_2, int int_3, string string_4, int int_5, int int_6, int int_7, int int_8, float float_9, string string_10, int int_11, bool bool_12) \n Draw pretty debug text (x, y, lineOffset, text, r, g, b, a, duration, font, size, bBold)\n"
+    },
+    "  Msg\n": {
+        "prefix": "  Msg\n",
+        "body": "Msg(${4:message})",
+        "description": " void Msg(string message) \n Print a message to the console.\n"
+    },
+    "  PrintLinkedConsoleMessage\n": {
+        "prefix": "  PrintLinkedConsoleMessage\n",
+        "body": "PrintLinkedConsoleMessage(${4:string_1},${6:string_2})",
+        "description": " void PrintLinkedConsoleMessage(string string_1, string string_2) \n Print a console message with a linked console command\n"
+    },
+    "  Say\n": {
+        "prefix": "  Say\n",
+        "body": "Say(${4:entity},${6:message},${8:teamOnly})",
+        "description": " void Say(handle entity, string message, bool teamOnly) \n Have Entity say string, and teamOnly or not\n"
+    },
+    "  ShowMessage\n": {
+        "prefix": "  ShowMessage\n",
+        "body": "ShowMessage(${4:string_1})",
+        "description": " void ShowMessage(string string_1) \n Print a hud message on all clients\n"
+    },
+    "  UTIL_MessageText\n": {
+        "prefix": "  UTIL_MessageText\n",
+        "body": "UTIL_MessageText(${4:playerId},${6:message},${8:r},${10:g},${12:b},${14:a})",
+        "description": " void UTIL_MessageText(int playerId, string message, int r, int g, int b, int a) \n Displays a message for a specific player\n"
+    },
+    "  UTIL_MessageText_WithContext\n": {
+        "prefix": "  UTIL_MessageText_WithContext\n",
+        "body": "UTIL_MessageText_WithContext(${4:playerId},${6:message},${8:r},${10:g},${12:b},${14:a},${16:context})",
+        "description": " void UTIL_MessageText_WithContext(int playerId, string message, int r, int g, int b, int a, table context) \n Sends a message to a specific player in the message box with a context table\n"
+    },
+    "  UTIL_MessageTextAll\n": {
+        "prefix": "  UTIL_MessageTextAll\n",
+        "body": "UTIL_MessageTextAll(${4:message},${6:r},${8:g},${10:b},${12:a})",
+        "description": " void UTIL_MessageTextAll(string message, int r, int g, int b, int a) \n Sends a message to everyone in the message box\n"
+    },
+    "  UTIL_MessageTextAll_WithContext\n": {
+        "prefix": "  UTIL_MessageTextAll_WithContext\n",
+        "body": "UTIL_MessageTextAll_WithContext(${4:message},${6:r},${8:g},${10:b},${12:a},${14:context})",
+        "description": " void UTIL_MessageTextAll_WithContext(string message, int r, int g, int b, int a, table context) \n Sends a message to everyone in the message box with a context table\n"
+    },
+    "  UTIL_ResetMessageText\n": {
+        "prefix": "  UTIL_ResetMessageText\n",
+        "body": "UTIL_ResetMessageText(${4:playerId})",
+        "description": " void UTIL_ResetMessageText(int playerId) \n Resets the message text for the player\n"
+    },
+    "  UTIL_ResetMessageTextAll\n": {
+        "prefix": "  UTIL_ResetMessageTextAll\n",
+        "body": "UTIL_ResetMessageTextAll()",
+        "description": " void UTIL_ResetMessageTextAll() \n Resets the message text for all players\n"
+    },
+    "  Warning\n": {
+        "prefix": "  Warning\n",
+        "body": "Warning(${4:string_1})",
+        "description": " void Warning(string string_1) \n Print a warning\n"
+    },
+    "  CancelEntityIOEvents\n": {
+        "prefix": "  CancelEntityIOEvents\n",
+        "body": "CancelEntityIOEvents(${4:ehandle_1})",
+        "description": " void CancelEntityIOEvents(ehandle ehandle_1) \n Create all I/O events for a particular entity\n"
+    },
+    "  ConnectOutputs\n": {
+        "prefix": "  ConnectOutputs\n",
+        "body": "ConnectOutputs(${4:scope})",
+        "description": " void ConnectOutputs(table scope) \n Connects all output script functions of the passed entity script scope to the entity outputs. To do:\u00c2\u00a0 Document function name format: \"^On.*Output$\"\n"
+    },
+    "  CreateDamageInfo \n": {
+        "prefix": "  CreateDamageInfo \n",
+        "body": "CreateDamageInfo(${4:hInflictor},${6:force},${8:hitPos},${10:flDamage},${12:damageTypes})",
+        "description": " DamageInfo CreateDamageInfo (handle, hInflictor, handlehAttacker,Vector force, Vector hitPos, float flDamage, int damageTypes) \n Allocate a DamageInfo object, used as an argument to CBaseEntity::TakeDamage(). Call DestroyDamageInfo( hInfo ) to free the object.\n"
+    },
+    "  CreateEffect\n": {
+        "prefix": "  CreateEffect\n",
+        "body": "CreateEffect(${4:handle_1})",
+        "description": " bool CreateEffect(handle handle_1) \n Pass table - Inputs: entity, effect\n"
+    },
+    "  CreateSceneEntity\n": {
+        "prefix": "  CreateSceneEntity\n",
+        "body": "CreateSceneEntity(${4:sceneName})",
+        "description": " handle CreateSceneEntity(string sceneName) \n Create a scene entity to play the specified scene.\n"
+    },
+    "  CreateTrigger\n": {
+        "prefix": "  CreateTrigger\n",
+        "body": "CreateTrigger(${4:Vector_1},${6:Vector_2},${8:Vector_3})",
+        "description": " handle CreateTrigger(Vector Vector_1, Vector Vector_2, Vector Vector_3) \n CreateTrigger( vecMin, vecMax )\u00c2\u00a0: Creates and returns an AABB trigger\n"
+    },
+    "  CreateTriggerRadiusApproximate\n": {
+        "prefix": "  CreateTriggerRadiusApproximate\n",
+        "body": "CreateTriggerRadiusApproximate(${4:Vector_1},${6:float_2})",
+        "description": " handle CreateTriggerRadiusApproximate(Vector Vector_1, float float_2) \n CreateTriggerRadiusApproximate( vecOrigin, flRadius )\u00c2\u00a0: Creates and returns an AABB trigger thats bigger than the radius provided\n"
+    },
+    "  DestroyDamageInfo\n": {
+        "prefix": "  DestroyDamageInfo\n",
+        "body": "DestroyDamageInfo()",
+        "description": " void DestroyDamageInfo(damageinfo) \n Free a damageinfo object that was created with CreateDamageInfo().\n"
+    },
+    "  DoEntFire\n": {
+        "prefix": "  DoEntFire\n",
+        "body": "DoEntFire(${4:target},${6:action},${8:value},${10:delay},${12:activator},${14:caller})",
+        "description": " void DoEntFire(string target, string action, string value, float delay, handle activator, handle caller) \n Internal native function for EntFire().\n"
+    },
+    "  DoEntFireByInstanceHandle\n": {
+        "prefix": "  DoEntFireByInstanceHandle\n",
+        "body": "DoEntFireByInstanceHandle(${4:target},${6:action},${8:value},${10:delay},${12:activator},${14:caller})",
+        "description": " void DoEntFireByInstanceHandle(handle target, string action, string value, float delay, handle activator, handle caller) \n Internal native function for EntFireByHandle().\n"
+    },
+    "  EntFire\n": {
+        "prefix": "  EntFire\n",
+        "body": "EntFire(${4:scope},${6:target},${8:action},${10:value},${12:\"\"},${14:delay},${16:0.0},${18:activator},${20:scope.thisEntity})",
+        "description": " void EntFire(table scope, string target, string action, string value = \"\", float delay = 0.0, handle activator = scope.thisEntity) \n Generate an entity I/O event on all entities matching the specified target name. The script scope of the calling entity should be passed to the first parameter.\n"
+    },
+    "  EntFireByHandle\n": {
+        "prefix": "  EntFireByHandle\n",
+        "body": "EntFireByHandle(${4:self},${6:target},${8:action},${10:value},${12:\"\"},${14:delay},${16:0.0},${18:activator},${20:self})",
+        "description": " void EntFireByHandle(handle self, handle target, string action, string value = \"\", float delay = 0.0, handle activator = self) \n Generate an entity I/O event on the specified entity. The calling entity should be passed to the first parameter.\n"
+    },
+    "  EntIndexToHScript\n": {
+        "prefix": "  EntIndexToHScript\n",
+        "body": "EntIndexToHScript(${4:int_1})",
+        "description": " handle EntIndexToHScript(int int_1) \n Turn an entity index integer to an HScript representing that entity's script instance.\n"
+    },
+    "  FireEntityIOInputNameOnly\n": {
+        "prefix": "  FireEntityIOInputNameOnly\n",
+        "body": "FireEntityIOInputNameOnly(${4:ehandle_1},${6:string_2})",
+        "description": " void FireEntityIOInputNameOnly(ehandle ehandle_1, string string_2) \n Fire Entity's Action Input w/no data\n"
+    },
+    "  FireEntityIOInputString\n": {
+        "prefix": "  FireEntityIOInputString\n",
+        "body": "FireEntityIOInputString(${4:ehandle_1},${6:string_2},${8:string_3})",
+        "description": " void FireEntityIOInputString(ehandle ehandle_1, string string_2, string string_3) \n Fire Entity's Action Input with passed String - you own the memory\n"
+    },
+    "  FireEntityIOInputVec\n": {
+        "prefix": "  FireEntityIOInputVec\n",
+        "body": "FireEntityIOInputVec(${4:ehandle_1},${6:string_2},${8:Vector_3})",
+        "description": " void FireEntityIOInputVec(ehandle ehandle_1, string string_2, Vector Vector_3) \n Fire Entity's Action Input with passed Vector ( hEntity, szActionName, vector )\n"
+    },
+    "  GetMaxOutputDelay\n": {
+        "prefix": "  GetMaxOutputDelay\n",
+        "body": "GetMaxOutputDelay(${4:ehandle_1},${6:string_2})",
+        "description": " float GetMaxOutputDelay(ehandle ehandle_1, string string_2) \n Get the longest delay for all events attached to an output\n"
+    },
+    "  GetPhysAngularVelocity\n": {
+        "prefix": "  GetPhysAngularVelocity\n",
+        "body": "GetPhysAngularVelocity(${4:entity})",
+        "description": " Vector GetPhysAngularVelocity(CBaseEntity entity) \n Get Angular Velocity for VPHYS or normal object. Returns a vector of the axis of rotation, multiplied by the rotation in radians per second.\n"
+    },
+    "  GetPhysVelocity\n": {
+        "prefix": "  GetPhysVelocity\n",
+        "body": "GetPhysVelocity(${4:entity})",
+        "description": " Vector GetPhysVelocity(CBaseEntity entity) \n Get Velocity for VPHYS or normal object.\n"
+    },
+    "  GetPlayerFromUserID\n": {
+        "prefix": "  GetPlayerFromUserID\n",
+        "body": "GetPlayerFromUserID(${4:userID})",
+        "description": " CBasePlayer GetPlayerFromUserID(int userID) \n Given a user ID, return the script handle for the entity, or nil.\n"
+    },
+    "  IsValidEntity\n": {
+        "prefix": "  IsValidEntity\n",
+        "body": "IsValidEntity(${4:handle_1})",
+        "description": " bool IsValidEntity(handle handle_1) \n Checks to see if the given hScript is a valid entity\n"
+    },
+    "  PlayerInstanceFromIndex\n": {
+        "prefix": "  PlayerInstanceFromIndex\n",
+        "body": "PlayerInstanceFromIndex(${4:int_1})",
+        "description": " handle PlayerInstanceFromIndex(int int_1) \n Get a script instance of a player by index.\n"
+    },
+    "  PrecacheEntityFromTable\n": {
+        "prefix": "  PrecacheEntityFromTable\n",
+        "body": "PrecacheEntityFromTable(${4:string_1},${6:handle_2},${8:handle_3})",
+        "description": " void PrecacheEntityFromTable(string string_1, handle handle_2, handle handle_3) \n Precache an entity from KeyValues in table\n"
+    },
+    "  PrecacheEntityListFromTable\n": {
+        "prefix": "  PrecacheEntityListFromTable\n",
+        "body": "PrecacheEntityListFromTable(${4:handle_1},${6:handle_2})",
+        "description": " void PrecacheEntityListFromTable(handle handle_1, handle handle_2) \n Precache a list of entity KeyValues table's\n"
+    },
+    "  PrecacheModel\n": {
+        "prefix": "  PrecacheModel\n",
+        "body": "PrecacheModel(${4:modelName},${6:context})",
+        "description": " void PrecacheModel(string modelName, handle context)\n Manually precache a single model.\n"
+    },
+    "  PrecacheResource\n": {
+        "prefix": "  PrecacheResource\n",
+        "body": "PrecacheResource(${4:resourceType},${6:resourcePath},${8:context})",
+        "description": " void PrecacheResource(string resourceType, string resourcePath, handle context)\nmodel_folder|sound|soundfile|particle|particle_folder\"\n"
+    },
+    "  SetPhysAngularVelocity\n": {
+        "prefix": "  SetPhysAngularVelocity\n",
+        "body": "SetPhysAngularVelocity(${4:entity},${6:angVel})",
+        "description": " void SetPhysAngularVelocity(CBaseEntity entity, Vector angVel) \n Set Angular Velocity for VPHYS or normal object, from a vector of the axis of rotation, multiplied by the rotation in radians per second.\n"
+    },
+    "  SetRenderingEnabled\n": {
+        "prefix": "  SetRenderingEnabled\n",
+        "body": "SetRenderingEnabled(${4:entityEhandle},${6:enabled})",
+        "description": " void SetRenderingEnabled(ehandle entityEhandle, bool enabled) \n Set rendering on/off for an EHANDLE.  Bug:\u00c2\u00a0Unstable in Half-Life: Alyx. May cause hard crash.\n"
+    },
+    "  SpawnEntityFromTableAsynchronous\n": {
+        "prefix": "  SpawnEntityFromTableAsynchronous\n",
+        "body": "SpawnEntityFromTableAsynchronous(${4:string_1},${6:handle_2},${8:handle_3},${10:handle_4})",
+        "description": " void SpawnEntityFromTableAsynchronous(string string_1, handle handle_2, handle handle_3, handle handle_4)\n Asynchronously spawns a single entity from a table\n"
+    },
+    "  SpawnEntityFromTableSynchronous\n": {
+        "prefix": "  SpawnEntityFromTableSynchronous\n",
+        "body": "SpawnEntityFromTableSynchronous(${4:string_1},${6:handle_2})",
+        "description": " handle SpawnEntityFromTableSynchronous(string string_1, handle handle_2) \n Synchronously spawns a single entity from a table\n"
+    },
+    "  SpawnEntityGroupFromTable\n": {
+        "prefix": "  SpawnEntityGroupFromTable\n",
+        "body": "SpawnEntityGroupFromTable(${4:groupSpawnTables},${6:bAsync},${8:hCallback})",
+        "description": " bool SpawnEntityGroupFromTable(handle groupSpawnTables, bool bAsync, handle hCallback) \n Hierarchically spawn an entity group from a set of spawn tables.\n"
+    },
+    "  SpawnEntityListFromTableAsynchronous\n": {
+        "prefix": "  SpawnEntityListFromTableAsynchronous\n",
+        "body": "SpawnEntityListFromTableAsynchronous(${4:handle_1},${6:handle_2})",
+        "description": " int SpawnEntityListFromTableAsynchronous(handle handle_1, handle handle_2) \n Asynchronously spawn an entity group from a list of spawn table's. A callback will be triggered when the spawning is complete\n"
+    },
+    "  SpawnEntityListFromTableSynchronous\n": {
+        "prefix": "  SpawnEntityListFromTableSynchronous\n",
+        "body": "SpawnEntityListFromTableSynchronous(${4:handle_1})",
+        "description": " handle SpawnEntityListFromTableSynchronous(handle handle_1) \n Synchronously spawn an entity group from a list of spawn table's.\n"
+    },
+    "  StopEffect\n": {
+        "prefix": "  StopEffect\n",
+        "body": "StopEffect(${4:handle_1},${6:string_2})",
+        "description": " void StopEffect(handle handle_1, string string_2) \n (hEntity, szEffectName)\n"
+    },
+    "  UTIL_Remove\n": {
+        "prefix": "  UTIL_Remove\n",
+        "body": "UTIL_Remove(${4:handle_1})",
+        "description": " void UTIL_Remove(handle handle_1) \n Removes the specified entity\n"
+    },
+    "  UTIL_RemoveImmediate\n": {
+        "prefix": "  UTIL_RemoveImmediate\n",
+        "body": "UTIL_RemoveImmediate(${4:handle_1})",
+        "description": " void UTIL_RemoveImmediate(handle handle_1) \n Do Not use this function.  Use UTIL_Remove() instead.  This will crash your game.\n"
+    },
+    "  TraceCollideable\n": {
+        "prefix": "  TraceCollideable\n",
+        "body": "TraceCollideable(${4:parameters})",
+        "description": " bool TraceCollideable(table parameters) \n Does a raytrace against a single entity. Input and output parameters are stored in the specified table.\n"
+    },
+    "  TraceHull\n": {
+        "prefix": "  TraceHull\n",
+        "body": "TraceHull(${4:parameters})",
+        "description": " bool TraceHull(table parameters) \n Traces a axis aligned bounding box along a line. Input and output parameters are stored in the specified table.\n"
+    },
+    "  TraceLine\n": {
+        "prefix": "  TraceLine\n",
+        "body": "TraceLine(${4:parameters})",
+        "description": " bool TraceLine(table parameters) \n Does a raytrace along a line. Input and output parameters are stored in the specified table.\n"
+    },
+    "  EmitGlobalSound\n": {
+        "prefix": "  EmitGlobalSound\n",
+        "body": "EmitGlobalSound(${4:soundName})",
+        "description": " void EmitGlobalSound(string soundName) \n Play named sound for all players.\n"
+    },
+    "  EmitSoundOn\n": {
+        "prefix": "  EmitSoundOn\n",
+        "body": "EmitSoundOn(${4:string_1},${6:handle_2})",
+        "description": " void EmitSoundOn(string string_1, handle handle_2) \n Play named sound on Entity\n"
+    },
+    "  EmitSoundOnClient\n": {
+        "prefix": "  EmitSoundOnClient\n",
+        "body": "EmitSoundOnClient(${4:string_1},${6:handle_2})",
+        "description": " void EmitSoundOnClient(string string_1, handle handle_2) \n Play named sound only on the client for the passed in player\n"
+    },
+    "  SetOpvarFloatAll\n": {
+        "prefix": "  SetOpvarFloatAll\n",
+        "body": "SetOpvarFloatAll(${4:string_1},${6:string_2},${8:string_3},${10:float_4})",
+        "description": " void SetOpvarFloatAll(string string_1, string string_2, string string_3, float float_4) \n Sets an opvar value for all players\n"
+    },
+    "  SetOpvarFloatPlayer\n": {
+        "prefix": "  SetOpvarFloatPlayer\n",
+        "body": "SetOpvarFloatPlayer(${4:string_1},${6:string_2},${8:string_3},${10:float_4},${12:handle_5})",
+        "description": " void SetOpvarFloatPlayer(string string_1, string string_2, string string_3, float float_4, handle handle_5) \n Sets an opvar value for a single player ( szStackName, szOperatorName, szOpvarName, flOpvarValue, hEnt )\n"
+    },
+    "  StartSoundEvent\n": {
+        "prefix": "  StartSoundEvent\n",
+        "body": "StartSoundEvent(${4:string_1},${6:handle_2})",
+        "description": " void StartSoundEvent(string string_1, handle handle_2) \n Start a sound event\n"
+    },
+    "  StartSoundEventFromPosition\n": {
+        "prefix": "  StartSoundEventFromPosition\n",
+        "body": "StartSoundEventFromPosition(${4:string_1},${6:Vector_2})",
+        "description": " void StartSoundEventFromPosition(string string_1, Vector Vector_2) \n Start a sound event from position\n"
+    },
+    "  StartSoundEventFromPositionReliable\n": {
+        "prefix": "  StartSoundEventFromPositionReliable\n",
+        "body": "StartSoundEventFromPositionReliable(${4:string_1},${6:Vector_2})",
+        "description": " void StartSoundEventFromPositionReliable(string string_1, Vector Vector_2) \n Start a sound event from position with reliable delivery\n"
+    },
+    "  StartSoundEventFromPositionUnreliable\n": {
+        "prefix": "  StartSoundEventFromPositionUnreliable\n",
+        "body": "StartSoundEventFromPositionUnreliable(${4:string_1},${6:Vector_2})",
+        "description": " void StartSoundEventFromPositionUnreliable(string string_1, Vector Vector_2) \n Start a sound event from position with optional delivery\n"
+    },
+    "  StartSoundEventReliable\n": {
+        "prefix": "  StartSoundEventReliable\n",
+        "body": "StartSoundEventReliable(${4:string_1},${6:handle_2})",
+        "description": " void StartSoundEventReliable(string string_1, handle handle_2) \n Start a sound event with reliable delivery\n"
+    },
+    "  StartSoundEventUnreliable\n": {
+        "prefix": "  StartSoundEventUnreliable\n",
+        "body": "StartSoundEventUnreliable(${4:string_1},${6:handle_2})",
+        "description": " void StartSoundEventUnreliable(string string_1, handle handle_2) \n Start a sound event with optional delivery\n"
+    },
+    "  StopSoundEvent\n": {
+        "prefix": "  StopSoundEvent\n",
+        "body": "StopSoundEvent(${4:string_1},${6:handle_2})",
+        "description": " void StopSoundEvent(string string_1, handle handle_2) \n Stops a sound event\n"
+    },
+    "  StopSoundOn\n": {
+        "prefix": "  StopSoundOn\n",
+        "body": "StopSoundOn(${4:soundName},${6:playingEntity})",
+        "description": " void StopSoundOn(string soundName, handle playingEntity) \n Stop named sound on Entity\n"
+    },
+    "  cvar_getf\n": {
+        "prefix": "  cvar_getf\n",
+        "body": "cvar_getf(${4:string_1})",
+        "description": " float cvar_getf(string string_1) \n Gets the value of the given cvar, as a float.\n"
+    },
+    "  cvar_setf\n": {
+        "prefix": "  cvar_setf\n",
+        "body": "cvar_setf(${4:string_1},${6:float_2})",
+        "description": " bool cvar_setf(string string_1, float float_2) \n Sets the value of the given cvar, as a float.\n"
+    },
+    "  DebugBreak\n": {
+        "prefix": "  DebugBreak\n",
+        "body": "DebugBreak()",
+        "description": " void DebugBreak() \n Breaks in the debugger\n"
+    },
+    "  DoIncludeScript\n": {
+        "prefix": "  DoIncludeScript\n",
+        "body": "DoIncludeScript(${4:scriptFileName},${6:scope})",
+        "description": " bool DoIncludeScript(string scriptFileName, handle scope) \n Internal native function for IncludeScript().\n"
+    },
+    "  DoScriptAssert\n": {
+        "prefix": "  DoScriptAssert\n",
+        "body": "DoScriptAssert(${4:assertion},${6:message})",
+        "description": " void DoScriptAssert(bool assertion, string message) \n Internal native function for ScriptAssert().\n"
+    },
+    "  DoUniqueString\n": {
+        "prefix": "  DoUniqueString\n",
+        "body": "DoUniqueString(${4:root})",
+        "description": " string DoUniqueString(string root) \n Internal native function for UniqueString().\n"
+    },
+    "  FileToString\n": {
+        "prefix": "  FileToString\n",
+        "body": "FileToString(${4:a})",
+        "description": " string FileToString(string a) \n Reads a string from a file to send to script\n"
+    },
+    "  FireGameEvent\n": {
+        "prefix": "  FireGameEvent\n",
+        "body": "FireGameEvent(${4:eventName},${6:parameterTable})",
+        "description": " void FireGameEvent(string eventName, handle parameterTable) \n Fire a pre-defined event, which can be found either in custom_events.txt or in dota's resource/*.res\n"
+    },
+    "  FireGameEventLocal\n": {
+        "prefix": "  FireGameEventLocal\n",
+        "body": "FireGameEventLocal(${4:string_1},${6:handle_2})",
+        "description": " void FireGameEventLocal(string string_1, handle handle_2) \n Fire a game event without broadcasting to the client.\n"
+    },
+    "  FrameTime\n": {
+        "prefix": "  FrameTime\n",
+        "body": "FrameTime()",
+        "description": " float FrameTime() \n Get the time spent on the server in the last frame\n"
+    },
+    "  GetActiveSpawnGroupHandle\n": {
+        "prefix": "  GetActiveSpawnGroupHandle\n",
+        "body": "GetActiveSpawnGroupHandle()",
+        "description": " int GetActiveSpawnGroupHandle()\n Returns the currently active spawn group handle\n"
+    },
+    "  GetFrameCount\n": {
+        "prefix": "  GetFrameCount\n",
+        "body": "GetFrameCount()",
+        "description": " int GetFrameCount() \n Returns the engines current frame count\n"
+    },
+    "  GetListenServerHost\n": {
+        "prefix": "  GetListenServerHost\n",
+        "body": "GetListenServerHost()",
+        "description": " handle GetListenServerHost() \n Get the local player on a listen server.\n"
+    },
+    "  GetMapName\n": {
+        "prefix": "  GetMapName\n",
+        "body": "GetMapName()",
+        "description": " string GetMapName() \n Get the name of the map.\n"
+    },
+    "  IncludeScript\n": {
+        "prefix": "  IncludeScript\n",
+        "body": "IncludeScript(${4:scriptFileName},${6:scope},${8:nil})",
+        "description": " bool IncludeScript(string scriptFileName, handle scope = nil) \n Execute a script file. Included in the current scope by default.\n"
+    },
+    "  InitLogFile\n": {
+        "prefix": "  InitLogFile\n",
+        "body": "InitLogFile(${4:string_1},${6:string_2})",
+        "description": " void InitLogFile(string string_1, string string_2) \n If the given file doesn't exist, creates it with the given contents; does nothing if it exists\n"
+    },
+    "  IsClient\n": {
+        "prefix": "  IsClient\n",
+        "body": "IsClient()",
+        "description": " bool IsClient() \n Returns true if this is lua running from the client.dll.\n"
+    },
+    "  IsDedicatedServer\n": {
+        "prefix": "  IsDedicatedServer\n",
+        "body": "IsDedicatedServer()",
+        "description": " bool IsDedicatedServer() \n Returns true if this server is a dedicated server.\n"
+    },
+    "  IsMarkedForDeletion\n": {
+        "prefix": "  IsMarkedForDeletion\n",
+        "body": "IsMarkedForDeletion(${4:handle_1})",
+        "description": " bool IsMarkedForDeletion(handle handle_1) \n Returns true if the entity is valid and marked for deletion.\n"
+    },
+    "  IsServer\n": {
+        "prefix": "  IsServer\n",
+        "body": "IsServer()",
+        "description": " bool IsServer() \n Returns true if this is lua running from the server.dll.\n"
+    },
+    "  IsInToolsMode\n": {
+        "prefix": "  IsInToolsMode\n",
+        "body": "IsInToolsMode()",
+        "description": " bool IsInToolsMode() \n Returns true if this is lua running from the dota2 workshop tools.\n"
+    },
+    "  ListenToGameEvent\n": {
+        "prefix": "  ListenToGameEvent\n",
+        "body": "ListenToGameEvent(${4:EventName},${6:functionNameToCall},${8:context})",
+        "description": " int ListenToGameEvent(string EventName, handle functionNameToCall, handle context) \n Register as a listener for a game event from script.\n"
+    },
+    "  LoadKeyValues\n": {
+        "prefix": "  LoadKeyValues\n",
+        "body": "LoadKeyValues(${4:string_1})",
+        "description": " table LoadKeyValues(string string_1) \n Creates a table from the specified keyvalues text file\n"
+    },
+    "  LoadKeyValuesFromString\n": {
+        "prefix": "  LoadKeyValuesFromString\n",
+        "body": "LoadKeyValuesFromString(${4:string_1})",
+        "description": " table LoadKeyValuesFromString(string string_1) \n Creates a table from the specified keyvalues string\n"
+    },
+    "  LocalTime\n": {
+        "prefix": "  LocalTime\n",
+        "body": "LocalTime()",
+        "description": " table LocalTime() \n Returns the local system time as a table with the format {Hours = int; Minutes = int; Seconds = int}\n"
+    },
+    "  MakeStringToken\n": {
+        "prefix": "  MakeStringToken\n",
+        "body": "MakeStringToken(${4:string_1})",
+        "description": " int MakeStringToken(string string_1) \n\n"
+    },
+    "  ManuallyTriggerSpawnGroupCompletion\n": {
+        "prefix": "  ManuallyTriggerSpawnGroupCompletion\n",
+        "body": "ManuallyTriggerSpawnGroupCompletion(${4:int_1})",
+        "description": " void ManuallyTriggerSpawnGroupCompletion(int int_1)\n Triggers the creation of entities in a manually-completed spawn group\n"
+    },
+    "  RegisterSpawnGroupFilterProxy\n": {
+        "prefix": "  RegisterSpawnGroupFilterProxy\n",
+        "body": "RegisterSpawnGroupFilterProxy(${4:string_1})",
+        "description": " void RegisterSpawnGroupFilterProxy(string string_1) \n Create a C proxy for a script-based spawn group filter\n"
+    },
+    "  ReloadMOTD\n": {
+        "prefix": "  ReloadMOTD\n",
+        "body": "ReloadMOTD()",
+        "description": " void ReloadMOTD() \n Reloads the MotD file\n"
+    },
+    "  RemoveSpawnGroupFilterProxy\n": {
+        "prefix": "  RemoveSpawnGroupFilterProxy\n",
+        "body": "RemoveSpawnGroupFilterProxy(${4:string_1})",
+        "description": " void RemoveSpawnGroupFilterProxy(string string_1) \n Remove the C proxy for a script-based spawn group filter\n"
+    },
+    "  rr_AddDecisionRule\n": {
+        "prefix": "  rr_AddDecisionRule\n",
+        "body": "rr_AddDecisionRule(${4:handle_1})",
+        "description": " bool rr_AddDecisionRule(handle handle_1) \n Add a rule to the decision database.\n"
+    },
+    "  rr_CommitAIResponse\n": {
+        "prefix": "  rr_CommitAIResponse\n",
+        "body": "rr_CommitAIResponse(${4:handle_1},${6:handle_2})",
+        "description": " bool rr_CommitAIResponse(handle handle_1, handle handle_2) \n Commit the result of QueryBestResponse back to the given entity to play. Call with params (entity, airesponse)\n"
+    },
+    "  rr_GetResponseTargets\n": {
+        "prefix": "  rr_GetResponseTargets\n",
+        "body": "rr_GetResponseTargets()",
+        "description": " handle rr_GetResponseTargets() \n Retrieve a table of all available expresser targets, in the form { name\u00c2\u00a0: handle, name: handle }.\n"
+    },
+    "  rr_QueryBestResponse\n": {
+        "prefix": "  rr_QueryBestResponse\n",
+        "body": "rr_QueryBestResponse(${4:handle_1},${6:handle_2},${8:handle_3})",
+        "description": " bool rr_QueryBestResponse(handle handle_1, handle handle_2, handle handle_3) \n Params: ( hEnt, hQuery, hResult ) // Static\u00c2\u00a0: tests 'query' against entity's response system and returns the best response found (or nil if none found).\n"
+    },
+    "  ScreenShake\n": {
+        "prefix": "  ScreenShake\n",
+        "body": "ScreenShake(${4:Vector_1},${6:float_2},${8:float_3},${10:float_4},${12:float_5},${14:int_6},${16:bool_7})",
+        "description": " void ScreenShake(Vector Vector_1, float float_2, float float_3, float float_4, float float_5, int int_6, bool bool_7) \n Start a screenshake with the following parameters. vecCenter, flAmplitude, flFrequency, flDuration, flRadius, eCommand( SHAKE_START = 0, SHAKE_STOP = 1 ), bAirShake\n"
+    },
+    "  ScriptAssert\n": {
+        "prefix": "  ScriptAssert\n",
+        "body": "ScriptAssert(${4:assertion},${6:message},${8:\"\"})",
+        "description": " void ScriptAssert(bool assertion, string message = \"\") \n Asserts the passed in value. Prints out a message and brings up the assert dialog.\n"
+    },
+    "  SendToConsole\n": {
+        "prefix": "  SendToConsole\n",
+        "body": "SendToConsole(${4:string_1})",
+        "description": " void SendToConsole(string string_1) \n Send a string to the console as a client command\n"
+    },
+    "  SendToServerConsole\n": {
+        "prefix": "  SendToServerConsole\n",
+        "body": "SendToServerConsole(${4:string_1})",
+        "description": " void SendToServerConsole(string string_1) \n Send a string to the console as a server command\n"
+    },
+    "  SetQuestName\n": {
+        "prefix": "  SetQuestName\n",
+        "body": "SetQuestName(${4:string_1})",
+        "description": " void SetQuestName(string string_1) \n Set the current quest name.\n"
+    },
+    "  SetQuestPhase\n": {
+        "prefix": "  SetQuestPhase\n",
+        "body": "SetQuestPhase(${4:int_1})",
+        "description": " void SetQuestPhase(int int_1) \n Set the current quest phase.\n"
+    },
+    "  StopListeningToAllGameEvents\n": {
+        "prefix": "  StopListeningToAllGameEvents\n",
+        "body": "StopListeningToAllGameEvents(${4:handle_1})",
+        "description": " void StopListeningToAllGameEvents(handle handle_1) \n Stop listening to all game events within a specific context.\n"
+    },
+    "  StopListeningToGameEvent\n": {
+        "prefix": "  StopListeningToGameEvent\n",
+        "body": "StopListeningToGameEvent(${4:int_1})",
+        "description": " bool StopListeningToGameEvent(int int_1) \n Stop listening to a particular game event.\n"
+    },
+    "  StringToFile\n": {
+        "prefix": "  StringToFile\n",
+        "body": "StringToFile(${4:a},${6:b})",
+        "description": " bool StringToFile(string a, string b) \n * Directory traversal doesn't seem to work. The characters '.', '/' and '\\\\' are ignored.\n"
+    },
+    "  Time\n": {
+        "prefix": "  Time\n",
+        "body": "Time()",
+        "description": " float Time() \n Get the current server time\n"
+    },
+    "  UniqueString\n": {
+        "prefix": "  UniqueString\n",
+        "body": "UniqueString(${4:root},${6:\"\"})",
+        "description": " string UniqueString(string root = \"\") \n Generate a string guaranteed to be unique across the life of the script VM, with an optional root string. Useful for adding data to table's when not sure what keys are already in use in that table.\n"
+    },
+    "  UnloadSpawnGroup\n": {
+        "prefix": "  UnloadSpawnGroup\n",
+        "body": "UnloadSpawnGroup(${4:string_1})",
+        "description": " void UnloadSpawnGroup(string string_1) \n Unload a spawn group by name\n"
+    },
+    "  UnloadSpawnGroupByHandle\n": {
+        "prefix": "  UnloadSpawnGroupByHandle\n",
+        "body": "UnloadSpawnGroupByHandle(${4:int_1})",
+        "description": " void UnloadSpawnGroupByHandle(int int_1) \n Unload a spawn group by handle\n"
+    },
+    "  UpdateEventPoints\n": {
+        "prefix": "  UpdateEventPoints\n",
+        "body": "UpdateEventPoints(${4:handle_1})",
+        "description": " void UpdateEventPoints(handle handle_1) \n No Description Set\n"
+    },
+    "  AddEffects\n": {
+        "prefix": "  AddEffects\n",
+        "body": "AddEffects(${4:nFlags})",
+        "description": " void AddEffects(int nFlags) \n AddEffects( int ): Adds the render effect flag.\n"
+    },
+    "  ApplyAbsVelocityImpulse\n": {
+        "prefix": "  ApplyAbsVelocityImpulse\n",
+        "body": "ApplyAbsVelocityImpulse(${4:vecImpulse})",
+        "description": " void ApplyAbsVelocityImpulse(Vector vecImpulse) \n Apply a Velocity Impulse.\n"
+    },
+    "  ApplyLocalAngularVelocityImpulse\n": {
+        "prefix": "  ApplyLocalAngularVelocityImpulse\n",
+        "body": "ApplyLocalAngularVelocityImpulse(${4:angImpulse})",
+        "description": " void ApplyLocalAngularVelocityImpulse(Vector angImpulse) \n Apply an Angular Velocity Impulse.\n"
+    },
+    "  Attribute_GetFloatValue\n": {
+        "prefix": "  Attribute_GetFloatValue\n",
+        "body": "Attribute_GetFloatValue(${4:pName},${6:flDefault})",
+        "description": " float Attribute_GetFloatValue(string pName, float flDefault) \n Get float value for an entity attribute.\n"
+    },
+    "  Attribute_GetIntValue\n": {
+        "prefix": "  Attribute_GetIntValue\n",
+        "body": "Attribute_GetIntValue(${4:pName},${6:nDefault})",
+        "description": " float Attribute_GetIntValue(string pName, int nDefault) \n Get int value for an entity attribute.\n"
+    },
+    "  Attribute_SetFloatValue\n": {
+        "prefix": "  Attribute_SetFloatValue\n",
+        "body": "Attribute_SetFloatValue(${4:pName},${6:flValue})",
+        "description": " void Attribute_SetFloatValue(string pName, float flValue) \n Set float value for an entity attribute.\n"
+    },
+    "  Attribute_SetIntValue\n": {
+        "prefix": "  Attribute_SetIntValue\n",
+        "body": "Attribute_SetIntValue(${4:pName},${6:nValue})",
+        "description": " void Attribute_SetIntValue(string pName, int nValue) \n Set int value for an entity attribute.\n"
+    },
+    "  DeleteAttribute\n": {
+        "prefix": "  DeleteAttribute\n",
+        "body": "DeleteAttribute(${4:pName})",
+        "description": " void DeleteAttribute(string pName) \n Delete an entity attribute.\n"
+    },
+    "  EmitSound\n": {
+        "prefix": "  EmitSound\n",
+        "body": "EmitSound(${4:soundName})",
+        "description": " void EmitSound(string soundName) \n\n"
+    },
+    "  EmitSoundParams\n": {
+        "prefix": "  EmitSoundParams\n",
+        "body": "EmitSoundParams(${4:soundName},${6:pitch},${8:volume},${10:soundTime})",
+        "description": " void EmitSoundParams(string soundName, int pitch, float volume, float soundTime) \n Plays/modifies a sound from this entity. changes sound if Pitch and/or Volume or SoundTime is > 0.\n"
+    },
+    "  EyeAngles\n": {
+        "prefix": "  EyeAngles\n",
+        "body": "EyeAngles()",
+        "description": " QAngle EyeAngles() \n Get the QAngles that this entity is looking at.\n"
+    },
+    "  EyePosition\n": {
+        "prefix": "  EyePosition\n",
+        "body": "EyePosition()",
+        "description": " Vector EyePosition() \n Get vector to eye position - absolute coords\n"
+    },
+    "  FirstMoveChild\n": {
+        "prefix": "  FirstMoveChild\n",
+        "body": "FirstMoveChild()",
+        "description": " handle FirstMoveChild() \n No Description Set\n"
+    },
+    "  FollowEntity\n": {
+        "prefix": "  FollowEntity\n",
+        "body": "FollowEntity(${4:hEntity},${6:bBoneMerge})",
+        "description": " void FollowEntity(handle hEntity, bool bBoneMerge) \n hEntity to follow, bool bBoneMerge\n"
+    },
+    "  GatherCriteria\n": {
+        "prefix": "  GatherCriteria\n",
+        "body": "GatherCriteria(${4:hResult})",
+        "description": " void GatherCriteria(handle hResult) \n Returns a table containing the criteria that would be used for response queries on this entity. This is the same as the table that is passed to response rule script function callbacks.\n"
+    },
+    "  GetAbsOrigin\n": {
+        "prefix": "  GetAbsOrigin\n",
+        "body": "GetAbsOrigin()",
+        "description": " Vector GetAbsOrigin() \n Returns the world space origin of the entity.\n"
+    },
+    "  GetAbsScale\n": {
+        "prefix": "  GetAbsScale\n",
+        "body": "GetAbsScale()",
+        "description": " float GetAbsScale() \n Get the absolute entity scale.\nTo do:\u00c2\u00a0 How to access non-uniform scale?\n\n"
+    },
+    "  GetAngles\n": {
+        "prefix": "  GetAngles\n",
+        "body": "GetAngles()",
+        "description": " QAngle GetAngles() \n No Description Set\n"
+    },
+    "  GetAnglesAsVector\n": {
+        "prefix": "  GetAnglesAsVector\n",
+        "body": "GetAnglesAsVector()",
+        "description": " Vector GetAnglesAsVector() \n Get entity pitch, yaw, roll as a vector\n"
+    },
+    "  GetAngularVelocity\n": {
+        "prefix": "  GetAngularVelocity\n",
+        "body": "GetAngularVelocity()",
+        "description": " Vector GetAngularVelocity() \n Get the local angular velocity - returns a vector of pitch,yaw,roll\n"
+    },
+    "  GetBaseVelocity\n": {
+        "prefix": "  GetBaseVelocity\n",
+        "body": "GetBaseVelocity()",
+        "description": " Vector GetBaseVelocity() \n Get Base velocity. Only functional on prop_dynamic entities with the Scripted Movement property set.\n"
+    },
+    "  GetBoundingMaxs\n": {
+        "prefix": "  GetBoundingMaxs\n",
+        "body": "GetBoundingMaxs()",
+        "description": " Vector GetBoundingMaxs() \n Get a vector containing max bounds, centered on object\n"
+    },
+    "  GetBoundingMins\n": {
+        "prefix": "  GetBoundingMins\n",
+        "body": "GetBoundingMins()",
+        "description": " Vector GetBoundingMins() \n Get a vector containing min bounds, centered on object\n"
+    },
+    "  GetBounds\n": {
+        "prefix": "  GetBounds\n",
+        "body": "GetBounds()",
+        "description": " table GetBounds() \n Get a table containing the 'Mins' & 'Maxs' vector bounds, centered on object\n"
+    },
+    "  GetCenter\n": {
+        "prefix": "  GetCenter\n",
+        "body": "GetCenter()",
+        "description": " Vector GetCenter() \n Get vector to center of object - absolute coords\n"
+    },
+    "  GetChildren\n": {
+        "prefix": "  GetChildren\n",
+        "body": "GetChildren()",
+        "description": " handle GetChildren() \n Get the entities parented to this entity.\n"
+    },
+    "  GetContext\n": {
+        "prefix": "  GetContext\n",
+        "body": "GetContext(${4:name})",
+        "description": " table GetContext(string name) \n GetContext( name ): looks up a context and returns it if available. May return string, float, or nil (if the context isn't found)\n"
+    },
+    "  GetForwardVector\n": {
+        "prefix": "  GetForwardVector\n",
+        "body": "GetForwardVector()",
+        "description": " Vector GetForwardVector() \n Get the forward Vector of the entity\n"
+    },
+    "  GetHealth\n": {
+        "prefix": "  GetHealth\n",
+        "body": "GetHealth()",
+        "description": " int GetHealth() \n No Description Set\n"
+    },
+    "  GetLocalAngularVelocity\n": {
+        "prefix": "  GetLocalAngularVelocity\n",
+        "body": "GetLocalAngularVelocity()",
+        "description": " QAngle GetLocalAngularVelocity() \n Get entity relative angular velocity. Only functional on prop_dynamic entities with the Scripted Movement property set.\n"
+    },
+    "  GetLocalAngles\n": {
+        "prefix": "  GetLocalAngles\n",
+        "body": "GetLocalAngles()",
+        "description": " QAngle GetLocalAngles() \n Get entity pitch, yaw, roll as a QAngle, in the space of the entity's parent or attachment point\n"
+    },
+    "  GetLocalOrigin\n": {
+        "prefix": "  GetLocalOrigin\n",
+        "body": "GetLocalOrigin()",
+        "description": " Vector GetLocalOrigin() \n Get entity origin as a Vector, in the space of the entity's parent or attachment point.\n"
+    },
+    "  GetLocalScale\n": {
+        "prefix": "  GetLocalScale\n",
+        "body": "GetLocalScale()",
+        "description": " float GetLocalScale() \n Get the entity scale relative to that of its parent.\n"
+    },
+    "  GetLocalVelocity\n": {
+        "prefix": "  GetLocalVelocity\n",
+        "body": "GetLocalVelocity()",
+        "description": " Vector GetLocalVelocity() \n Get Entity relative velocity. Only functional on prop_dynamic entities with the Scripted Movement property set.\n"
+    },
+    "  GetMass\n": {
+        "prefix": "  GetMass\n",
+        "body": "GetMass()",
+        "description": " float GetMass() \n Get the mass of an entity. (returns 0 if it doesn't have a physics object)\n"
+    },
+    "  GetMaxHealth\n": {
+        "prefix": "  GetMaxHealth\n",
+        "body": "GetMaxHealth()",
+        "description": " int GetMaxHealth() \n No Description Set\n"
+    },
+    "  GetModelName\n": {
+        "prefix": "  GetModelName\n",
+        "body": "GetModelName()",
+        "description": " string GetModelName() \n Returns the name of the model.\n"
+    },
+    "  GetMoveParent\n": {
+        "prefix": "  GetMoveParent\n",
+        "body": "GetMoveParent()",
+        "description": " handle GetMoveParent() \n If in hierarchy, retrieves the entity's parent\n"
+    },
+    "  GetOrigin\n": {
+        "prefix": "  GetOrigin\n",
+        "body": "GetOrigin()",
+        "description": " Vector GetOrigin() \n Returns the origin of the entity, either in world space ot in its parents space if parented.\n"
+    },
+    "  GetOwner\n": {
+        "prefix": "  GetOwner\n",
+        "body": "GetOwner()",
+        "description": " handle GetOwner() \n Gets this entity's owner\n"
+    },
+    "  GetOwnerEntity\n": {
+        "prefix": "  GetOwnerEntity\n",
+        "body": "GetOwnerEntity()",
+        "description": " handle GetOwnerEntity() \n Get the owner entity, if there is one\n"
+    },
+    "  GetRightVector\n": {
+        "prefix": "  GetRightVector\n",
+        "body": "GetRightVector()",
+        "description": " Vector GetRightVector() \n Get the right vector of the entity\n"
+    },
+    "  GetRootMoveParent\n": {
+        "prefix": "  GetRootMoveParent\n",
+        "body": "GetRootMoveParent()",
+        "description": " handle GetRootMoveParent() \n If in hierarchy, walks up the hierarchy to find the root parent\n"
+    },
+    "  GetSoundDuration\n": {
+        "prefix": "  GetSoundDuration\n",
+        "body": "GetSoundDuration(${4:soundName},${6:actormodelname})",
+        "description": " float GetSoundDuration(string soundName, string actormodelname) \n Returns float duration of the sound. Takes soundname and optional actormodelname.\n"
+    },
+    "  GetSpawnGroupHandle\n": {
+        "prefix": "  GetSpawnGroupHandle\n",
+        "body": "GetSpawnGroupHandle()",
+        "description": " int GetSpawnGroupHandle()\n Returns the spawn group handle of this entity.\n"
+    },
+    "  GetTeam\n": {
+        "prefix": "  GetTeam\n",
+        "body": "GetTeam()",
+        "description": " int GetTeam() \n No Description Set\n"
+    },
+    "  GetTeamNumber\n": {
+        "prefix": "  GetTeamNumber\n",
+        "body": "GetTeamNumber()",
+        "description": " int GetTeamNumber() \n Get the team number of this entity.\n"
+    },
+    "  GetUpVector\n": {
+        "prefix": "  GetUpVector\n",
+        "body": "GetUpVector()",
+        "description": " Vector GetUpVector() \n Get the up vector of the entity\n"
+    },
+    "  GetVelocity\n": {
+        "prefix": "  GetVelocity\n",
+        "body": "GetVelocity()",
+        "description": " Vector GetVelocity() \n Get the filtered controller velocity.\n"
+    },
+    "  HasAttribute\n": {
+        "prefix": "  HasAttribute\n",
+        "body": "HasAttribute(${4:pName})",
+        "description": " bool HasAttribute(string pName) \n See if an entity has a particular attribute.\n"
+    },
+    "  IsAlive\n": {
+        "prefix": "  IsAlive\n",
+        "body": "IsAlive()",
+        "description": " bool IsAlive() \n No Description Set.\n"
+    },
+    "  IsNPC\n": {
+        "prefix": "  IsNPC\n",
+        "body": "IsNPC()",
+        "description": " bool IsNPC() \n Is this entity an CAI_BaseNPC?\n"
+    },
+    "  IsNull\n": {
+        "prefix": "  IsNull\n",
+        "body": "IsNull()",
+        "description": " bool IsNull() \n Detect entity has been deleted from C++\n"
+    },
+    "  IsPlayer\n": {
+        "prefix": "  IsPlayer\n",
+        "body": "IsPlayer()",
+        "description": " bool IsPlayer() \n Is this a player entity?\n"
+    },
+    "  Kill\n": {
+        "prefix": "  Kill\n",
+        "body": "Kill()",
+        "description": " void Kill() \n No Description Set\n"
+    },
+    "  NextMovePeer\n": {
+        "prefix": "  NextMovePeer\n",
+        "body": "NextMovePeer()",
+        "description": " handle NextMovePeer() \n No Description Set\n"
+    },
+    "  OverrideFriction\n": {
+        "prefix": "  OverrideFriction\n",
+        "body": "OverrideFriction(${4:duration},${6:friction})",
+        "description": " void OverrideFriction(float duration, float friction) \n Takes duration, value for a temporary override\n"
+    },
+    "  PrecacheScriptSound\n": {
+        "prefix": "  PrecacheScriptSound\n",
+        "body": "PrecacheScriptSound(${4:soundname})",
+        "description": " void PrecacheScriptSound(string soundname) \n Precache a sound for later playing.\n"
+    },
+    "  RemoveEffects\n": {
+        "prefix": "  RemoveEffects\n",
+        "body": "RemoveEffects(${4:nFlags})",
+        "description": " void RemoveEffects(int nFlags) \n RemoveEffects( int ): Removes the render effect flag.\n"
+    },
+    "  SetAbsAngles\n": {
+        "prefix": "  SetAbsAngles\n",
+        "body": "SetAbsAngles(${4:fPitch},${6:fYaw},${8:fRoll})",
+        "description": " void SetAbsAngles(float fPitch, float fYaw, float fRoll)\n Set entity world space pitch, yaw, roll by component.\n"
+    },
+    "  SetAbsOrigin\n": {
+        "prefix": "  SetAbsOrigin\n",
+        "body": "SetAbsOrigin(${4:origin})",
+        "description": " void SetAbsOrigin(Vector origin) \n Sets the world space entity origin.\n"
+    },
+    "  SetAbsScale\n": {
+        "prefix": "  SetAbsScale\n",
+        "body": "SetAbsScale(${4:scale})",
+        "description": " void SetAbsScale(float scale) \n Set the absolute scale of the entity.\nTo do:\u00c2\u00a0 How to set non-uniform scale?\n\n"
+    },
+    "  SetAngles\n": {
+        "prefix": "  SetAngles\n",
+        "body": "SetAngles(${4:pitch},${6:yaw},${8:roll})",
+        "description": " void SetAngles(float pitch, float yaw, float roll) \n Set entity pitch, yaw, roll by component. If parented, this is set relative to the parents local space.\n"
+    },
+    "  SetAngularVelocity\n": {
+        "prefix": "  SetAngularVelocity\n",
+        "body": "SetAngularVelocity(${4:Vector_1})",
+        "description": " void SetAngularVelocity(Vector Vector_1) \n No Description Set\n"
+    },
+    "  SetConstraint\n": {
+        "prefix": "  SetConstraint\n",
+        "body": "SetConstraint(${4:vPos})",
+        "description": " void SetConstraint(Vector vPos) \n Set the position of the constraint.\n"
+    },
+    "  SetContext\n": {
+        "prefix": "  SetContext\n",
+        "body": "SetContext(${4:pName},${6:pValue},${8:duration})",
+        "description": " void SetContext(string pName, string pValue, float duration) \n SetContext( name , value, duration ): store any key/value pair in this entity's dialog contexts. Value must be a string. Will last for duration (set 0 to mean 'forever').\n"
+    },
+    "  SetContextNum\n": {
+        "prefix": "  SetContextNum\n",
+        "body": "SetContextNum(${4:pName},${6:fValue},${8:duration})",
+        "description": " void SetContextNum(string pName, float fValue, float duration) \n SetContext( name , value, duration ): store any key/value pair in this entity's dialog contexts. Value must be a number (int or float). Will last for duration (set 0 to mean 'forever').\n"
+    },
+    "  SetContextThink\n": {
+        "prefix": "  SetContextThink\n",
+        "body": "SetContextThink(${4:pszContextName},${6:hThinkFunc},${8:flInterval})",
+        "description": " void SetContextThink(string pszContextName, handle hThinkFunc, float flInterval) \n Set a think function on this entity.\n"
+    },
+    "  SetEntityName\n": {
+        "prefix": "  SetEntityName\n",
+        "body": "SetEntityName(${4:pName})",
+        "description": " void SetEntityName(string pName) \n Set the name (targetname) of an entity.\n"
+    },
+    "  SetForwardVector\n": {
+        "prefix": "  SetForwardVector\n",
+        "body": "SetForwardVector(${4:forwardVec})",
+        "description": " void SetForwardVector(Vector forwardVec) \n Set the orientation of the entity to have this forward forwardVec\n"
+    },
+    "  SetFriction\n": {
+        "prefix": "  SetFriction\n",
+        "body": "SetFriction(${4:flFriction})",
+        "description": " void SetFriction(float flFriction) \n Set PLAYER friction, ignored for objects\n"
+    },
+    "  SetGravity\n": {
+        "prefix": "  SetGravity\n",
+        "body": "SetGravity(${4:flGravity})",
+        "description": " void SetGravity(float flGravity) \n Set PLAYER gravity, ignored for objects\n"
+    },
+    "  SetHealth\n": {
+        "prefix": "  SetHealth\n",
+        "body": "SetHealth(${4:hp})",
+        "description": " void SetHealth(int hp) \n No Description Set\n"
+    },
+    "  SetLocalAngles\n": {
+        "prefix": "  SetLocalAngles\n",
+        "body": "SetLocalAngles(${4:pitch},${6:yaw},${8:roll})",
+        "description": " void SetLocalAngles(float pitch, float yaw, float roll) \n Set the entity pitch, yaw, roll by component, relative to the local space of the entity's parent or attachment point.\n"
+    },
+    "  SetLocalOrigin\n": {
+        "prefix": "  SetLocalOrigin\n",
+        "body": "SetLocalOrigin(${4:origin})",
+        "description": " void SetLocalOrigin(Vector origin)\n Set the entity origin from a Vector, relative to the local space of the entity's parent or attachment point.\n"
+    },
+    "  SetLocalScale\n": {
+        "prefix": "  SetLocalScale\n",
+        "body": "SetLocalScale(${4:scale})",
+        "description": " void SetLocalScale(float scale) \n Set the entity scale relative to the entity's parent.\n"
+    },
+    "  SetMass\n": {
+        "prefix": "  SetMass\n",
+        "body": "SetMass(${4:flMass})",
+        "description": " void SetMass(float flMass) \n Set the mass of an entity. (does nothing if it doesn't have a physics object)\n"
+    },
+    "  SetMaxHealth\n": {
+        "prefix": "  SetMaxHealth\n",
+        "body": "SetMaxHealth(${4:maxHP})",
+        "description": " void SetMaxHealth(int maxHP) \n No Description Set\n"
+    },
+    "  SetOrigin\n": {
+        "prefix": "  SetOrigin\n",
+        "body": "SetOrigin(${4:origin})",
+        "description": " void SetOrigin(Vector origin) \n No Description Set\n"
+    },
+    "  SetOwner\n": {
+        "prefix": "  SetOwner\n",
+        "body": "SetOwner(${4:owningEntity})",
+        "description": " void SetOwner(handle owningEntity) \n Sets this entity's owner.\n"
+    },
+    "  SetParent\n": {
+        "prefix": "  SetParent\n",
+        "body": "SetParent(${4:hParent},${6:pAttachmentname})",
+        "description": " void SetParent(handle hParent, string pAttachmentname) \n Set the parent for this entity. The attachment is optional, pass an empty string to not use it.\n"
+    },
+    "  SetTeam\n": {
+        "prefix": "  SetTeam\n",
+        "body": "SetTeam(${4:team})",
+        "description": " void SetTeam(int team) \n No Description Set\n"
+    },
+    "  SetThink\n": {
+        "prefix": "  SetThink\n",
+        "body": "SetThink(${4:thinkFunction},${6:thinkName},${8:initialDelay})",
+        "description": " void SetThink(function thinkFunction, string thinkName, float initialDelay) \n Sets a thinker function to be called periodically.\n"
+    },
+    "  SetVelocity\n": {
+        "prefix": "  SetVelocity\n",
+        "body": "SetVelocity(${4:velocity})",
+        "description": " void SetVelocity(Vector velocity) \n No Description Set\n"
+    },
+    "  StopSound\n": {
+        "prefix": "  StopSound\n",
+        "body": "StopSound(${4:soundName})",
+        "description": " void StopSound(string soundName) \n Stops the named sound playing from this entity.\n"
+    },
+    "  StopThink\n": {
+        "prefix": "  StopThink\n",
+        "body": "StopThink(${4:thinkName})",
+        "description": " void StopThink (string thinkName) \n Stops the named thinker function.\n"
+    },
+    "  TakeDamage\n": {
+        "prefix": "  TakeDamage\n",
+        "body": "TakeDamage(${4:hInfo})",
+        "description": " int TakeDamage(damageinfo hInfo) \n Apply damage to this entity. Use CreateDamageInfo() to create a damageinfo object.\n"
+    },
+    "  TransformPointEntityToWorld\n": {
+        "prefix": "  TransformPointEntityToWorld\n",
+        "body": "TransformPointEntityToWorld(${4:vPoint})",
+        "description": " Vector TransformPointEntityToWorld(Vector vPoint) \n Returns the input Vector transformed from entity to world space.\nTo do:\u00c2\u00a0 May not respect entity scale\n\n"
+    },
+    "  TransformPointWorldToEntity\n": {
+        "prefix": "  TransformPointWorldToEntity\n",
+        "body": "TransformPointWorldToEntity(${4:vPoint})",
+        "description": " Vector TransformPointWorldToEntity(Vector vPoint) \n Returns the input Vector transformed from world to entity space.\nTo do:\u00c2\u00a0 May not respect entity scale\n\n"
+    },
+    "  Trigger\n": {
+        "prefix": "  Trigger\n",
+        "body": "Trigger(${4:hActivator},${6:hCaller})",
+        "description": " void Trigger(handle hActivator, handle hCaller)\n Trigger(hActivator, hCaller)\u00c2\u00a0: Triggers the logic_relay\n"
+    },
+    "  ValidatePrivateScriptScope\n": {
+        "prefix": "  ValidatePrivateScriptScope\n",
+        "body": "ValidatePrivateScriptScope()",
+        "description": " void ValidatePrivateScriptScope() \n Validates the private script scope and creates it if one doesn't exist.\n"
+    },
+    "  Activate\n": {
+        "prefix": "  Activate\n",
+        "body": "Activate(${4:activateType})",
+        "description": " void Activate(int activateType) \n  Called on Activate(), after the entity has spawned. If the entity is spawned on map load, Activate() is called after all entities have spawned. The activateType parameter contains an enumeration as documented  here.\n"
+    },
+    "  OnBreak\n": {
+        "prefix": "  OnBreak\n",
+        "body": "OnBreak()",
+        "description": " void OnBreak() \n  Called when a breakable entity is broken. To do:\u00c2\u00a0Find out what entity classes this works for?\n"
+    },
+    "  OnEntText\n": {
+        "prefix": "  OnEntText\n",
+        "body": "OnEntText()",
+        "description": " string OnEntText() \n Called every frame when ent_text is enabled on the entity. Return a string to be added to the ent_text printout.\n"
+    },
+    "  OnTakeDamage\n": {
+        "prefix": "  OnTakeDamage\n",
+        "body": "OnTakeDamage(${4:damageTable})",
+        "description": " unknown OnTakeDamage(table damageTable) \n Called when the entity takes damage. Table format: {inflictor = handle, damage_direction = Vector, damage_position = Vector, damage_force = Vector, damage = int, attacker = handle} To do:\u00c2\u00a0Check if all entity calsses can take damage\n"
+    },
+    "  Precache\n": {
+        "prefix": "  Precache\n",
+        "body": "Precache(${4:context})",
+        "description": " void Precache(CScriptPrecacheContext context) \n Called when the entity is precached. Used to precache any additional resources needed by the script using the global Precache family of script functions.\n"
+    },
+    "  Spawn\n": {
+        "prefix": "  Spawn\n",
+        "body": "Spawn(${4:spawnkeys})",
+        "description": " void Spawn(CScriptKeyValues spawnkeys) \n Called on Spawn(), just after the entity has been created, but before it has been initialized. Passes a CScriptKeyValues handle that can be used to query the entity spawn keyvalues.\n"
+    },
+    "  UpdateOnRemove\n": {
+        "prefix": "  UpdateOnRemove\n",
+        "body": "UpdateOnRemove()",
+        "description": " void UpdateOnRemove() \n Called before the entity is killed.\n"
+    },
+    "  ConnectOutput\n": {
+        "prefix": "  ConnectOutput\n",
+        "body": "ConnectOutput(${4:string_1},${6:string_2})",
+        "description": " void ConnectOutput(string string_1, string string_2) \n Adds an I/O connection that will call the named function on this entity when the specified output fires.\n Bug:\u00c2\u00a0 This doesn't appear to work in Half-Life: Alyx scripts.  Use EntFire with the action \"AddOutput\" instead.  Select the \"AddOutput\" action in Hammer I/O for description\n"
+    },
+    "  Destroy\n": {
+        "prefix": "  Destroy\n",
+        "body": "Destroy()",
+        "description": " void Destroy() \n No Description Set\n"
+    },
+    "  DisconnectOutput\n": {
+        "prefix": "  DisconnectOutput\n",
+        "body": "DisconnectOutput(${4:string_1},${6:string_2})",
+        "description": " void DisconnectOutput(string string_1, string string_2) \n Removes a connected script function from an I/O event on this entity.\n"
+    },
+    "  DisconnectRedirectedOutput\n": {
+        "prefix": "  DisconnectRedirectedOutput\n",
+        "body": "DisconnectRedirectedOutput(${4:string_1},${6:string_2},${8:handle_3})",
+        "description": " void DisconnectRedirectedOutput(string string_1, string string_2, handle handle_3) \n Removes a connected script function from an I/O event on the passed entity.\n"
+    },
+    "  entindex\n": {
+        "prefix": "  entindex\n",
+        "body": "entindex()",
+        "description": " int entindex() \n No Description Set\n"
+    },
+    "  FireOutput\n": {
+        "prefix": "  FireOutput\n",
+        "body": "FireOutput(${4:outputName},${6:activator},${8:caller},${10:args},${12:delay})",
+        "description": " void FireOutput(string outputName, handle activator, handle caller, table args, float delay) \n Fire an entity output\n"
+    },
+    "  GetClassname\n": {
+        "prefix": "  GetClassname\n",
+        "body": "GetClassname()",
+        "description": " string GetClassname() \n No Description Set\n"
+    },
+    "  GetDebugName\n": {
+        "prefix": "  GetDebugName\n",
+        "body": "GetDebugName()",
+        "description": " string GetDebugName() \n Get the entity name w/help if not defined (i.e. classname/etc)\n"
+    },
+    "  GetEntityHandle\n": {
+        "prefix": "  GetEntityHandle\n",
+        "body": "GetEntityHandle()",
+        "description": " ehandle GetEntityHandle() \n Get the entity as an EHANDLE\n"
+    },
+    "  GetEntityIndex\n": {
+        "prefix": "  GetEntityIndex\n",
+        "body": "GetEntityIndex()",
+        "description": " int GetEntityIndex() \n No Description Set\n"
+    },
+    "  GetIntAttr\n": {
+        "prefix": "  GetIntAttr\n",
+        "body": "GetIntAttr(${4:string_1})",
+        "description": " int GetIntAttr(string string_1) \n Get Integer Attribute\n"
+    },
+    "  GetName\n": {
+        "prefix": "  GetName\n",
+        "body": "GetName()",
+        "description": " string GetName() \n No Description Set\n"
+    },
+    "  GetOrCreatePrivateScriptScope\n": {
+        "prefix": "  GetOrCreatePrivateScriptScope\n",
+        "body": "GetOrCreatePrivateScriptScope()",
+        "description": " handle GetOrCreatePrivateScriptScope() \n Retrieve, creating if necessary, the private per-instance script-side data associated with an entity\n"
+    },
+    "  GetOrCreatePublicScriptScope\n": {
+        "prefix": "  GetOrCreatePublicScriptScope\n",
+        "body": "GetOrCreatePublicScriptScope()",
+        "description": " handle GetOrCreatePublicScriptScope() \n Retrieve, creating if necessary, the public script-side data associated with an entity\n"
+    },
+    "  GetPrivateScriptScope\n": {
+        "prefix": "  GetPrivateScriptScope\n",
+        "body": "GetPrivateScriptScope()",
+        "description": " handle GetPrivateScriptScope() \n Retrieve the private per-instance script-side data associated with an entity\n"
+    },
+    "  GetPublicScriptScope\n": {
+        "prefix": "  GetPublicScriptScope\n",
+        "body": "GetPublicScriptScope()",
+        "description": " handle GetPublicScriptScope() \n Retrieve the public script-side data associated with an entity\n"
+    },
+    "  RedirectOutput\n": {
+        "prefix": "  RedirectOutput\n",
+        "body": "RedirectOutput(${4:string_1},${6:string_2},${8:handle_3})",
+        "description": " void RedirectOutput(string string_1, string string_2, handle handle_3) \n Adds an I/O connection that will call the named function on the passed entity when the specified output fires.\n"
+    },
+    "  RemoveSelf\n": {
+        "prefix": "  RemoveSelf\n",
+        "body": "RemoveSelf()",
+        "description": " void RemoveSelf() \n Delete this entity\n"
+    },
+    "  SetIntAttr\n": {
+        "prefix": "  SetIntAttr\n",
+        "body": "SetIntAttr(${4:string_1},${6:int_2})",
+        "description": " void SetIntAttr(string string_1, int int_2) \n Set Integer Attribute\n"
+    },
+    "  GetMaterialGroupHash\n": {
+        "prefix": "  GetMaterialGroupHash\n",
+        "body": "GetMaterialGroupHash()",
+        "description": " unsigned GetMaterialGroupHash() \n Get the material group hash of this entity.\n"
+    },
+    "  GetMaterialGroupMask\n": {
+        "prefix": "  GetMaterialGroupMask\n",
+        "body": "GetMaterialGroupMask()",
+        "description": " <unknown> GetMaterialGroupMask() \n Get the mesh group mask of this entity.\n"
+    },
+    "  GetRenderAlpha\n": {
+        "prefix": "  GetRenderAlpha\n",
+        "body": "GetRenderAlpha()",
+        "description": " int GetRenderAlpha() \n Get the alpha modulation of this entity.\n"
+    },
+    "  GetRenderColor\n": {
+        "prefix": "  GetRenderColor\n",
+        "body": "GetRenderColor()",
+        "description": " Vector GetRenderColor() \n Get the render color of the entity.\n"
+    },
+    "  SetBodygroup\n": {
+        "prefix": "  SetBodygroup\n",
+        "body": "SetBodygroup(${4:iGroup},${6:iValue})",
+        "description": " void SetBodygroup(int iGroup, int iValue) \n Sets a bodygroup by index.\n"
+    },
+    "  SetBodygroupByName\n": {
+        "prefix": "  SetBodygroupByName\n",
+        "body": "SetBodygroupByName(${4:iGroup},${6:iValue})",
+        "description": " void SetBodygroupByName(int iGroup, int iValue) \n Sets a bodygroup by name.\n"
+    },
+    "  SetLightGroup\n": {
+        "prefix": "  SetLightGroup\n",
+        "body": "SetLightGroup(${4:pLightGroup})",
+        "description": " void SetLightGroup(string pLightGroup) \n Sets the light group of the entity.\n"
+    },
+    "  SetMaterialGroup\n": {
+        "prefix": "  SetMaterialGroup\n",
+        "body": "SetMaterialGroup(${4:utlstringtoken_1})",
+        "description": " void SetMaterialGroup(utlstringtoken utlstringtoken_1) \n No Description Set\n"
+    },
+    "  SetMaterialGroupHash\n": {
+        "prefix": "  SetMaterialGroupHash\n",
+        "body": "SetMaterialGroupHash(${4:nHash})",
+        "description": " void SetMaterialGroupHash(uint32 nHash) \n Set the material group hash of this entity.\n"
+    },
+    "  SetMaterialGroupMask\n": {
+        "prefix": "  SetMaterialGroupMask\n",
+        "body": "SetMaterialGroupMask(${4:nMeshGroupMask})",
+        "description": " void SetMaterialGroupMask(uint64 nMeshGroupMask) \n Set the mesh group mask of this entity.\n"
+    },
+    "  SetModel\n": {
+        "prefix": "  SetModel\n",
+        "body": "SetModel(${4:pModelName})",
+        "description": " void SetModel(string pModelName) \n Changes the model of the entity. Make sure the new model is precached before using.\n"
+    },
+    "  SetRenderAlpha\n": {
+        "prefix": "  SetRenderAlpha\n",
+        "body": "SetRenderAlpha(${4:nAlpha})",
+        "description": " void SetRenderAlpha(int nAlpha) \n Set the alpha modulation of this entity.\n"
+    },
+    "  SetRenderColor\n": {
+        "prefix": "  SetRenderColor\n",
+        "body": "SetRenderColor(${4:red},${6:green},${8:blue})",
+        "description": " void SetRenderColor(int red, int green, int blue) \n Sets the render color of the entity.\n"
+    },
+    "  SetRenderMode\n": {
+        "prefix": "  SetRenderMode\n",
+        "body": "SetRenderMode(${4:nMode})",
+        "description": " void SetRenderMode(int nMode) \n Sets the render mode of the entity.\n"
+    },
+    "  SetSingleMeshGroup\n": {
+        "prefix": "  SetSingleMeshGroup\n",
+        "body": "SetSingleMeshGroup(${4:pMeshGroupName})",
+        "description": " void SetSingleMeshGroup(string pMeshGroupName) \n Set a single mesh group for this entity.\n"
+    },
+    "  SetSize\n": {
+        "prefix": "  SetSize\n",
+        "body": "SetSize(${4:mins},${6:maxs})",
+        "description": " void SetSize(Vector mins, Vector maxs) \n\n"
+    },
+    "  SetSkin\n": {
+        "prefix": "  SetSkin\n",
+        "body": "SetSkin(${4:iSkin})",
+        "description": " void SetSkin(int iSkin)\n Set skin (int).\n"
+    },
+    "  AreChaperoneBoundsVisible\n": {
+        "prefix": "  AreChaperoneBoundsVisible\n",
+        "body": "AreChaperoneBoundsVisible()",
+        "description": " bool AreChaperoneBoundsVisible() \n Returns whether this player's chaperone bounds are visible.\n"
+    },
+    "  GetAnalogActionPositionForHand\n": {
+        "prefix": "  GetAnalogActionPositionForHand\n",
+        "body": "GetAnalogActionPositionForHand(${4:nLiteralHandType},${6:nAnalogAction})",
+        "description": " Vector GetAnalogActionPositionForHand(int nLiteralHandType, int nAnalogAction)\n Returns the value of the analog action for the given hand.  See  Analog Input Actions for action index values and return types.  Note: Only reports input when headset is awake.  Will still transmit input when controllers lose tracking.\n"
+    },
+    "  GetHMDAnchor\n": {
+        "prefix": "  GetHMDAnchor\n",
+        "body": "GetHMDAnchor()",
+        "description": " handle GetHMDAnchor() \n Returns the HMD anchor entity for this player if it exists.\n"
+    },
+    "  GetHMDAvatar\n": {
+        "prefix": "  GetHMDAvatar\n",
+        "body": "GetHMDAvatar()",
+        "description": " CPropHMDAvatar GetHMDAvatar() \n Returns the HMD Avatar entity for this player if it exists.\n"
+    },
+    "  GetPlayArea\n": {
+        "prefix": "  GetPlayArea\n",
+        "body": "GetPlayArea(${4:nPoint})",
+        "description": " Vector GetPlayArea(int nPoint) \n Returns the Vector position of the point you ask for. Pass 0-3 to get the four points.\n"
+    },
+    "  GetUserID\n": {
+        "prefix": "  GetUserID\n",
+        "body": "GetUserID()",
+        "description": " int GetUserID() \n Returns the player's user ID.\n"
+    },
+    "  GetVRControllerType\n": {
+        "prefix": "  GetVRControllerType\n",
+        "body": "GetVRControllerType()",
+        "description": " int GetVRControllerType() \n Returns the type of controller being used while in VR. See list at the bottom of the page for controller types.\n"
+    },
+    "  IsDigitalActionOnForHand\n": {
+        "prefix": "  IsDigitalActionOnForHand\n",
+        "body": "IsDigitalActionOnForHand(${4:nLiteralHandType},${6:nDigitalAction})",
+        "description": " bool IsDigitalActionOnForHand(int nLiteralHandType, int nDigitalAction)\n Returns true if the digital action is on for the given hand.  See  Digital Input Actions for action index values.   Note: Only reports input when headset is awake.  Will still transmit input when controllers lose tracking.\n"
+    },
+    "  IsNoclipping\n": {
+        "prefix": "  IsNoclipping\n",
+        "body": "IsNoclipping()",
+        "description": " bool IsNoclipping() \n Returns true if the player is in noclip mode.\n"
+    },
+    "  IsUsePressed\n": {
+        "prefix": "  IsUsePressed\n",
+        "body": "IsUsePressed()",
+        "description": " bool IsUsePressed() \n Returns true if the use key is pressed.\n"
+    },
+    "  IsVRControllerButtonPressed\n": {
+        "prefix": "  IsVRControllerButtonPressed\n",
+        "body": "IsVRControllerButtonPressed(${4:nButton})",
+        "description": " bool IsVRControllerButtonPressed(int nButton) \n Returns true if the controller button is pressed.  Bug:\u00c2\u00a0Non-functional for motion controller buttons in Half-Life: Alyx. Works with key bindings when VR is turned off.\n"
+    },
+    "  IsVRDashboardShowing\n": {
+        "prefix": "  IsVRDashboardShowing\n",
+        "body": "IsVRDashboardShowing()",
+        "description": " bool IsVRDashboardShowing() \n Returns true if the SteamVR dashboard is showing for this player.\n"
+    },
+    "  PlayerCounter_CanModifyValue\n": {
+        "prefix": "  PlayerCounter_CanModifyValue\n",
+        "body": "PlayerCounter_CanModifyValue(${4:name},${6:delta})",
+        "description": " bool PlayerCounter_CanModifyValue(string name, int delta) \n\n"
+    },
+    "  PlayerCounter_SetMax\n": {
+        "prefix": "  PlayerCounter_SetMax\n",
+        "body": "PlayerCounter_SetMax(${4:name},${6:max})",
+        "description": " int PlayerCounter_SetMax(string name, int max) \n\n"
+    },
+    "  PlayerCounter_ModifyValue\n": {
+        "prefix": "  PlayerCounter_ModifyValue\n",
+        "body": "PlayerCounter_ModifyValue(${4:name},${6:delta})",
+        "description": " int PlayerCounter_ModifyValue(string name, int delta) \n\n"
+    },
+    "  PlayerCounter_SetMin\n": {
+        "prefix": "  PlayerCounter_SetMin\n",
+        "body": "PlayerCounter_SetMin(${4:name},${6:min})",
+        "description": " int PlayerCounter_SetMin(string name, int min) \n\n"
+    },
+    "  PlayerCounter_SetMinMax\n": {
+        "prefix": "  PlayerCounter_SetMinMax\n",
+        "body": "PlayerCounter_SetMinMax(${4:name},${6:min},${8:max})",
+        "description": " int PlayerCounter_SetMinMax(string name, int min, int max) \n\n"
+    },
+    "  PlayerCounter_SetValue\n": {
+        "prefix": "  PlayerCounter_SetValue\n",
+        "body": "PlayerCounter_SetValue(${4:name},${6:value})",
+        "description": " int PlayerCounter_SetValue(string name, int value) \n\n"
+    },
+    "  PlayerCounter_GetValue\n": {
+        "prefix": "  PlayerCounter_GetValue\n",
+        "body": "PlayerCounter_GetValue(${4:name})",
+        "description": " int PlayerCounter_GetValue(string name) \n\n"
+    },
+    "  ActiveSequenceDuration\n": {
+        "prefix": "  ActiveSequenceDuration\n",
+        "body": "ActiveSequenceDuration()",
+        "description": " float ActiveSequenceDuration() \n Returns the duration in seconds of the active sequence.\n"
+    },
+    "  GetAttachmentAngles\n": {
+        "prefix": "  GetAttachmentAngles\n",
+        "body": "GetAttachmentAngles(${4:iAttachment})",
+        "description": " Vector GetAttachmentAngles(int iAttachment) \n Get the attachment id's angles as a p,y,r vector\n"
+    },
+    "  GetAttachmentForward\n": {
+        "prefix": "  GetAttachmentForward\n",
+        "body": "GetAttachmentForward(${4:iAttachment})",
+        "description": " Vector GetAttachmentForward(int iAttachment) \n Get the attachment id's forward vector.\n"
+    },
+    "  GetAttachmentOrigin\n": {
+        "prefix": "  GetAttachmentOrigin\n",
+        "body": "GetAttachmentOrigin(${4:iAttachment})",
+        "description": " Vector GetAttachmentOrigin(int iAttachment) \n Get the attachment id's origin vector\n"
+    },
+    "  GetCycle\n": {
+        "prefix": "  GetCycle\n",
+        "body": "GetCycle()",
+        "description": " float GetCycle() \n Get the cycle of the animation.\n"
+    },
+    "  GetGraphParameter\n": {
+        "prefix": "  GetGraphParameter\n",
+        "body": "GetGraphParameter(${4:pszParam})",
+        "description": " table GetGraphParameter(string pszParam) \n Get the value of the given animGraph parameter.\n"
+    },
+    "  GetModelScale\n": {
+        "prefix": "  GetModelScale\n",
+        "body": "GetModelScale()",
+        "description": " float GetModelScale() \n Get scale of entity's model.\n"
+    },
+    "  GetSequence\n": {
+        "prefix": "  GetSequence\n",
+        "body": "GetSequence()",
+        "description": " <unknown> GetSequence() \n Returns the active sequence\n"
+    },
+    "  IsSequenceFinished\n": {
+        "prefix": "  IsSequenceFinished\n",
+        "body": "IsSequenceFinished()",
+        "description": " bool IsSequenceFinished() \n Ask whether the main sequence is done playing\n"
+    },
+    "  RegisterAnimTagListener\n": {
+        "prefix": "  RegisterAnimTagListener\n",
+        "body": "RegisterAnimTagListener(${4:hAnimTagListenerFunc})",
+        "description": " void RegisterAnimTagListener(handle hAnimTagListenerFunc) \n Registers a listener for string AnimTags, replaces existing script listener if any.\n"
+    },
+    "  ResetSequence\n": {
+        "prefix": "  ResetSequence\n",
+        "body": "ResetSequence(${4:pSequenceName})",
+        "description": " void ResetSequence(string pSequenceName) \n Sets the active sequence by name, resetting the current cycle\n"
+    },
+    "  ScriptLookupAttachment\n": {
+        "prefix": "  ScriptLookupAttachment\n",
+        "body": "ScriptLookupAttachment(${4:pAttachmentName})",
+        "description": " int ScriptLookupAttachment(string pAttachmentName) \n Get the named attachment id\n"
+    },
+    "  SequenceDuration\n": {
+        "prefix": "  SequenceDuration\n",
+        "body": "SequenceDuration(${4:string_1})",
+        "description": " float SequenceDuration(string string_1) \n Returns the duration in seconds of the specified sequence\n"
+    },
+    "  SetGraphLookTarget\n": {
+        "prefix": "  SetGraphLookTarget\n",
+        "body": "SetGraphLookTarget(${4:vValue})",
+        "description": " void SetGraphLookTarget(Vector vValue) \n Pass the desired look target in world space to the graph.\n"
+    },
+    "  SetGraphParameter\n": {
+        "prefix": "  SetGraphParameter\n",
+        "body": "SetGraphParameter(${4:pszParam},${6:svArg})",
+        "description": " void SetGraphParameter(string pszParam, table svArg) \n Set the specific param value, type is inferred from the type in script.\n"
+    },
+    "  SetGraphParameterBool\n": {
+        "prefix": "  SetGraphParameterBool\n",
+        "body": "SetGraphParameterBool(${4:szName},${6:bValue})",
+        "description": " void SetGraphParameterBool(string szName, bool bValue) \n Set the specific boolean parameter on or off.\n"
+    },
+    "  SetGraphParameterEnum\n": {
+        "prefix": "  SetGraphParameterEnum\n",
+        "body": "SetGraphParameterEnum(${4:szName},${6:nValue})",
+        "description": " void SetGraphParameterEnum(string szName, int nValue) \n Pass the enum (int) value to the specified param.\n"
+    },
+    "  SetGraphParameterFloat\n": {
+        "prefix": "  SetGraphParameterFloat\n",
+        "body": "SetGraphParameterFloat(${4:szName},${6:flValue})",
+        "description": " void SetGraphParameterFloat(string szName, float flValue) \n Pass the float value to the specified parameter.\n"
+    },
+    "  SetGraphParameterInt\n": {
+        "prefix": "  SetGraphParameterInt\n",
+        "body": "SetGraphParameterInt(${4:szName},${6:nValue})",
+        "description": " void SetGraphParameterInt(string szName, int nValue) \n Pass the int value to the specified param.\n"
+    },
+    "  SetGraphParameterVector\n": {
+        "prefix": "  SetGraphParameterVector\n",
+        "body": "SetGraphParameterVector(${4:szName},${6:vValue})",
+        "description": " void SetGraphParameterVector(string szName, Vector vValue) \n Pass the vector value to the specified param in the graph.\n"
+    },
+    "  SetModelScale\n": {
+        "prefix": "  SetModelScale\n",
+        "body": "SetModelScale(${4:scale})",
+        "description": " void SetModelScale(float scale) \n Sets the model's scale to scale, so if a unit had its model scale at 1, and you use SetModelScale(10.0), it would set the scale to 10.0.\n"
+    },
+    "  SetPoseParameter\n": {
+        "prefix": "  SetPoseParameter\n",
+        "body": "SetPoseParameter(${4:szName},${6:fValue})",
+        "description": " float SetPoseParameter(string szName, float fValue) \n Set the specified pose parameter to the specified value.\n"
+    },
+    "  SetSequence\n": {
+        "prefix": "  SetSequence\n",
+        "body": "SetSequence(${4:pSequenceName})",
+        "description": " void SetSequence(string pSequenceName) \n Sets the active sequence by name, keeping the current cycle.\n"
+    },
+    "  StopAnimation\n": {
+        "prefix": "  StopAnimation\n",
+        "body": "StopAnimation()",
+        "description": " void StopAnimation() \n Stop the current animation by setting playback rate to 0.0.\n"
+    },
+    "  UnregisterAnimTagListener\n": {
+        "prefix": "  UnregisterAnimTagListener\n",
+        "body": "UnregisterAnimTagListener(${4:hScript})",
+        "description": " void UnregisterAnimTagListener(table hScript) \n Unregisters the current string AnimTag listener, if any\n"
+    },
+    "  FindFlexController\n": {
+        "prefix": "  FindFlexController\n",
+        "body": "FindFlexController(${4:pszFlexControllerName})",
+        "description": " int FindFlexController(string pszFlexControllerName) \n Finds a flex controller by name, returns the index, -1 if not found\n"
+    },
+    "  GetCurrentScene\n": {
+        "prefix": "  GetCurrentScene\n",
+        "body": "GetCurrentScene()",
+        "description": " handle GetCurrentScene() \n Returns the instance of the oldest active scene entity (if any).\n"
+    },
+    "  GetFlexWeight\n": {
+        "prefix": "  GetFlexWeight\n",
+        "body": "GetFlexWeight(${4:nFlexControllerIndex})",
+        "description": " float GetFlexWeight(int nFlexControllerIndex) \n Gets the weight of a flex controller specified by index, use FindFlexController to get the index of a flex controller by name.\n"
+    },
+    "  GetSceneByIndex\n": {
+        "prefix": "  GetSceneByIndex\n",
+        "body": "GetSceneByIndex(${4:index})",
+        "description": " handle GetSceneByIndex(int index) \n Returns the instance of the scene entity at the specified index.\n"
+    },
+    "  ScriptPlayScene\n": {
+        "prefix": "  ScriptPlayScene\n",
+        "body": "ScriptPlayScene(${4:pszSceneFile},${6:flDelay})",
+        "description": " float ScriptPlayScene(string pszSceneFile, float flDelay) \n Play the specified .vcd file.\n"
+    },
+    "  SetFlexWeight\n": {
+        "prefix": "  SetFlexWeight\n",
+        "body": "SetFlexWeight(${4:nFlexControllerIndex},${6:flWeight})",
+        "description": " void SetFlexWeight(int nFlexControllerIndex, float flWeight) \n Sets the weight of a flex controller specified by index, use FindFlexController to get the index of a flex controller by name.\n"
+    },
+    "  GetEquippedWeapons\n": {
+        "prefix": "  GetEquippedWeapons\n",
+        "body": "GetEquippedWeapons()",
+        "description": " table GetEquippedWeapons() \n Returns an array of all the equipped weapons\n"
+    },
+    "  GetFaction\n": {
+        "prefix": "  GetFaction\n",
+        "body": "GetFaction()",
+        "description": " int GetFaction() \n Get the combat character faction.\n"
+    },
+    "  GetWeaponCount\n": {
+        "prefix": "  GetWeaponCount\n",
+        "body": "GetWeaponCount()",
+        "description": " int GetWeaponCount() \n Gets the number of weapons currently equipped\n"
+    },
+    "  ShootPosition\n": {
+        "prefix": "  ShootPosition\n",
+        "body": "ShootPosition(${4:nHand})",
+        "description": " Vector ShootPosition(int nHand) \n Returns the shoot position eyes (or hand in VR).\n"
+    },
+    "  AddImpulseAtPosition\n": {
+        "prefix": "  AddImpulseAtPosition\n",
+        "body": "AddImpulseAtPosition(${4:Vector_1},${6:Vector_2})",
+        "description": " void AddImpulseAtPosition(Vector Vector_1, Vector Vector_2) \n Apply an impulse at a worldspace position to the physics\n"
+    },
+    "  AddVelocity\n": {
+        "prefix": "  AddVelocity\n",
+        "body": "AddVelocity(${4:Vector_1},${6:Vector_2})",
+        "description": " void AddVelocity(Vector Vector_1, Vector Vector_2) \n Add linear and angular velocity to the physics object\n"
+    },
+    "  DetachFromParent\n": {
+        "prefix": "  DetachFromParent\n",
+        "body": "DetachFromParent()",
+        "description": " void DetachFromParent() \n Detach from its parent\n"
+    },
+    "  IsAttachedToParent\n": {
+        "prefix": "  IsAttachedToParent\n",
+        "body": "IsAttachedToParent()",
+        "description": " bool IsAttachedToParent() \n Is attached to parent\n"
+    },
+    "  LookupSequence\n": {
+        "prefix": "  LookupSequence\n",
+        "body": "LookupSequence(${4:string_1})",
+        "description": " <unknown> LookupSequence(string string_1) \n Returns a sequence id given a name\n"
+    },
+    "  SetAnimation\n": {
+        "prefix": "  SetAnimation\n",
+        "body": "SetAnimation(${4:string_1})",
+        "description": " void SetAnimation(string string_1) \n Pass string for the animation to play on this model\n"
+    },
+    "  SetBodyGroup\n": {
+        "prefix": "  SetBodyGroup\n",
+        "body": "SetBodyGroup(${4:string_1})",
+        "description": " void SetBodyGroup(string string_1) \n No Description Set\n"
+    },
+    "  CreateByClassname\n": {
+        "prefix": "  CreateByClassname\n",
+        "body": "CreateByClassname(${4:className})",
+        "description": " handle CreateByClassname(string className) \n Creates an entity by class name.  Warning:\u00c2\u00a0This does not initialize the created entity. Use the Spawn prefixed global functions instead.\n"
+    },
+    "  FindAllByClassname\n": {
+        "prefix": "  FindAllByClassname\n",
+        "body": "FindAllByClassname(${4:className})",
+        "description": " table FindAllByClassname(string className) \n Finds all entities by class name. Returns an array containing all the found entities.\n"
+    },
+    "  FindAllByClassnameWithin\n": {
+        "prefix": "  FindAllByClassnameWithin\n",
+        "body": "FindAllByClassnameWithin(${4:className},${6:origin},${8:maxRadius})",
+        "description": " table FindAllByClassnameWithin(string className, Vector origin, float maxRadius) \n Find entities by class name within a radius. Returns an array containing all the found entities.\n"
+    },
+    "  FindAllByModel\n": {
+        "prefix": "  FindAllByModel\n",
+        "body": "FindAllByModel(${4:modelName})",
+        "description": " table FindAllByModel(string modelName) \n Find entities by model name. Returns an array containing all the found entities.\n"
+    },
+    "  FindAllByName\n": {
+        "prefix": "  FindAllByName\n",
+        "body": "FindAllByName(${4:name})",
+        "description": " table FindAllByName(string name) \n Find all entities by name. Returns an array containing all the found entities in it.\n"
+    },
+    "  FindAllByNameWithin\n": {
+        "prefix": "  FindAllByNameWithin\n",
+        "body": "FindAllByNameWithin(${4:name},${6:origin},${8:maxRadius})",
+        "description": " table FindAllByNameWithin(string name, Vector origin, float maxRadius) \n Find all entities by name within a radius. Returns an array containing all the found entities.\n"
+    },
+    "  FindAllByTarget\n": {
+        "prefix": "  FindAllByTarget\n",
+        "body": "FindAllByTarget(${4:targetName})",
+        "description": " table FindAllByTarget(string targetName) \n Find all entities with this target set. Returns an array containing all the found entities.\n"
+    },
+    "  FindAllInSphere\n": {
+        "prefix": "  FindAllInSphere\n",
+        "body": "FindAllInSphere(${4:origin},${6:maxRadius})",
+        "description": " table FindAllInSphere(Vector origin, float maxRadius) \n Find all entities within a radius. Returns an array containing all the found entities.\n"
+    },
+    "  FindByClassname\n": {
+        "prefix": "  FindByClassname\n",
+        "body": "FindByClassname(${4:startFrom},${6:className})",
+        "description": " handle FindByClassname(handle startFrom, string className) \n Find entities by class name. Pass nil to start an iteration, or reference to a previously found entity to continue a search.\n"
+    },
+    "  FindByClassnameNearest\n": {
+        "prefix": "  FindByClassnameNearest\n",
+        "body": "FindByClassnameNearest(${4:className},${6:origin},${8:maxRadius})",
+        "description": " handle FindByClassnameNearest(string className, Vector origin, float maxRadius) \n Find entities by class name nearest to a point.\n"
+    },
+    "  FindByClassnameWithin\n": {
+        "prefix": "  FindByClassnameWithin\n",
+        "body": "FindByClassnameWithin(${4:startFrom},${6:className},${8:origin},${10:maxRadius})",
+        "description": " handle FindByClassnameWithin(handle startFrom, string className, Vector origin, float maxRadius) \n Find entities by class name within a radius. Pass nil to start an iteration, or reference to a previously found entity to continue a search\n"
+    },
+    "  FindByModel\n": {
+        "prefix": "  FindByModel\n",
+        "body": "FindByModel(${4:startFrom},${6:modelName})",
+        "description": " handle FindByModel(handle startFrom, string modelName) \n Find entities by model name. Pass nil to start an iteration, or reference to a previously found entity to continue a search\n"
+    },
+    "  FindByModelWithin\n": {
+        "prefix": "  FindByModelWithin\n",
+        "body": "FindByModelWithin(${4:startFrom},${6:modelName},${8:origin},${10:maxRadius})",
+        "description": " handle FindByModelWithin(handle startFrom, string modelName, Vector origin, float maxRadius) \n Find entities by model name within a radius. Pass nil to start an iteration, or reference to a previously found entity to continue a search\n"
+    },
+    "  FindByName\n": {
+        "prefix": "  FindByName\n",
+        "body": "FindByName(${4:lastEnt},${6:searchString})",
+        "description": " handle FindByName(handle lastEnt, string searchString) \n Find entities by name. Pass nil to start an iteration, or reference to a previously found entity to continue a search\n"
+    },
+    "  FindByNameNearest\n": {
+        "prefix": "  FindByNameNearest\n",
+        "body": "FindByNameNearest(${4:name},${6:origin},${8:maxRadius})",
+        "description": " handle FindByNameNearest(string name, Vector origin, float maxRadius) \n Find entities by name nearest to a point.\n"
+    },
+    "  FindByNameWithin\n": {
+        "prefix": "  FindByNameWithin\n",
+        "body": "FindByNameWithin(${4:startFrom},${6:name},${8:origin},${10:maxRadius})",
+        "description": " handle FindByNameWithin(handle startFrom, string name, Vector origin, float maxRadius) \n Find entities by name within a radius. Pass nil to start an iteration, or reference to a previously found entity to continue a search\n"
+    },
+    "  FindByTarget\n": {
+        "prefix": "  FindByTarget\n",
+        "body": "FindByTarget(${4:startFrom},${6:targetName})",
+        "description": " handle FindByTarget(handle startFrom, string targetName) \n Find entities by targetname. Pass nil to start an iteration, or reference to a previously found entity to continue a search\n"
+    },
+    "  FindInSphere\n": {
+        "prefix": "  FindInSphere\n",
+        "body": "FindInSphere(${4:startFrom},${6:origin},${8:maxRadius})",
+        "description": " handle FindInSphere(handle startFrom, Vector origin, float maxRadius) \n Find entities within a radius. Pass nil to start an iteration, or reference to a previously found entity to continue a search\n"
+    },
+    "  First\n": {
+        "prefix": "  First\n",
+        "body": "First()",
+        "description": " handle First() \n Begin an iteration over the list of entities\n"
+    },
+    "  GetLocalPlayer\n": {
+        "prefix": "  GetLocalPlayer\n",
+        "body": "GetLocalPlayer()",
+        "description": " handle GetLocalPlayer() \n Get the local player.\n"
+    },
+    "  Next\n": {
+        "prefix": "  Next\n",
+        "body": "Next(${4:startFrom})",
+        "description": " handle Next(handle startFrom) \n Continue an iteration over the list of entities, providing reference to a previously found entity\n"
+    },
+    "  GetSquad\n": {
+        "prefix": "  GetSquad\n",
+        "body": "GetSquad()",
+        "description": " handle GetSquad() \n Get the squad to which this NPC belongs.\n"
+    },
+    "  NpcForceGoPosition\n": {
+        "prefix": "  NpcForceGoPosition\n",
+        "body": "NpcForceGoPosition(${4:vPos},${6:bRun},${8:flSuccessTolerance})",
+        "description": " void NpcForceGoPosition(Vector vPos, bool bRun, float flSuccessTolerance)\n Set a position goal and start moving.\n"
+    },
+    "  NpcNavClearGoal\n": {
+        "prefix": "  NpcNavClearGoal\n",
+        "body": "NpcNavClearGoal()",
+        "description": " void NpcNavClearGoal()\n Removes the NPC's current goal.\n"
+    },
+    "  NpcNavGetGoalPosition\n": {
+        "prefix": "  NpcNavGetGoalPosition\n",
+        "body": "NpcNavGetGoalPosition()",
+        "description": " Vector NpcNavGetGoalPosition()\n Get the position of the current goal.\n"
+    },
+    "  NpcNavGoalActive\n": {
+        "prefix": "  NpcNavGoalActive\n",
+        "body": "NpcNavGoalActive()",
+        "description": " bool NpcNavGoalActive()\n Returns true if NPC has a goal and path\n"
+    },
+    "  Disable\n": {
+        "prefix": "  Disable\n",
+        "body": "Disable()",
+        "description": " void Disable() \n Disable the trigger\n"
+    },
+    "  Enable\n": {
+        "prefix": "  Enable\n",
+        "body": "Enable()",
+        "description": " void Enable() \n Enable the trigger\n"
+    },
+    "  IsTouching\n": {
+        "prefix": "  IsTouching\n",
+        "body": "IsTouching(${4:hEnt})",
+        "description": " bool IsTouching(handle hEnt) \n Checks whether the passed entity is touching the trigger.\n"
+    },
+    "  GetFloat\n": {
+        "prefix": "  GetFloat\n",
+        "body": "GetFloat(${4:name})",
+        "description": " table GetFloat(string name) \n GetFloat(name)\u00c2\u00a0: returns the convar as a float. May return nil if no such convar.\n"
+    },
+    "  GetVector\n": {
+        "prefix": "  GetVector\n",
+        "body": "GetVector(${4:unknown},${6:unknown})",
+        "description": " Vector GetVector(utilstringtoken unknown, Vector unknown) \n Lookup dynamic time-of-day vector value.\n"
+    },
+    "  SpawnEntity\n": {
+        "prefix": "  SpawnEntity\n",
+        "body": "SpawnEntity()",
+        "description": " void SpawnEntity() \n Create an entity at the location of the maker\n"
+    },
+    "  SpawnEntityAtEntityOrigin\n": {
+        "prefix": "  SpawnEntityAtEntityOrigin\n",
+        "body": "SpawnEntityAtEntityOrigin(${4:hEntity})",
+        "description": " void SpawnEntityAtEntityOrigin(handle hEntity) \n Create an entity at the location of a specified entity instance\n"
+    },
+    "  SpawnEntityAtLocation\n": {
+        "prefix": "  SpawnEntityAtLocation\n",
+        "body": "SpawnEntityAtLocation(${4:vecAlternateOrigin},${6:vecAlternateAngles})",
+        "description": " void SpawnEntityAtLocation(Vector vecAlternateOrigin, Vector vecAlternateAngles) \n Create an entity at a specified location and orientaton, orientation is Euler angle in degrees (pitch, yaw, roll)\n"
+    },
+    "  SpawnEntityAtNamedEntityOrigin\n": {
+        "prefix": "  SpawnEntityAtNamedEntityOrigin\n",
+        "body": "SpawnEntityAtNamedEntityOrigin(${4:pszName})",
+        "description": " void SpawnEntityAtNamedEntityOrigin(string pszName) \n Create an entity at the location of a named entity\n"
+    },
+    "  CreateEntity\n": {
+        "prefix": "  CreateEntity\n",
+        "body": "CreateEntity(${4:className},${6:instance})",
+        "description": " void CreateEntity(string className, handle instance) \n\n"
+    },
+    "  DispatchActivate\n": {
+        "prefix": "  DispatchActivate\n",
+        "body": "DispatchActivate(${4:entity})",
+        "description": " bool DispatchActivate(handle entity) \n\n"
+    },
+    "  DispatchInput\n": {
+        "prefix": "  DispatchInput\n",
+        "body": "DispatchInput(${4:inputName},${6:targetunknown})",
+        "description": " bool DispatchInput(string inputName, table target,unknown args) \n\n"
+    },
+    "  DispatchPrecache\n": {
+        "prefix": "  DispatchPrecache\n",
+        "body": "DispatchPrecache(${4:entity},${6:context})",
+        "description": " void DispatchPrecache(handle entity, CScriptPrecacheContext context) \n\n"
+    },
+    "  DispatchSpawn\n": {
+        "prefix": "  DispatchSpawn\n",
+        "body": "DispatchSpawn(${4:entity})",
+        "description": " void DispatchSpawn(handle entity, CScriptKeyValuesspawnkeys) \n\n"
+    },
+    "  DispatchUpdateOnRemove\n": {
+        "prefix": "  DispatchUpdateOnRemove\n",
+        "body": "DispatchUpdateOnRemove(${4:entity})",
+        "description": " bool DispatchUpdateOnRemove(handle entity) \n\n"
+    },
+    "  GetClassNameOverride\n": {
+        "prefix": "  GetClassNameOverride\n",
+        "body": "GetClassNameOverride(${4:className})",
+        "description": " string GetClassNameOverride(string className) \n\n"
+    },
+    "  GetDesignerNameForScriptClass\n": {
+        "prefix": "  GetDesignerNameForScriptClass\n",
+        "body": "GetDesignerNameForScriptClass(${4:classNamehandle})",
+        "description": " string GetDesignerNameForScriptClass(string className,handle instance) \n\n"
+    },
+    "  GetInputsForScriptClass\n": {
+        "prefix": "  GetInputsForScriptClass\n",
+        "body": "GetInputsForScriptClass(${4:scriptClassName})",
+        "description": " table GetInputsForScriptClass(string scriptClassName) \n\n"
+    },
+    "  GetNativeClassForScriptClass\n": {
+        "prefix": "  GetNativeClassForScriptClass\n",
+        "body": "GetNativeClassForScriptClass(${4:scriptClassName})",
+        "description": " string GetNativeClassForScriptClass(string scriptClassName) \n\n"
+    },
+    "  GetNativeOutputsForClass\n": {
+        "prefix": "  GetNativeOutputsForClass\n",
+        "body": "GetNativeOutputsForClass(${4:scriptClassName})",
+        "description": " CNativeOutputs GetNativeOutputsForClass(string scriptClassName) \n\n"
+    },
+    "  GetScriptClassForDesignerName\n": {
+        "prefix": "  GetScriptClassForDesignerName\n",
+        "body": "GetScriptClassForDesignerName(${4:designerName})",
+        "description": " string GetScriptClassForDesignerName(string designerName) \n\n"
+    },
+    "  InstallClasses\n": {
+        "prefix": "  InstallClasses\n",
+        "body": "InstallClasses()",
+        "description": " void InstallClasses() \n\n"
+    },
+    "  HideWorldLayer\n": {
+        "prefix": "  HideWorldLayer\n",
+        "body": "HideWorldLayer()",
+        "description": " void HideWorldLayer() \n Hides this layer.\n"
+    },
+    "  ShowWorldLayer\n": {
+        "prefix": "  ShowWorldLayer\n",
+        "body": "ShowWorldLayer()",
+        "description": " void ShowWorldLayer() \n Shows this layer.\n"
+    },
+    "  HasTag\n": {
+        "prefix": "  HasTag\n",
+        "body": "HasTag(${4:pszTagName})",
+        "description": " bool HasTag(string pszTagName) \n Does this volume have the given tag.\n"
+    },
+    "  AddResource\n": {
+        "prefix": "  AddResource\n",
+        "body": "AddResource(${4:string_1})",
+        "description": " void AddResource(string string_1) \n Precaches a specific resource\n"
+    },
+    "  GetValue\n": {
+        "prefix": "  GetValue\n",
+        "body": "GetValue(${4:key})",
+        "description": " variable GetValue(string key) \n Reads a spawn key.\n"
+    },
+    "  constructor \n": {
+        "prefix": "  constructor \n",
+        "body": "((${2:float},${4:float},${6:float})",
+        "description": " Vector(float x, float y, float z) \n Creates a new vector with the specified Cartesian coordinates.\n"
+    },
+    "  AddOutput\n": {
+        "prefix": "  AddOutput\n",
+        "body": "AddOutput(${4:outputName},${6:description})",
+        "description": " void AddOutput(string outputName, string description) \n Add an output.\n"
+    },
+    "  Init\n": {
+        "prefix": "  Init\n",
+        "body": "Init(${4:numOutputs})",
+        "description": " void Init(int numOutputs) \n Initialize with specified number of outputs.\n"
+    },
+    "  SetFarRange\n": {
+        "prefix": "  SetFarRange\n",
+        "body": "SetFarRange(${4:flRange})",
+        "description": " void SetFarRange(float flRange) \n Set light maximum range\n"
+    },
+    "  SetLinearAttenuation\n": {
+        "prefix": "  SetLinearAttenuation\n",
+        "body": "SetLinearAttenuation(${4:flAtten})",
+        "description": " void SetLinearAttenuation(float flAtten) \n Set light linear attenuation value\n"
+    },
+    "  SetNearRange\n": {
+        "prefix": "  SetNearRange\n",
+        "body": "SetNearRange(${4:flRange})",
+        "description": " void SetNearRange(float flRange) \n Set light minimum range\n"
+    },
+    "  SetQuadraticAttenuation\n": {
+        "prefix": "  SetQuadraticAttenuation\n",
+        "body": "SetQuadraticAttenuation(${4:flAtten})",
+        "description": " void SetQuadraticAttenuation(float flAtten) \n Set light quadratic attenuation value\n"
+    },
+    "  SetVolumetrics\n": {
+        "prefix": "  SetVolumetrics\n",
+        "body": "SetVolumetrics(${4:bOn},${6:flIntensity},${8:flNoise},${10:nPlanes},${12:flPlaneOffset})",
+        "description": " void SetVolumetrics(bool bOn, float flIntensity, float flNoise, int nPlanes, float flPlaneOffset) \n Turn on/off light volumetrics: bool bOn, float flIntensity, float flNoise, int nPlanes, float flPlaneOffset\n"
+    },
+    "  QueryColor\n": {
+        "prefix": "  QueryColor\n",
+        "body": "QueryColor(${4:tok},${6:vDefault})",
+        "description": " Vector QueryColor(utlstringtoken tok, Vector vDefault) \n Query color data for this key\n"
+    },
+    "  QueryFloat\n": {
+        "prefix": "  QueryFloat\n",
+        "body": "QueryFloat(${4:tok},${6:flDefault})",
+        "description": " float QueryFloat(utlstringtoken tok, float flDefault) \n Query float data for this key\n"
+    },
+    "  QueryInt\n": {
+        "prefix": "  QueryInt\n",
+        "body": "QueryInt(${4:tok},${6:nDefault})",
+        "description": " int QueryInt(utlstringtoken tok, int nDefault) \n Query int data for this key\n"
+    },
+    "  QueryNumber\n": {
+        "prefix": "  QueryNumber\n",
+        "body": "QueryNumber(${4:tok},${6:flDefault})",
+        "description": " float QueryNumber(utlstringtoken tok, float flDefault) \n Query number data for this key\n"
+    },
+    "  QueryString\n": {
+        "prefix": "  QueryString\n",
+        "body": "QueryString(${4:tok},${6:pDefault})",
+        "description": " string QueryString(utlstringtoken tok, string pDefault) \n Query string data for this key\n"
+    },
+    "  QueryVector\n": {
+        "prefix": "  QueryVector\n",
+        "body": "QueryVector(${4:tok},${6:vDefault})",
+        "description": " Vector QueryVector(utlstringtoken tok, Vector vDefault) \n Query vector data for this key\n"
+    },
+    "  SetDynamicVsDynamicContinuous\n": {
+        "prefix": "  SetDynamicVsDynamicContinuous\n",
+        "body": "SetDynamicVsDynamicContinuous(${4:bIsDynamicVsDynamicContinuousEnabled})",
+        "description": " void SetDynamicVsDynamicContinuous(bool bIsDynamicVsDynamicContinuousEnabled)\n Enable/disable dynamic vs dynamic continuous collision traces.\n"
+    },
+    "  DisableMotion\n": {
+        "prefix": "  DisableMotion\n",
+        "body": "DisableMotion()",
+        "description": " void DisableMotion() \n Enable motion for the prop.\n"
+    },
+    "  EnableMotion\n": {
+        "prefix": "  EnableMotion\n",
+        "body": "EnableMotion()",
+        "description": " void EnableMotion() \n Enable motion for the prop.\n"
+    },
+    "  Axis\n": {
+        "prefix": "  Axis\n",
+        "body": "Axis(${4:Vector_1},${6:Quaternion_2},${8:float_3},${10:bool_4},${12:float_5})",
+        "description": " void Axis(Vector Vector_1, Quaternion Quaternion_2, float float_3, bool bool_4, float float_5) \n Draws an axis. Specify origin + orientation in world space.\n"
+    },
+    "  Box\n": {
+        "prefix": "  Box\n",
+        "body": "Box(${4:Vector_1},${6:Vector_2},${8:int_3},${10:int_4},${12:int_5},${14:int_6},${16:bool_7},${18:float_8})",
+        "description": " void Box(Vector Vector_1, Vector Vector_2, int int_3, int int_4, int int_5, int int_6, bool bool_7, float float_8) \n Draws a world-space axis-aligned box. Specify bounds in world space.\n"
+    },
+    "  BoxAngles\n": {
+        "prefix": "  BoxAngles\n",
+        "body": "BoxAngles(${4:Vector_1},${6:Vector_2},${8:Vector_3},${10:Quaternion_4},${12:int_5},${14:int_6},${16:int_7},${18:int_8},${20:bool_9},${22:float_10})",
+        "description": " void BoxAngles(Vector Vector_1, Vector Vector_2, Vector Vector_3, Quaternion Quaternion_4, int int_5, int int_6, int int_7, int int_8, bool bool_9, float float_10) \n Draws an oriented box at the origin. Specify bounds in local space.\n"
+    },
+    "  Capsule\n": {
+        "prefix": "  Capsule\n",
+        "body": "Capsule(${4:Vector_1},${6:Quaternion_2},${8:float_3},${10:float_4},${12:int_5},${14:int_6},${16:int_7},${18:int_8},${20:bool_9},${22:float_10})",
+        "description": " void Capsule(Vector Vector_1, Quaternion Quaternion_2, float float_3, float float_4, int int_5, int int_6, int int_7, int int_8, bool bool_9, float float_10) \n Draws a capsule. Specify base in world space.\n"
+    },
+    "  Circle\n": {
+        "prefix": "  Circle\n",
+        "body": "Circle(${4:Vector_1},${6:Quaternion_2},${8:float_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:bool_8},${20:float_9})",
+        "description": " void Circle(Vector Vector_1, Quaternion Quaternion_2, float float_3, int int_4, int int_5, int int_6, int int_7, bool bool_8, float float_9) \n Draws a circle. Specify center in world space.\n"
+    },
+    "  CircleScreenOriented\n": {
+        "prefix": "  CircleScreenOriented\n",
+        "body": "CircleScreenOriented(${4:Vector_1},${6:float_2},${8:int_3},${10:int_4},${12:int_5},${14:int_6},${16:bool_7},${18:float_8})",
+        "description": " void CircleScreenOriented(Vector Vector_1, float float_2, int int_3, int int_4, int int_5, int int_6, bool bool_7, float float_8) \n Draws a circle oriented to the screen. Specify center in world space.\n"
+    },
+    "  Cone\n": {
+        "prefix": "  Cone\n",
+        "body": "Cone(${4:Vector_1},${6:Vector_2},${8:float_3},${10:float_4},${12:int_5},${14:int_6},${16:int_7},${18:int_8},${20:bool_9},${22:float_10})",
+        "description": " void Cone(Vector Vector_1, Vector Vector_2, float float_3, float float_4, int int_5, int int_6, int int_7, int int_8, bool bool_9, float float_10) \n Draws a wireframe cone. Specify endpoint and direction in world space.\n"
+    },
+    "  Cross\n": {
+        "prefix": "  Cross\n",
+        "body": "Cross(${4:a},${6:b})",
+        "description": " Vector Cross(Vector a, Vector b) \n Cross product of two vectors.\n"
+    },
+    "  Cross3D\n": {
+        "prefix": "  Cross3D\n",
+        "body": "Cross3D(${4:Vector_1},${6:float_2},${8:int_3},${10:int_4},${12:int_5},${14:int_6},${16:bool_7},${18:float_8})",
+        "description": " void Cross3D(Vector Vector_1, float float_2, int int_3, int int_4, int int_5, int int_6, bool bool_7, float float_8) \n Draws a world-aligned cross. Specify origin in world space.\n"
+    },
+    "  Cross3DOriented\n": {
+        "prefix": "  Cross3DOriented\n",
+        "body": "Cross3DOriented(${4:Vector_1},${6:Quaternion_2},${8:float_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:bool_8},${20:float_9})",
+        "description": " void Cross3DOriented(Vector Vector_1, Quaternion Quaternion_2, float float_3, int int_4, int int_5, int int_6, int int_7, bool bool_8, float float_9) \n Draws an oriented cross. Specify origin in world space.\n"
+    },
+    "  DrawTickMarkedLine\n": {
+        "prefix": "  DrawTickMarkedLine\n",
+        "body": "DrawTickMarkedLine(${4:Vector_1},${6:Vector_2},${8:float_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:int_8},${20:bool_9},${22:float_10})",
+        "description": " void DrawTickMarkedLine(Vector Vector_1, Vector Vector_2, float float_3, int int_4, int int_5, int int_6, int int_7, int int_8, bool bool_9, float float_10) \n Draws a dashed line. Specify endpoint's in world space.\n"
+    },
+    "  EntityAttachments\n": {
+        "prefix": "  EntityAttachments\n",
+        "body": "EntityAttachments(${4:ehandle_1},${6:float_2},${8:float_3})",
+        "description": " void EntityAttachments(ehandle ehandle_1, float float_2, float float_3) \n Draws the attachments of the entity\n"
+    },
+    "  EntityAxis\n": {
+        "prefix": "  EntityAxis\n",
+        "body": "EntityAxis(${4:ehandle_1},${6:float_2},${8:bool_3},${10:float_4})",
+        "description": " void EntityAxis(ehandle ehandle_1, float float_2, bool bool_3, float float_4) \n Draws the axis of the entity origin\n"
+    },
+    "  EntityBounds\n": {
+        "prefix": "  EntityBounds\n",
+        "body": "EntityBounds(${4:ehandle_1},${6:int_2},${8:int_3},${10:int_4},${12:int_5},${14:bool_6},${16:float_7})",
+        "description": " void EntityBounds(ehandle ehandle_1, int int_2, int int_3, int int_4, int int_5, bool bool_6, float float_7) \n Draws bounds of an entity\n"
+    },
+    "  EntitySkeleton\n": {
+        "prefix": "  EntitySkeleton\n",
+        "body": "EntitySkeleton(${4:ehandle_1},${6:float_2})",
+        "description": " void EntitySkeleton(ehandle ehandle_1, float float_2) \n Draws the skeleton of the entity\n"
+    },
+    "  EntityText\n": {
+        "prefix": "  EntityText\n",
+        "body": "EntityText(${4:ehandle_1},${6:int_2},${8:string_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:float_8})",
+        "description": " void EntityText(ehandle ehandle_1, int int_2, string string_3, int int_4, int int_5, int int_6, int int_7, float float_8) \n Draws text on an entity\n"
+    },
+    "  FilledRect2D\n": {
+        "prefix": "  FilledRect2D\n",
+        "body": "FilledRect2D(${4:Vector2D_1},${6:Vector2D_2},${8:int_3},${10:int_4},${12:int_5},${14:int_6},${16:float_7})",
+        "description": " void FilledRect2D(Vector2D Vector2D_1, Vector2D Vector2D_2, int int_3, int int_4, int int_5, int int_6, float float_7) \n Draws a screen-space filled 2D rectangle. Coordinates are in pixels.\n"
+    },
+    "  HorzArrow\n": {
+        "prefix": "  HorzArrow\n",
+        "body": "HorzArrow(${4:Vector_1},${6:Vector_2},${8:float_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:bool_8},${20:float_9})",
+        "description": " void HorzArrow(Vector Vector_1, Vector Vector_2, float float_3, int int_4, int int_5, int int_6, int int_7, bool bool_8, float float_9) \n Draws a horizontal arrow. Specify endpoint's in world space.\n"
+    },
+    "  Line\n": {
+        "prefix": "  Line\n",
+        "body": "Line(${4:Vector_1},${6:Vector_2},${8:int_3},${10:int_4},${12:int_5},${14:int_6},${16:bool_7},${18:float_8})",
+        "description": " void Line(Vector Vector_1, Vector Vector_2, int int_3, int int_4, int int_5, int int_6, bool bool_7, float float_8) \n Draws a line between two point's\n"
+    },
+    "  Line2D\n": {
+        "prefix": "  Line2D\n",
+        "body": "Line2D(${4:Vector2D_1},${6:Vector2D_2},${8:int_3},${10:int_4},${12:int_5},${14:int_6},${16:float_7})",
+        "description": " void Line2D(Vector2D Vector2D_1, Vector2D Vector2D_2, int int_3, int int_4, int int_5, int int_6, float float_7) \n Draws a line between two point's in screenspace\n"
+    },
+    "  PopDebugOverlayScope\n": {
+        "prefix": "  PopDebugOverlayScope\n",
+        "body": "PopDebugOverlayScope()",
+        "description": " void PopDebugOverlayScope() \n Pops the identifier used to group overlays. Overlays marked with this identifier can be deleted in a big batch.\n"
+    },
+    "  PushAndClearDebugOverlayScope\n": {
+        "prefix": "  PushAndClearDebugOverlayScope\n",
+        "body": "PushAndClearDebugOverlayScope(${4:utlstringtoken_1})",
+        "description": " void PushAndClearDebugOverlayScope(utlstringtoken utlstringtoken_1) \n Pushes an identifier used to group overlays. Deletes all existing overlays using this overlay id.\n"
+    },
+    "  PushDebugOverlayScope\n": {
+        "prefix": "  PushDebugOverlayScope\n",
+        "body": "PushDebugOverlayScope(${4:utlstringtoken_1})",
+        "description": " void PushDebugOverlayScope(utlstringtoken utlstringtoken_1) \n Pushes an identifier used to group overlays. Overlays marked with this identifier can be deleted in a big batch.\n"
+    },
+    "  RemoveAllInScope\n": {
+        "prefix": "  RemoveAllInScope\n",
+        "body": "RemoveAllInScope(${4:utlstringtoken_1})",
+        "description": " void RemoveAllInScope(utlstringtoken utlstringtoken_1) \n Removes all overlays marked with a specific identifier, regardless of their lifetime.\n"
+    },
+    "  SolidCone\n": {
+        "prefix": "  SolidCone\n",
+        "body": "SolidCone(${4:Vector_1},${6:Vector_2},${8:float_3},${10:float_4},${12:int_5},${14:int_6},${16:int_7},${18:int_8},${20:bool_9},${22:float_10})",
+        "description": " void SolidCone(Vector Vector_1, Vector Vector_2, float float_3, float float_4, int int_5, int int_6, int int_7, int int_8, bool bool_9, float float_10) \n Draws a solid cone. Specify endpoint and direction in world space.\n"
+    },
+    "  Sphere\n": {
+        "prefix": "  Sphere\n",
+        "body": "Sphere(${4:Vector_1},${6:float_2},${8:int_3},${10:int_4},${12:int_5},${14:int_6},${16:bool_7},${18:float_8})",
+        "description": " void Sphere(Vector Vector_1, float float_2, int int_3, int int_4, int int_5, int int_6, bool bool_7, float float_8) \n Draws a wireframe sphere. Specify center in world space.\n"
+    },
+    "  SweptBox\n": {
+        "prefix": "  SweptBox\n",
+        "body": "SweptBox(${4:Vector_1},${6:Vector_2},${8:Vector_3},${10:Vector_4},${12:Quaternion_5},${14:int_6},${16:int_7},${18:int_8},${20:int_9},${22:float_10})",
+        "description": " void SweptBox(Vector Vector_1, Vector Vector_2, Vector Vector_3, Vector Vector_4, Quaternion Quaternion_5, int int_6, int int_7, int int_8, int int_9, float float_10) \n Draws a swept box. Specify endpoint's in world space and the bounds in local space.\n"
+    },
+    "  Text\n": {
+        "prefix": "  Text\n",
+        "body": "Text(${4:Vector_1},${6:int_2},${8:string_3},${10:float_4},${12:int_5},${14:int_6},${16:int_7},${18:int_8},${20:float_9})",
+        "description": " void Text(Vector Vector_1, int int_2, string string_3, float float_4, int int_5, int int_6, int int_7, int int_8, float float_9) \n Draws 2D text. Specify origin in world space.\n"
+    },
+    "  Texture\n": {
+        "prefix": "  Texture\n",
+        "body": "Texture(${4:string_1},${6:Vector2D_2},${8:Vector2D_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:Vector2D_8},${20:Vector2D_9},${22:float_10})",
+        "description": " void Texture(string string_1, Vector2D Vector2D_2, Vector2D Vector2D_3, int int_4, int int_5, int int_6, int int_7, Vector2D Vector2D_8, Vector2D Vector2D_9, float float_10) \n Draws a screen-space texture. Coordinates are in pixels.\n"
+    },
+    "  Triangle\n": {
+        "prefix": "  Triangle\n",
+        "body": "Triangle(${4:Vector_1},${6:Vector_2},${8:Vector_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:bool_8},${20:float_9})",
+        "description": " void Triangle(Vector Vector_1, Vector Vector_2, Vector Vector_3, int int_4, int int_5, int int_6, int int_7, bool bool_8, float float_9) \n Draws a filled triangle. Specify vertices in world space.\n"
+    },
+    "  UnitTestCycleOverlayRenderType\n": {
+        "prefix": "  UnitTestCycleOverlayRenderType\n",
+        "body": "UnitTestCycleOverlayRenderType()",
+        "description": " void UnitTestCycleOverlayRenderType() \n Toggles the overlay render type, for unit tests\n"
+    },
+    "  VectorText3D\n": {
+        "prefix": "  VectorText3D\n",
+        "body": "VectorText3D(${4:Vector_1},${6:Quaternion_2},${8:string_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:bool_8},${20:float_9})",
+        "description": " void VectorText3D(Vector Vector_1, Quaternion Quaternion_2, string string_3, int int_4, int int_5, int int_6, int int_7, bool bool_8, float float_9) \n Draws 3D text. Specify origin + orientation in world space.\n"
+    },
+    "  VertArrow\n": {
+        "prefix": "  VertArrow\n",
+        "body": "VertArrow(${4:Vector_1},${6:Vector_2},${8:float_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:bool_8},${20:float_9})",
+        "description": " void VertArrow(Vector Vector_1, Vector Vector_2, float float_3, int int_4, int int_5, int int_6, int int_7, bool bool_8, float float_9) \n Draws a vertical arrow. Specify endpoint's in world space.\n"
+    },
+    "  YawArrow\n": {
+        "prefix": "  YawArrow\n",
+        "body": "YawArrow(${4:Vector_1},${6:float_2},${8:float_3},${10:float_4},${12:int_5},${14:int_6},${16:int_7},${18:int_8},${20:bool_9},${22:float_10})",
+        "description": " void YawArrow(Vector Vector_1, float float_2, float float_3, float float_4, int int_5, int int_6, int int_7, int int_8, bool bool_9, float float_10) \n Draws a arrow associated with a specific yaw. Specify endpoint's in world space.\n"
+    },
+    "  AddBroadcastTeamTarget\n": {
+        "prefix": "  AddBroadcastTeamTarget\n",
+        "body": "AddBroadcastTeamTarget(${4:int_1})",
+        "description": " void AddBroadcastTeamTarget(int int_1) \n Adds a team (by index) to the broadcast list\n"
+    },
+    "  Cancel\n": {
+        "prefix": "  Cancel\n",
+        "body": "Cancel()",
+        "description": " void Cancel() \n Cancel scene playback\n"
+    },
+    "  EstimateLength\n": {
+        "prefix": "  EstimateLength\n",
+        "body": "EstimateLength()",
+        "description": " float EstimateLength() \n Returns length of this scene in seconds.\n"
+    },
+    "  FindCamera\n": {
+        "prefix": "  FindCamera\n",
+        "body": "FindCamera()",
+        "description": " handle FindCamera() \n Get the camera\n"
+    },
+    "  FindNamedEntity\n": {
+        "prefix": "  FindNamedEntity\n",
+        "body": "FindNamedEntity(${4:string_1})",
+        "description": " handle FindNamedEntity(string string_1) \n given an entity reference, such as\u00c2\u00a0!target, get actual entity from scene object\n"
+    },
+    "  IsPaused\n": {
+        "prefix": "  IsPaused\n",
+        "body": "IsPaused()",
+        "description": " bool IsPaused() \n If this scene is currently paused.\n"
+    },
+    "  IsPlayingBack\n": {
+        "prefix": "  IsPlayingBack\n",
+        "body": "IsPlayingBack()",
+        "description": " bool IsPlayingBack() \n If this scene is currently playing.\n"
+    },
+    "  LoadSceneFromString\n": {
+        "prefix": "  LoadSceneFromString\n",
+        "body": "LoadSceneFromString(${4:string_1},${6:string_2})",
+        "description": " bool LoadSceneFromString(string string_1, string string_2) \n given a dummy scene name and a vcd string, load the scene\n"
+    },
+    "  RemoveBroadcastTeamTarget\n": {
+        "prefix": "  RemoveBroadcastTeamTarget\n",
+        "body": "RemoveBroadcastTeamTarget(${4:int_1})",
+        "description": " void RemoveBroadcastTeamTarget(int int_1) \n Removes a team (by index) from the broadcast list\n"
+    },
+    "  Start\n": {
+        "prefix": "  Start\n",
+        "body": "Start(${4:handle_1})",
+        "description": " void Start(handle handle_1) \n Start scene playback, takes activatorEntity as param\n"
+    },
+    "  RegisterListener\n": {
+        "prefix": "  RegisterListener\n",
+        "body": "RegisterListener(${4:string_1},${6:handle_2})",
+        "description": " int RegisterListener(string string_1, handle handle_2) \n ( string EventName, func CallbackFunction ) - Register a callback to be called when a particular custom event arrives. Returns a listener ID that can be used to unregister later.\n"
+    },
+    "  Send_ServerToAllClients\n": {
+        "prefix": "  Send_ServerToAllClients\n",
+        "body": "Send_ServerToAllClients(${4:string_1},${6:handle_2})",
+        "description": " void Send_ServerToAllClients(string string_1, handle handle_2) \n ( string EventName, table EventData )\n"
+    },
+    "  Send_ServerToPlayer\n": {
+        "prefix": "  Send_ServerToPlayer\n",
+        "body": "Send_ServerToPlayer(${4:handle_1},${6:string_2},${8:handle_3})",
+        "description": " void Send_ServerToPlayer(handle handle_1, string string_2, handle handle_3) \n ( Entity Player, string EventName, table EventData )\n"
+    },
+    "  Send_ServerToTeam\n": {
+        "prefix": "  Send_ServerToTeam\n",
+        "body": "Send_ServerToTeam(${4:int_1},${6:string_2},${8:handle_3})",
+        "description": " void Send_ServerToTeam(int int_1, string string_2, handle handle_3) \n ( int TeamNumber, string EventName, table EventData )\n"
+    },
+    "  UnregisterListener\n": {
+        "prefix": "  UnregisterListener\n",
+        "body": "UnregisterListener(${4:int_1})",
+        "description": " void UnregisterListener(int int_1) \n ( int ListnerID ) - Unregister a specific listener\n"
+    },
+    "  AcceptUserInput\n": {
+        "prefix": "  AcceptUserInput\n",
+        "body": "AcceptUserInput()",
+        "description": " void AcceptUserInput() \n Tells the panel to accept user input.\n"
+    },
+    "  AddCSSClasses\n": {
+        "prefix": "  AddCSSClasses\n",
+        "body": "AddCSSClasses(${4:classes})",
+        "description": " void AddCSSClasses(string classes) \n Adds CSS class(es) to the panel.\n"
+    },
+    "  IgnoreUserInput\n": {
+        "prefix": "  IgnoreUserInput\n",
+        "body": "IgnoreUserInput()",
+        "description": " void IgnoreUserInput() \n Tells the panel to ignore user input.\n"
+    },
+    "  IsGrabbable\n": {
+        "prefix": "  IsGrabbable\n",
+        "body": "IsGrabbable()",
+        "description": " void IsGrabbable() \n Returns whether this entity is grabbable.\n"
+    },
+    "  RemoveCSSClasses\n": {
+        "prefix": "  RemoveCSSClasses\n",
+        "body": "RemoveCSSClasses(${4:classes})",
+        "description": " void RemoveCSSClasses(string classes) \n Remove CSS class(es) from the panel.\n"
+    },
+    "  DeleteCreatedSpawnGroups\n": {
+        "prefix": "  DeleteCreatedSpawnGroups\n",
+        "body": "DeleteCreatedSpawnGroups()",
+        "description": " void DeleteCreatedSpawnGroups() \n DeleteCreatedSpawnGroups()\u00c2\u00a0: Deletes any spawn groups that this point_template has spawned. Note: The point_template will not be deleted by this.\n"
+    },
+    "  ForceSpawn\n": {
+        "prefix": "  ForceSpawn\n",
+        "body": "ForceSpawn()",
+        "description": " void ForceSpawn() \n ForceSpawn()\u00c2\u00a0: Spawns all of the entities the point_template is pointing at.\n"
+    },
+    "  GetSpawnedEntities\n": {
+        "prefix": "  GetSpawnedEntities\n",
+        "body": "GetSpawnedEntities()",
+        "description": " handle GetSpawnedEntities() \n GetSpawnedEntities()\u00c2\u00a0: Get the list of the most recent spawned entities\n"
+    },
+    "  SetSpawnCallback\n": {
+        "prefix": "  SetSpawnCallback\n",
+        "body": "SetSpawnCallback(${4:hCallbackFunc},${6:hCallbackScope})",
+        "description": " void SetSpawnCallback(handle hCallbackFunc, handle hCallbackScope) \n SetSpawnCallback( hCallbackFunc, hCallbackScope, hCallbackData )\u00c2\u00a0: Set a callback for when the template spawns entities. The spawned entities will be passed in as an array.\n"
+    },
+    "  SetMessage\n": {
+        "prefix": "  SetMessage\n",
+        "body": "SetMessage(${4:pMessage})",
+        "description": " void SetMessage(string pMessage)\n Set the message on this entity.\n"
+    },
+    "  GetVRHand\n": {
+        "prefix": "  GetVRHand\n",
+        "body": "GetVRHand(${4:nHandID})",
+        "description": " CPropVRHand GetVRHand(int nHandID) \n Get VR hand by ID (0 and 1).\n"
+    },
+    "  AddHandAttachment\n": {
+        "prefix": "  AddHandAttachment\n",
+        "body": "AddHandAttachment(${4:attachment})",
+        "description": " void AddHandAttachment(handle attachment) \n Add the attachment to this hand.\n"
+    },
+    "  AddHandModelOverride\n": {
+        "prefix": "  AddHandModelOverride\n",
+        "body": "AddHandModelOverride(${4:modelName})",
+        "description": " void AddHandModelOverride(string modelName) \n Add a model override for this hand.\n"
+    },
+    "  FindHandModelOverride\n": {
+        "prefix": "  FindHandModelOverride\n",
+        "body": "FindHandModelOverride(${4:pModelName})",
+        "description": " handle FindHandModelOverride(string pModelName) \n Find a specific model override for this hand.\n"
+    },
+    "  FireHapticPulse\n": {
+        "prefix": "  FireHapticPulse\n",
+        "body": "FireHapticPulse(${4:strength})",
+        "description": " void FireHapticPulse(int strength) \n Fire a haptic pulse on this hand. Integer range [0, 1, 2] for strength.\n"
+    },
+    "  FireHapticPulsePrecise\n": {
+        "prefix": "  FireHapticPulsePrecise\n",
+        "body": "FireHapticPulsePrecise(${4:nPulseDuration})",
+        "description": " void FireHapticPulsePrecise(int nPulseDuration) \n Fire a haptic pulse on this hand. Specify the duration in micro seconds.\n"
+    },
+    "  GetHandAttachment\n": {
+        "prefix": "  GetHandAttachment\n",
+        "body": "GetHandAttachment()",
+        "description": " handle GetHandAttachment() \n Get the attachment on this hand.\n"
+    },
+    "  GetHandID\n": {
+        "prefix": "  GetHandID\n",
+        "body": "GetHandID()",
+        "description": " int GetHandID() \n Get the players hand ID for this hand.\n"
+    },
+    "  GetLiteralHandType\n": {
+        "prefix": "  GetLiteralHandType\n",
+        "body": "GetLiteralHandType()",
+        "description": " int GetLiteralHandType() \n Get literal type for this hand.\n"
+    },
+    "  GetPlayer\n": {
+        "prefix": "  GetPlayer\n",
+        "body": "GetPlayer()",
+        "description": " CBasePlayer GetPlayer() \n Get the player for this hand.\n"
+    },
+    "  GetVRControllerTypeName\n": {
+        "prefix": "  GetVRControllerTypeName\n",
+        "body": "GetVRControllerTypeName()",
+        "description": " string GetVRControllerTypeName() \n Returns the controller type name of the first found controller.\n"
+    },
+    "  RemoveAllHandModelOverrides\n": {
+        "prefix": "  RemoveAllHandModelOverrides\n",
+        "body": "RemoveAllHandModelOverrides()",
+        "description": " void RemoveAllHandModelOverrides() \n Remove all model overrides for this hand.\n"
+    },
+    "  RemoveHandAttachmentByHandle\n": {
+        "prefix": "  RemoveHandAttachmentByHandle\n",
+        "body": "RemoveHandAttachmentByHandle(${4:hAttachment})",
+        "description": " void RemoveHandAttachmentByHandle(handle hAttachment) \n Remove hand attachment by handle.\n"
+    },
+    "  RemoveHandModelOverride\n": {
+        "prefix": "  RemoveHandModelOverride\n",
+        "body": "RemoveHandModelOverride(${4:pModelName})",
+        "description": " void RemoveHandModelOverride(string pModelName) \n Remove a model override for this hand.\n"
+    },
+    "  SetHandAttachment\n": {
+        "prefix": "  SetHandAttachment\n",
+        "body": "SetHandAttachment(${4:hAttachment})",
+        "description": " void SetHandAttachment(handle hAttachment) \n Set the attachment for this hand.\n"
+    },
+    "  CreateParticle\n": {
+        "prefix": "  CreateParticle\n",
+        "body": "CreateParticle(${4:particleName},${6:particleAttach},${8:owningEntity})",
+        "description": " int CreateParticle(string particleName, int particleAttach, handle owningEntity) \n Creates a new particle effect. Returns the index of the created effect.\n"
+    },
+    "  CreateParticleForPlayer\n": {
+        "prefix": "  CreateParticleForPlayer\n",
+        "body": "CreateParticleForPlayer(${4:particleName},${6:particleAttach},${8:owningEntity},${10:owningPlayer})",
+        "description": " int CreateParticleForPlayer(string particleName, int particleAttach, handle owningEntity, handle owningPlayer) \n Creates a new particle effect that only plays for the specified player. Returns the index of the created effect.\n"
+    },
+    "  DestroyParticle\n": {
+        "prefix": "  DestroyParticle\n",
+        "body": "DestroyParticle(${4:particleID},${6:immediately})",
+        "description": " void DestroyParticle(int particleID, bool immediately) \n Destroys particle.\n"
+    },
+    "  GetParticleReplacement\n": {
+        "prefix": "  GetParticleReplacement\n",
+        "body": "GetParticleReplacement(${4:string_1},${6:handle_2})",
+        "description": " string GetParticleReplacement(string string_1, handle handle_2) \n No Description Set\n"
+    },
+    "  ReleaseParticleIndex\n": {
+        "prefix": "  ReleaseParticleIndex\n",
+        "body": "ReleaseParticleIndex(${4:particleId})",
+        "description": " void ReleaseParticleIndex(int particleId) \n Frees the specified particle index\n"
+    },
+    "  SetParticleAlwaysSimulate\n": {
+        "prefix": "  SetParticleAlwaysSimulate\n",
+        "body": "SetParticleAlwaysSimulate(${4:int_1})",
+        "description": " void SetParticleAlwaysSimulate(int int_1) \n No Description Set\n"
+    },
+    "  SetParticleControl\n": {
+        "prefix": "  SetParticleControl\n",
+        "body": "SetParticleControl(${4:particleId},${6:controlIndex},${8:controlData})",
+        "description": " void SetParticleControl(int particleId, int controlIndex, Vector controlData) \n Set the control point data for a control on a particle effect\n"
+    },
+    "  SetParticleControlEnt\n": {
+        "prefix": "  SetParticleControlEnt\n",
+        "body": "SetParticleControlEnt(${4:particleId},${6:controlIndex},${8:entity},${10:attachType},${12:attachment},${14:origin},${16:unknown})",
+        "description": " void SetParticleControlEnt(int particleId, int controlIndex, handle entity, ParticleAttachment_t attachType, string attachment, Vector origin, bool unknown) \n Attaches the control point to an entity.\n"
+    },
+    "  SetParticleControlForward\n": {
+        "prefix": "  SetParticleControlForward\n",
+        "body": "SetParticleControlForward(${4:FXIndex},${6:controlIndex},${8:forward})",
+        "description": " void SetParticleControlForward(int FXIndex, int controlIndex, Vector forward) \n Set the forward direction for a control point on a particle effect.\n"
+    },
+    "  SetParticleControlOffset\n": {
+        "prefix": "  SetParticleControlOffset\n",
+        "body": "SetParticleControlOffset(${4:iIndex},${6:iPoint},${8:vecOffset})",
+        "description": " void SetParticleControlOffset(int iIndex, int iPoint, Vector vecOffset) \n Set the linear offset for a control on a particle effect.\n"
+    },
+    "  SetParticleControlOrientation\n": {
+        "prefix": "  SetParticleControlOrientation\n",
+        "body": "SetParticleControlOrientation(${4:FXIndex},${6:controlIndex},${8:forward},${10:right},${12:up})",
+        "description": " void SetParticleControlOrientation(int FXIndex, int controlIndex, Vector forward, Vector right, Vector up) \n Set the orientation for a control point on a particle effect.  Note:This is left handed -- bad!!\n"
+    },
+    "  SetParticleControlOrientationFLU\n": {
+        "prefix": "  SetParticleControlOrientationFLU\n",
+        "body": "SetParticleControlOrientationFLU(${4:FXIndex},${6:controlIndex},${8:forward},${10:left},${12:up})",
+        "description": " void SetParticleControlOrientationFLU(int FXIndex, int controlIndex, Vector forward, Vector left, Vector up) \n Set the orientation for a control point on a particle effect.\n"
+    },
+    "  IsPublicUniverse\n": {
+        "prefix": "  IsPublicUniverse\n",
+        "body": "IsPublicUniverse()",
+        "description": " bool IsPublicUniverse() \n Is the script connected to the public Steam universe.\n"
+    },
+    "  AddDamage\n": {
+        "prefix": "  AddDamage\n",
+        "body": "AddDamage(${4:addAmount})",
+        "description": " void AddDamage(float addAmount) \n Adds to the damage value.\n"
+    },
+    "  AddDamageType\n": {
+        "prefix": "  AddDamageType\n",
+        "body": "AddDamageType(${4:bitsDamageType})",
+        "description": " void  AddDamageType(int bitsDamageType) \n Adds damage type bit flags.\n"
+    },
+    "  AllowFriendlyFire\n": {
+        "prefix": "  AllowFriendlyFire\n",
+        "body": "AllowFriendlyFire()",
+        "description": " bool AllowFriendlyFire() \n\n"
+    },
+    "  BaseDamageIsValid\n": {
+        "prefix": "  BaseDamageIsValid\n",
+        "body": "BaseDamageIsValid()",
+        "description": " bool BaseDamageIsValid() \n\n"
+    },
+    "  CanBeBlocked\n": {
+        "prefix": "  CanBeBlocked\n",
+        "body": "CanBeBlocked()",
+        "description": " bool CanBeBlocked() \n\n"
+    },
+    "  GetAmmoType\n": {
+        "prefix": "  GetAmmoType\n",
+        "body": "GetAmmoType()",
+        "description": " int GetAmmoType() \n\n"
+    },
+    "  GetAttacker\n": {
+        "prefix": "  GetAttacker\n",
+        "body": "GetAttacker()",
+        "description": " CBaseEntity GetAttacker() \n Returns the attacker entity.\n"
+    },
+    "  GetBaseDamage\n": {
+        "prefix": "  GetBaseDamage\n",
+        "body": "GetBaseDamage()",
+        "description": " float GetBaseDamage() \n\n"
+    },
+    "  GetDamage\n": {
+        "prefix": "  GetDamage\n",
+        "body": "GetDamage()",
+        "description": " float GetDamage() \n Returns the damage value.\n"
+    },
+    "  GetDamageCustom\n": {
+        "prefix": "  GetDamageCustom\n",
+        "body": "GetDamageCustom()",
+        "description": " int GetDamageCustom() \n\n"
+    },
+    "  GetDamageForce\n": {
+        "prefix": "  GetDamageForce\n",
+        "body": "GetDamageForce()",
+        "description": " Vector GetDamageForce() \n Returns the damage force.\n"
+    },
+    "  GetDamagePosition\n": {
+        "prefix": "  GetDamagePosition\n",
+        "body": "GetDamagePosition()",
+        "description": " int GetDamagePosition() \n Returns the damage position.\n"
+    },
+    "  GetDamageTaken\n": {
+        "prefix": "  GetDamageTaken\n",
+        "body": "GetDamageTaken()",
+        "description": " float GetDamageTaken() \n\n"
+    },
+    "  GetDamageType\n": {
+        "prefix": "  GetDamageType\n",
+        "body": "GetDamageType()",
+        "description": " int GetDamageType() \n Returns the damage type bitfield.\n"
+    },
+    "  GetInflictor\n": {
+        "prefix": "  GetInflictor\n",
+        "body": "GetInflictor()",
+        "description": " CBaseEntity GetInflictor() \n Returns the inflictor entity (usually the weapon).\n"
+    },
+    "  GetMaxDamage\n": {
+        "prefix": "  GetMaxDamage\n",
+        "body": "GetMaxDamage()",
+        "description": " float GetMaxDamage() \n\n"
+    },
+    "  GetOriginalDamage\n": {
+        "prefix": "  GetOriginalDamage\n",
+        "body": "GetOriginalDamage()",
+        "description": " float GetOriginalDamage() \n\n"
+    },
+    "  GetRadius\n": {
+        "prefix": "  GetRadius\n",
+        "body": "GetRadius()",
+        "description": " float GetRadius() \n\n"
+    },
+    "  GetReportedPosition\n": {
+        "prefix": "  GetReportedPosition\n",
+        "body": "GetReportedPosition()",
+        "description": " Vector GetReportedPosition() \n\n"
+    },
+    "  GetStabilityDamage\n": {
+        "prefix": "  GetStabilityDamage\n",
+        "body": "GetStabilityDamage()",
+        "description": " float GetStabilityDamage() \n\n"
+    },
+    "  ScaleDamage\n": {
+        "prefix": "  ScaleDamage\n",
+        "body": "ScaleDamage(${4:scaleAmount})",
+        "description": " void ScaleDamage(float scaleAmount) \n\n"
+    },
+    "  SetAllowFriendlyFire\n": {
+        "prefix": "  SetAllowFriendlyFire\n",
+        "body": "SetAllowFriendlyFire(${4:allow})",
+        "description": " void SetAllowFriendlyFire(bool allow) \n\n"
+    },
+    "  SetAmmoType\n": {
+        "prefix": "  SetAmmoType\n",
+        "body": "SetAmmoType()",
+        "description": " void SetAmmoType(intammoType) \n\n"
+    },
+    "  SetAttacker\n": {
+        "prefix": "  SetAttacker\n",
+        "body": "SetAttacker(${4:attacker})",
+        "description": " void SetAttacker(CBaseEntity attacker) \n\n"
+    },
+    "  SetCanBeBlocked\n": {
+        "prefix": "  SetCanBeBlocked\n",
+        "body": "SetCanBeBlocked(${4:block})",
+        "description": " void SetCanBeBlocked(bool block) \n\n"
+    },
+    "  SetDamage\n": {
+        "prefix": "  SetDamage\n",
+        "body": "SetDamage(${4:damage})",
+        "description": " void SetDamage(float damage) \n Set new damage value.\n"
+    },
+    "  SetDamageCustom\n": {
+        "prefix": "  SetDamageCustom\n",
+        "body": "SetDamageCustom(${4:damageCustom})",
+        "description": " void SetDamageCustom(int damageCustom) \n\n"
+    },
+    "  SetDamageForce\n": {
+        "prefix": "  SetDamageForce\n",
+        "body": "SetDamageForce(${4:damageForce})",
+        "description": " void SetDamageForce(Vector damageForce) \n Sets the damage force vector.\n"
+    },
+    "  SetDamagePosition\n": {
+        "prefix": "  SetDamagePosition\n",
+        "body": "SetDamagePosition(${4:damagePosition})",
+        "description": " void SetDamagePosition(Vector damagePosition) \n Sets the global space damage position.\n"
+    },
+    "  SetDamageTaken\n": {
+        "prefix": "  SetDamageTaken\n",
+        "body": "SetDamageTaken(${4:damageTaken})",
+        "description": " void SetDamageTaken(int damageTaken) \n\n"
+    },
+    "  SetDamageType\n": {
+        "prefix": "  SetDamageType\n",
+        "body": "SetDamageType(${4:bitsDamageType})",
+        "description": " void SetDamageType(int bitsDamageType) \n Set the damage type bitfield.\n"
+    },
+    "  SetMaxDamage\n": {
+        "prefix": "  SetMaxDamage\n",
+        "body": "SetMaxDamage(${4:maxDamage})",
+        "description": " void SetMaxDamage(float maxDamage) \n\n"
+    },
+    "  SetOriginalDamage\n": {
+        "prefix": "  SetOriginalDamage\n",
+        "body": "SetOriginalDamage(${4:originalDamage})",
+        "description": " void SetOriginalDamage(float originalDamage) \n\n"
+    },
+    "  SetRadius\n": {
+        "prefix": "  SetRadius\n",
+        "body": "SetRadius(${4:radius})",
+        "description": " void SetRadius(float radius) \n\n"
+    },
+    "  SetReportedPosition\n": {
+        "prefix": "  SetReportedPosition\n",
+        "body": "SetReportedPosition(${4:reportedPosition})",
+        "description": " void SetReportedPosition(Vector reportedPosition) \n\n"
+    },
+    "  SetStabilityDamage\n": {
+        "prefix": "  SetStabilityDamage\n",
+        "body": "SetStabilityDamage(${4:stabilityDamage})",
+        "description": " void SetStabilityDamage(float stabilityDamage) \n\n"
+    },
+    "  GetBool\n": {
+        "prefix": "  GetBool\n",
+        "body": "GetBool(${4:variableName})",
+        "description": " table GetBool(string variableName) \n GetBool(name)\u00c2\u00a0: returns the convar as a boolean flag.\n"
+    },
+    "  GetCommandClient\n": {
+        "prefix": "  GetCommandClient\n",
+        "body": "GetCommandClient()",
+        "description": " handle GetCommandClient() \n GetCommandClient()\u00c2\u00a0: returns the player who issued this console command.\n"
+    },
+    "  GetInt\n": {
+        "prefix": "  GetInt\n",
+        "body": "GetInt(${4:string_1})",
+        "description": " table GetInt(string string_1) \n GetInt(name)\u00c2\u00a0: returns the convar as an int. May return nil if no such convar.\n"
+    },
+    "  GetStr\n": {
+        "prefix": "  GetStr\n",
+        "body": "GetStr(${4:variableName})",
+        "description": " table GetStr(string variableName) \n GetStr(name)\u00c2\u00a0: returns the convar as a string. May return nil if no such convar.\n"
+    },
+    "  RegisterCommand\n": {
+        "prefix": "  RegisterCommand\n",
+        "body": "RegisterCommand(${4:variableName},${6:function},${8:helpText},${10:flags})",
+        "description": " void RegisterCommand(string variableName, handle function, string helpText, int flags) \n RegisterCommand(name, fn, helpString, flags)\u00c2\u00a0: register a console command.\n"
+    },
+    "  RegisterConvar\n": {
+        "prefix": "  RegisterConvar\n",
+        "body": "RegisterConvar(${4:name},${6:defaultValue},${8:helpText},${10:flags})",
+        "description": " void RegisterConvar(string name, string defaultValue, string helpText, int flags) \n RegisterConvar(name, defaultValue, helpString, flags): register a new console variable.\n"
+    },
+    "  SetBool\n": {
+        "prefix": "  SetBool\n",
+        "body": "SetBool(${4:variableName},${6:value})",
+        "description": " void SetBool(string variableName, bool value) \n SetBool(name, val)\u00c2\u00a0: sets the value of the convar to the bool.\n"
+    },
+    "  SetFloat\n": {
+        "prefix": "  SetFloat\n",
+        "body": "SetFloat(${4:variableName},${6:value})",
+        "description": " void SetFloat(string variableName, float value) \n SetFloat(name, val)\u00c2\u00a0: sets the value of the convar to the float.\n"
+    },
+    "  SetInt\n": {
+        "prefix": "  SetInt\n",
+        "body": "SetInt(${4:string_1},${6:int_2})",
+        "description": " void SetInt(string string_1, int int_2) \n SetInt(name, val)\u00c2\u00a0: sets the value of the convar to the int.\n"
+    },
+    "  SetStr\n": {
+        "prefix": "  SetStr\n",
+        "body": "SetStr(${4:string_1},${6:string_2})",
+        "description": " void SetStr(string string_1, string string_2) \n SetStr(name, val)\u00c2\u00a0: sets the value of the convar to the string.\n"
+    },
+    "  AddRule\n": {
+        "prefix": "  AddRule\n",
+        "body": "AddRule(${4:rule})",
+        "description": " bool AddRule(CRule rule) \n Add a CRule object (defined in rulescript_base.nut)\n"
+    },
+    "  FindAllMatches\n": {
+        "prefix": "  FindAllMatches\n",
+        "body": "FindAllMatches(${4:query},${6:leeway})",
+        "description": " handle FindAllMatches(handle query, float leeway) \n Returns an array of all matching responses. If leeway is nonzero, all results scoring within 'leeway' of the best score return.\n"
+    },
+    "  FindBestMatch\n": {
+        "prefix": "  FindBestMatch\n",
+        "body": "FindBestMatch(${4:query})",
+        "description": " handle FindBestMatch(handle query) \n Query the database and return the best result found. If multiple of equal score found, an arbitrary one returns.\n"
+    },
+    "  CommandLineCheck\n": {
+        "prefix": "  CommandLineCheck\n",
+        "body": "CommandLineCheck(${4:name})",
+        "description": " bool CommandLineCheck(string name) \n Returns true if the command line param was used, otherwise false.\n"
+    },
+    "  CommandLineFloat\n": {
+        "prefix": "  CommandLineFloat\n",
+        "body": "CommandLineFloat(${4:name})",
+        "description": " float CommandLineFloat(string name) \n Returns the command line param as a float.\n"
+    },
+    "  CommandLineInt\n": {
+        "prefix": "  CommandLineInt\n",
+        "body": "CommandLineInt(${4:name})",
+        "description": " int CommandLineInt(string name) \n Returns the command line param as an int.\n"
+    },
+    "  CommandLineStr\n": {
+        "prefix": "  CommandLineStr\n",
+        "body": "CommandLineStr(${4:name})",
+        "description": " string CommandLineStr(string name) \n Returns the command line param as a string.\n"
+    },
+    "  BitwiseAnd\n": {
+        "prefix": "  BitwiseAnd\n",
+        "body": "BitwiseAnd(${4:operand})",
+        "description": " int BitwiseAnd(Uint64 operand) \n Performs bitwise AND between two integers.\n"
+    },
+    "  BitwiseOr\n": {
+        "prefix": "  BitwiseOr\n",
+        "body": "BitwiseOr(${4:operand})",
+        "description": " int BitwiseOr(Uint64 operand) \n Performs bitwise OR between two integers.\n"
+    },
+    "  BitwiseXor\n": {
+        "prefix": "  BitwiseXor\n",
+        "body": "BitwiseXor(${4:operand})",
+        "description": " int BitwiseXor(Uint64 operand) \n Performs bitwise XOR between two integers.\n"
+    },
+    "  BitwiseNot\n": {
+        "prefix": "  BitwiseNot\n",
+        "body": "BitwiseNot(${4:operand})",
+        "description": " int BitwiseNot(Uint64 operand) \n Performs bitwise NOT between two integers.\n"
+    },
+    "  ClearBit\n": {
+        "prefix": "  ClearBit\n",
+        "body": "ClearBit(${4:bitvalue})",
+        "description": " int ClearBit(int bitvalue) \n Clears the specified bit.\n"
+    },
+    "  IsBitSet\n": {
+        "prefix": "  IsBitSet\n",
+        "body": "IsBitSet(${4:bitvalue})",
+        "description": " bool IsBitSet(int bitvalue) \n Checks if a bit is set.\n"
+    },
+    "  SetBit\n": {
+        "prefix": "  SetBit\n",
+        "body": "SetBit(${4:bitvalue})",
+        "description": " int SetBit(int bitvalue) \n Sets the specified bit.\n"
+    },
+    "  ToggleBit\n": {
+        "prefix": "  ToggleBit\n",
+        "body": "ToggleBit(${4:bitvalue})",
+        "description": " int ToggleBit(int bitvalue) \n Toggles the specified bit.\n"
+    },
+    "  ToHexString\n": {
+        "prefix": "  ToHexString\n",
+        "body": "ToHexString()",
+        "description": " string ToHexString() \n Returns a hexadecimal string representation of the integer.\n"
+    },
+    "  __add\n": {
+        "prefix": "  __add\n",
+        "body": "__add(${4:a},${6:b})",
+        "description": " Vector __add(Vector a, Vector b) \n Overloaded +.  Adds vectors together.\n"
+    },
+    "  __eq\n": {
+        "prefix": "  __eq\n",
+        "body": "__eq(${4:a},${6:b})",
+        "description": " bool __eq(Vector a, Vector b) \n Overloaded ==.  Tests for Equality.\n"
+    },
+    "  __tostring\n": {
+        "prefix": "  __tostring\n",
+        "body": "__tostring()",
+        "description": " string __tostring() \n Overloaded .. Converts vectors to strings\n"
+    },
+    "  Forward\n": {
+        "prefix": "  Forward\n",
+        "body": "Forward()",
+        "description": " Vector Forward() \n Returns the forward vector.\n"
+    },
+    "  Left\n": {
+        "prefix": "  Left\n",
+        "body": "Left()",
+        "description": " Vector Left() \n Returns the left vector.\n"
+    },
+    "  Up\n": {
+        "prefix": "  Up\n",
+        "body": "Up()",
+        "description": " Vector Up() \n Returns the up vector.\n"
+    },
+    "  __div\n": {
+        "prefix": "  __div\n",
+        "body": "__div(${4:a},${6:b})",
+        "description": " Vector __div(Vector a, Vector b) \n Overloaded /.  Divides vectors.\n"
+    },
+    "  __len\n": {
+        "prefix": "  __len\n",
+        "body": "__len()",
+        "description": " float __len() \n Overloaded # returns the length of the vector.\n"
+    },
+    "  __mul\n": {
+        "prefix": "  __mul\n",
+        "body": "__mul(${4:a},${6:b})",
+        "description": " Vector __mul(Vector a, Vector b) \n Overloaded * returns the vectors multiplied together. can also be used to multiply with scalars.\n"
+    },
+    "  __sub\n": {
+        "prefix": "  __sub\n",
+        "body": "__sub(${4:a},${6:b})",
+        "description": " Vector __sub(Vector a, Vector b) \n Overloaded -.  Subtracts vectors\n"
+    },
+    "  __unm\n": {
+        "prefix": "  __unm\n",
+        "body": "__unm()",
+        "description": " Vector __unm() \n Overloaded unary - operator. Reverses the vector.\n"
+    },
+    "  Dot\n": {
+        "prefix": "  Dot\n",
+        "body": "Dot(${4:a},${6:b})",
+        "description": " float Dot(Vector a, Vector b) \n Dot product of two vectors.\n"
+    },
+    "  Length\n": {
+        "prefix": "  Length\n",
+        "body": "Length()",
+        "description": " float Length() \n Length of the Vector.\n"
+    },
+    "  Length2D\n": {
+        "prefix": "  Length2D\n",
+        "body": "Length2D()",
+        "description": " float Length2D() \n Length of the Vector in the XY plane.\n"
+    },
+    "  Lerp\n": {
+        "prefix": "  Lerp\n",
+        "body": "Lerp(${4:target},${6:t})",
+        "description": " Vector Lerp(Vector target, float t) \n Linear interpolation between the vector and the passed in target over t = [0,1].\n"
+    },
+    "  Normalized\n": {
+        "prefix": "  Normalized\n",
+        "body": "Normalized()",
+        "description": " Vector Normalized() \n Returns the vector normalized.\n"
+    }
+}
