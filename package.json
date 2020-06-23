@@ -2,7 +2,7 @@
     "name": "source2-hammer-vscript",
     "displayName": "Source2 Hammer Vscript",
     "description": "This adds snippets from the Scripting API Wiki",
-    "version": "0.0.3",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.46.0"
     },
@@ -18,5 +18,7 @@
             }
         ]
     },
-    "repository": {"url": "https://github.com/Adesii/source2-hammer-vscript"}
+    "repository": {
+        "url": "https://github.com/Adesii/source2-hammer-vscript"
+    }
 }
