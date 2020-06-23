@@ -11,3 +11,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.0.2]
 
 - Uploaded to Github
+
+## [0.0.3]
+
+- Fixed Default Values counting as Arguments
