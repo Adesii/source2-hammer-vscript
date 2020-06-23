@@ -256,12 +256,12 @@
     },
     "  EntFire\n": {
         "prefix": "  EntFire\n",
-        "body": "EntFire(${4:scope},${6:target},${8:action},${10:value},${14:delay},${18:activator}",
+        "body": "EntFire(${4:scope},${6:target},${8:action},${10:value},${14:delay},${18:activator})",
         "description": " void EntFire(table scope, string target, string action, string value = \"\", float delay = 0.0, handle activator = scope.thisEntity) \n Generate an entity I/O event on all entities matching the specified target name. The script scope of the calling entity should be passed to the first parameter.\n"
     },
     "  EntFireByHandle\n": {
         "prefix": "  EntFireByHandle\n",
-        "body": "EntFireByHandle(${4:self},${6:target},${8:action},${10:value},${14:delay}},${18:activator})",
+        "body": "EntFireByHandle(${4:self},${6:target},${8:action},${10:value},${14:delay},${18:activator})",
         "description": " void EntFireByHandle(handle self, handle target, string action, string value = \"\", float delay = 0.0, handle activator = self) \n Generate an entity I/O event on the specified entity. The calling entity should be passed to the first parameter.\n"
     },
     "  EntIndexToHScript\n": {

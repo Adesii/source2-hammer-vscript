@@ -19,3 +19,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.1.1]
 
 - Fixed Version Numbering
+
+## [0.1.2]
+
+- Fixed the Functions i broke in the last update
