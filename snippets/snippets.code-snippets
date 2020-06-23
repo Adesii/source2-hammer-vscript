@@ -256,12 +256,12 @@
     },
     "  EntFire\n": {
         "prefix": "  EntFire\n",
-        "body": "EntFire(${4:scope},${6:target},${8:action},${10:value},${12:\"\"},${14:delay},${16:0.0},${18:activator},${20:scope.thisEntity})",
+        "body": "EntFire(${4:scope},${6:target},${8:action},${10:value},${14:delay},${18:activator}",
         "description": " void EntFire(table scope, string target, string action, string value = \"\", float delay = 0.0, handle activator = scope.thisEntity) \n Generate an entity I/O event on all entities matching the specified target name. The script scope of the calling entity should be passed to the first parameter.\n"
     },
     "  EntFireByHandle\n": {
         "prefix": "  EntFireByHandle\n",
-        "body": "EntFireByHandle(${4:self},${6:target},${8:action},${10:value},${12:\"\"},${14:delay},${16:0.0},${18:activator},${20:self})",
+        "body": "EntFireByHandle(${4:self},${6:target},${8:action},${10:value},${14:delay}},${18:activator})",
         "description": " void EntFireByHandle(handle self, handle target, string action, string value = \"\", float delay = 0.0, handle activator = self) \n Generate an entity I/O event on the specified entity. The calling entity should be passed to the first parameter.\n"
     },
     "  EntIndexToHScript\n": {
@@ -536,7 +536,7 @@
     },
     "  IncludeScript\n": {
         "prefix": "  IncludeScript\n",
-        "body": "IncludeScript(${4:scriptFileName},${6:scope},${8:nil})",
+        "body": "IncludeScript(${4:scriptFileName},${6:scope})",
         "description": " bool IncludeScript(string scriptFileName, handle scope = nil) \n Execute a script file. Included in the current scope by default.\n"
     },
     "  InitLogFile\n": {
@@ -641,7 +641,7 @@
     },
     "  ScriptAssert\n": {
         "prefix": "  ScriptAssert\n",
-        "body": "ScriptAssert(${4:assertion},${6:message},${8:\"\"})",
+        "body": "ScriptAssert(${4:assertion},${6:message})",
         "description": " void ScriptAssert(bool assertion, string message = \"\") \n Asserts the passed in value. Prints out a message and brings up the assert dialog.\n"
     },
     "  SendToConsole\n": {
@@ -686,7 +686,7 @@
     },
     "  UniqueString\n": {
         "prefix": "  UniqueString\n",
-        "body": "UniqueString(${4:root},${6:\"\"})",
+        "body": "UniqueString(${4:root})",
         "description": " string UniqueString(string root = \"\") \n Generate a string guaranteed to be unique across the life of the script VM, with an optional root string. Useful for adding data to table's when not sure what keys are already in use in that table.\n"
     },
     "  UnloadSpawnGroup\n": {
