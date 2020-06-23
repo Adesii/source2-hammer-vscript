@@ -12,6 +12,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Uploaded to Github
 
-## [0.0.3]
+## [0.1.0]
 
 - Fixed Default Values counting as Arguments
+
+## [0.1.1]
+
+- Fixed Version Numbering
