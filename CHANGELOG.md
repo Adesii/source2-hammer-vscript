@@ -23,3 +23,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.1.2]
 
 - Fixed the Functions i broke in the last update
+
+## [0.1.3]
+
+-  Updated functions to the newest version from the Wiki

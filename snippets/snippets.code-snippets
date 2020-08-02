@@ -6,13 +6,13 @@
     },
     "  AnglesToVector\n": {
         "prefix": "  AnglesToVector\n",
-        "body": "AnglesToVector(${4:QAngle_1})",
-        "description": " Vector AnglesToVector(QAngle QAngle_1)\n Generate a vector given a QAngles\n"
+        "body": "AnglesToVector(${4:angle})",
+        "description": " Vector AnglesToVector(QAngle angle)\n Generate a vector given a QAngles\n"
     },
     "  AxisAngleToQuaternion\n": {
         "prefix": "  AxisAngleToQuaternion\n",
-        "body": "AxisAngleToQuaternion(${4:Vector_1},${6:float_2})",
-        "description": " Quaternion AxisAngleToQuaternion(Vector Vector_1, float float_2) \n (vector,float) constructs a quaternion representing a rotation by angle around the specified vector axis.  Bug:\u00c2\u00a0 The Quaternion class is non-functional\n"
+        "body": "AxisAngleToQuaternion(${4:axis},${6:angle})",
+        "description": " Quaternion AxisAngleToQuaternion(Vector axis, float angle) \n (vector,float) constructs a quaternion representing a rotation by angle around the specified vector axis.  Bug:\u00c2\u00a0 The Quaternion class is non-functional\n"
     },
     "  CalcClosestPointOnEntityOBB\n": {
         "prefix": "  CalcClosestPointOnEntityOBB\n",
@@ -31,13 +31,13 @@
     },
     "  CalcDistanceToLineSegment2D\n": {
         "prefix": "  CalcDistanceToLineSegment2D\n",
-        "body": "CalcDistanceToLineSegment2D(${4:unknown1},${6:unknown2},${8:unknown3})",
-        "description": " float CalcDistanceToLineSegment2D(Vector unknown1, Vector unknown2, Vector unknown3) \n To do:\u00c2\u00a0Calculates the distance from a point to a line\n"
+        "body": "CalcDistanceToLineSegment2D(${4:P},${6:vLineA},${8:vLineB})",
+        "description": " float CalcDistanceToLineSegment2D(Vector P, Vector vLineA, Vector vLineB) \n Get the closest point from P to the (infinite) line through vLineA and vLineB and calculate the shortest distance from P to the line.\n"
     },
     "  ExponentialDecay\n": {
         "prefix": "  ExponentialDecay\n",
-        "body": "ExponentialDecay(${4:inValue},${6:startValue},${8:lambda})",
-        "description": " float ExponentialDecay(float inValue, float startValue, float lambda) \n Smooth curve decreasing slower as it approaches zero.\n"
+        "body": "ExponentialDecay(${4:decayTo},${6:decayTime},${8:dt})",
+        "description": " float ExponentialDecay(float decayTo, float decayTime, float dt) \n Smooth curve decreasing slower as it approaches zero.\n"
     },
     "  LerpVectors\n": {
         "prefix": "  LerpVectors\n",
@@ -66,13 +66,13 @@
     },
     "  RotateQuaternionByAxisAngle\n": {
         "prefix": "  RotateQuaternionByAxisAngle\n",
-        "body": "RotateQuaternionByAxisAngle(${4:Quaternion_1},${6:Vector_2},${8:float_3})",
-        "description": " Quaternion RotateQuaternionByAxisAngle(Quaternion Quaternion_1, Vector Vector_2, float float_3) \n Rotates a quaternion by the specified angle around the specified vector axis.  Bug:\u00c2\u00a0 The Quaternion class is non-functional\n"
+        "body": "RotateQuaternionByAxisAngle(${4:quat},${6:axis},${8:angle})",
+        "description": " Quaternion RotateQuaternionByAxisAngle(Quaternion quat, Vector axis, float angle) \n Rotates a quaternion by the specified angle around the specified vector axis.  Bug:\u00c2\u00a0 The Quaternion class is non-functional\n"
     },
     "  RotationDelta\n": {
         "prefix": "  RotationDelta\n",
-        "body": "RotationDelta(${4:angle1},${6:angle2})",
-        "description": " QAngle RotationDelta(Qangle angle1, Qangle angle2,) \n Find the delta between two QAngles.\n"
+        "body": "RotationDelta(${4:src},${6:dest})",
+        "description": " QAngle RotationDelta(Qangle src, Qangle dest,) \n Find the delta between two QAngles.\n"
     },
     "  RotationDeltaAsAngularVelocity\n": {
         "prefix": "  RotationDeltaAsAngularVelocity\n",
@@ -92,27 +92,97 @@
     "  VectorToAngles\n": {
         "prefix": "  VectorToAngles\n",
         "body": "VectorToAngles(${4:input})",
-        "description": " QAngle VectorToAngles(Vector input) \n Get Qangles (with no roll) for a Vector.\n"
+        "description": " QAngle VectorToAngles(Vector input) \n Get QAngles for a Vector.\n"
+    },
+    "  abs\n": {
+        "prefix": "  abs\n",
+        "body": "abs(${4:val})",
+        "description": " float abs(float val) \n Absolute value.\n"
+    },
+    "  Clamp\n": {
+        "prefix": "  Clamp\n",
+        "body": "Clamp(${4:val},${6:min},${8:max})",
+        "description": " float Clamp(float val, float min, float max) \n Clamp the value between the min and max.\n"
+    },
+    "  Deg2Rad\n": {
+        "prefix": "  Deg2Rad\n",
+        "body": "Deg2Rad(${4:deg})",
+        "description": " float Deg2Rad(float deg) \n Convert degrees to radians.\n"
+    },
+    "  Rad2Deg\n": {
+        "prefix": "  Rad2Deg\n",
+        "body": "Rad2Deg(${4:rad})",
+        "description": " float Rad2Deg(float rad) \n Convert radians to degrees.\n"
+    },
+    "  Lerp\n": {
+        "prefix": "  Lerp\n",
+        "body": "Lerp(${4:target},${6:t})",
+        "description": " Vector Lerp(Vector target, float t) \n Linear interpolation between the vector and the passed in target over t = [0,1].\n"
+    },
+    "  max\n": {
+        "prefix": "  max\n",
+        "body": "max(${4:x},${6:x})",
+        "description": " float max(float x, float x) \n Returns the largest value of the inputs.\n"
+    },
+    "  min\n": {
+        "prefix": "  min\n",
+        "body": "min(${4:x},${6:x})",
+        "description": " float min(float x, float x) \n Returns the smallest value of the inputs.\n"
+    },
+    "  Merge\n": {
+        "prefix": "  Merge\n",
+        "body": "Merge(${4:t1},${6:t2})",
+        "description": " table Merge(table t1, table t2) \n Merges two tables into a third, overwriting any matching keys.\n"
+    },
+    "  RemapVal\n": {
+        "prefix": "  RemapVal\n",
+        "body": "RemapVal(${4:input},${6:a},${8:b},${10:c},${12:d})",
+        "description": " float RemapVal(float input, float a, float b, float c, float d)  \n Remap a value in the range [a,b] to [c,d].\n"
+    },
+    "  RemapValClamped\n": {
+        "prefix": "  RemapValClamped\n",
+        "body": "RemapValClamped(${4:input},${6:a},${8:b},${10:c},${12:d})",
+        "description": " float RemapValClamped(float input, float a, float b, float c, float d)  \n Remap a value in the range [a,b] to [c,d], clamping the output to the range.\n"
+    },
+    "  VectorDistanceSq\n": {
+        "prefix": "  VectorDistanceSq\n",
+        "body": "VectorDistanceSq(${4:v1},${6:v2})",
+        "description": " float VectorDistanceSq(Vector v1, Vector v2) \n Distance between two vectors squared (faster than calculating the plain distance).\n"
+    },
+    "  VectorDistance\n": {
+        "prefix": "  VectorDistance\n",
+        "body": "VectorDistance(${4:v1},${6:v2})",
+        "description": " float VectorDistance(Vector v1, Vector v2) \n Distance between two vectors.\n"
+    },
+    "  VectorLerp\n": {
+        "prefix": "  VectorLerp\n",
+        "body": "VectorLerp(${4:t},${6:v1},${8:v2})",
+        "description": " Vector VectorLerp(float t, Vector v1, Vector v2) \n Linear interpolation of vector values over [0,1]. The native function LerpVectors performs the same task.\n"
+    },
+    "  VectorIsZero\n": {
+        "prefix": "  VectorIsZero\n",
+        "body": "VectorIsZero(${4:vec})",
+        "description": " bool VectorIsZero(Vector vec) \n Check if the vector is a zero vector.\n"
     },
     "  AppendToLogFile\n": {
         "prefix": "  AppendToLogFile\n",
         "body": "AppendToLogFile(${4:string_1},${6:string_2})",
-        "description": " void AppendToLogFile(string string_1, string string_2) \n Appends a string to a log file on the server\n"
+        "description": " void AppendToLogFile(string string_1, string string_2) \n Appends a string to a log file on the server  Warning:\u00c2\u00a0Deprecated\n"
     },
     "  DebugDrawBox\n": {
         "prefix": "  DebugDrawBox\n",
-        "body": "DebugDrawBox(${4:origin},${6:min},${8:max},${10:r},${12:g},${14:b},${16:a},${18:duration})",
-        "description": " void DebugDrawBox(Vector origin, Vector min, Vector max, int r, int g, int b, int a, float duration) \n Draw a debug overlay box\n"
+        "body": "DebugDrawBox(${4:origin},${6:mins},${8:maxs},${10:r},${12:g},${14:b},${16:a},${18:duration})",
+        "description": " void DebugDrawBox(Vector origin, Vector mins, Vector maxs, int r, int g, int b, int a, float duration) \n Draw a debug overlay box\n"
     },
     "  DebugDrawBoxDirection\n": {
         "prefix": "  DebugDrawBoxDirection\n",
-        "body": "DebugDrawBoxDirection(${4:Vector_1},${6:Vector_2},${8:Vector_3},${10:Vector_4},${12:Vector_5},${14:float_6},${16:float_7})",
-        "description": " void DebugDrawBoxDirection(Vector Vector_1, Vector Vector_2, Vector Vector_3, Vector Vector_4, Vector Vector_5, float float_6, float float_7) \n Draw a debug forward box (cent, min, max, forward, vRgb, a, duration)\n"
+        "body": "DebugDrawBoxDirection(${4:origin},${6:mins},${8:maxs},${10:orientation},${12:rgb},${14:a},${16:duration})",
+        "description": " void DebugDrawBoxDirection(Vector origin, Vector mins, Vector maxs, Vector orientation, Vector rgb, float a, float duration) \n Draw box oriented to a Vector direction\n"
     },
     "  DebugDrawCircle\n": {
         "prefix": "  DebugDrawCircle\n",
-        "body": "DebugDrawCircle(${4:Vector_1},${6:Vector_2},${8:float_3},${10:float_4},${12:bool_5},${14:float_6})",
-        "description": " void DebugDrawCircle(Vector Vector_1, Vector Vector_2, float float_3, float float_4, bool bool_5, float float_6) \n Draw a debug circle (center, vRgb, a, rad, ztest, duration)\n"
+        "body": "DebugDrawCircle(${4:origin},${6:rgb},${8:a},${10:radius},${12:noDepthTest},${14:duration})",
+        "description": " void DebugDrawCircle(Vector origin, Vector rgb, float a, float radius, bool noDepthTest, float duration) \n Draw a debug circle\n"
     },
     "  DebugDrawClear\n": {
         "prefix": "  DebugDrawClear\n",
@@ -121,8 +191,8 @@
     },
     "  DebugDrawLine\n": {
         "prefix": "  DebugDrawLine\n",
-        "body": "DebugDrawLine(${4:Vector_1},${6:Vector_2},${8:int_3},${10:int_4},${12:int_5},${14:bool_6},${16:float_7})",
-        "description": " void DebugDrawLine(Vector Vector_1, Vector Vector_2, int int_3, int int_4, int int_5, bool bool_6, float float_7) \n Draw a debug overlay line (origin, target, r, g, b, ztest, duration)\n"
+        "body": "DebugDrawLine(${4:origin},${6:target},${8:r},${10:g},${12:b},${14:noDepthTest},${16:duration})",
+        "description": " void DebugDrawLine(Vector origin, Vector target, int r, int g, int b, bool noDepthTest, float duration) \n Draw a debug overlay line\n"
     },
     "  DebugDrawLine_vCol\n": {
         "prefix": "  DebugDrawLine_vCol\n",
@@ -162,7 +232,7 @@
     "  Say\n": {
         "prefix": "  Say\n",
         "body": "Say(${4:entity},${6:message},${8:teamOnly})",
-        "description": " void Say(handle entity, string message, bool teamOnly) \n Have Entity say string, and teamOnly or not\n"
+        "description": " void Say(handle entity, string message, bool teamOnly) \n Have Entity say message, and teamOnly or not\n"
     },
     "  ShowMessage\n": {
         "prefix": "  ShowMessage\n",
@@ -201,13 +271,13 @@
     },
     "  Warning\n": {
         "prefix": "  Warning\n",
-        "body": "Warning(${4:string_1})",
-        "description": " void Warning(string string_1) \n Print a warning\n"
+        "body": "Warning(${4:\"msg\"})",
+        "description": " void Warning(string \"msg\") \n Print a warning\n"
     },
     "  CancelEntityIOEvents\n": {
         "prefix": "  CancelEntityIOEvents\n",
-        "body": "CancelEntityIOEvents(${4:ehandle_1})",
-        "description": " void CancelEntityIOEvents(ehandle ehandle_1) \n Create all I/O events for a particular entity\n"
+        "body": "CancelEntityIOEvents(${4:entityEhandle})",
+        "description": " void CancelEntityIOEvents(EHANDLE entityEhandle) \n Cancel all I/O events for a particular entity\n"
     },
     "  ConnectOutputs\n": {
         "prefix": "  ConnectOutputs\n",
@@ -217,12 +287,12 @@
     "  CreateDamageInfo \n": {
         "prefix": "  CreateDamageInfo \n",
         "body": "CreateDamageInfo(${4:hInflictor},${6:force},${8:hitPos},${10:flDamage},${12:damageTypes})",
-        "description": " DamageInfo CreateDamageInfo (handle, hInflictor, handlehAttacker,Vector force, Vector hitPos, float flDamage, int damageTypes) \n Allocate a DamageInfo object, used as an argument to CBaseEntity::TakeDamage(). Call DestroyDamageInfo( hInfo ) to free the object.\n"
+        "description": " CTakeDamageInfo CreateDamageInfo (handle, hInflictor, handlehAttacker,Vector force, Vector hitPos, float flDamage, int damageTypes) \n Allocate a CTakeDamageInfo object, used as an argument to CBaseEntity::TakeDamage(). Call DestroyDamageInfo( hInfo ) to free the object.\n"
     },
     "  CreateEffect\n": {
         "prefix": "  CreateEffect\n",
-        "body": "CreateEffect(${4:handle_1})",
-        "description": " bool CreateEffect(handle handle_1) \n Pass table - Inputs: entity, effect\n"
+        "body": "CreateEffect(${4:keys})",
+        "description": " bool CreateEffect(table keys) \n Pass table - Inputs: entity, effect\n"
     },
     "  CreateSceneEntity\n": {
         "prefix": "  CreateSceneEntity\n",
@@ -231,18 +301,18 @@
     },
     "  CreateTrigger\n": {
         "prefix": "  CreateTrigger\n",
-        "body": "CreateTrigger(${4:Vector_1},${6:Vector_2},${8:Vector_3})",
-        "description": " handle CreateTrigger(Vector Vector_1, Vector Vector_2, Vector Vector_3) \n CreateTrigger( vecMin, vecMax )\u00c2\u00a0: Creates and returns an AABB trigger\n"
+        "body": "CreateTrigger(${4:origin},${6:mins},${8:maxs})",
+        "description": " handle CreateTrigger(Vector origin, Vector mins, Vector maxs) \n Creates and returns an enabled AABB trigger\n"
     },
     "  CreateTriggerRadiusApproximate\n": {
         "prefix": "  CreateTriggerRadiusApproximate\n",
-        "body": "CreateTriggerRadiusApproximate(${4:Vector_1},${6:float_2})",
-        "description": " handle CreateTriggerRadiusApproximate(Vector Vector_1, float float_2) \n CreateTriggerRadiusApproximate( vecOrigin, flRadius )\u00c2\u00a0: Creates and returns an AABB trigger thats bigger than the radius provided\n"
+        "body": "CreateTriggerRadiusApproximate(${4:origin},${6:radius})",
+        "description": " handle CreateTriggerRadiusApproximate(Vector origin, float radius) \n Creates and returns an AABB trigger thats bigger than the radius provided\n"
     },
     "  DestroyDamageInfo\n": {
         "prefix": "  DestroyDamageInfo\n",
-        "body": "DestroyDamageInfo()",
-        "description": " void DestroyDamageInfo(damageinfo) \n Free a damageinfo object that was created with CreateDamageInfo().\n"
+        "body": "DestroyDamageInfo(${4:info})",
+        "description": " void DestroyDamageInfo(CTakeDamageInfo info) \n Free a CTakeDamageInfo object that was created with CreateDamageInfo().\n"
     },
     "  DoEntFire\n": {
         "prefix": "  DoEntFire\n",
@@ -266,28 +336,28 @@
     },
     "  EntIndexToHScript\n": {
         "prefix": "  EntIndexToHScript\n",
-        "body": "EntIndexToHScript(${4:int_1})",
-        "description": " handle EntIndexToHScript(int int_1) \n Turn an entity index integer to an HScript representing that entity's script instance.\n"
+        "body": "EntIndexToHScript(${4:entindex})",
+        "description": " handle EntIndexToHScript(int entindex) \n Turn an entity index integer to an HScript representing that entity's script instance.\n"
     },
     "  FireEntityIOInputNameOnly\n": {
         "prefix": "  FireEntityIOInputNameOnly\n",
-        "body": "FireEntityIOInputNameOnly(${4:ehandle_1},${6:string_2})",
-        "description": " void FireEntityIOInputNameOnly(ehandle ehandle_1, string string_2) \n Fire Entity's Action Input w/no data\n"
+        "body": "FireEntityIOInputNameOnly(${4:entityEhandle},${6:inputName})",
+        "description": " void FireEntityIOInputNameOnly(EHANDLE entityEhandle, string inputName) \n Fire Entity's Action Input w/no data\n"
     },
     "  FireEntityIOInputString\n": {
         "prefix": "  FireEntityIOInputString\n",
-        "body": "FireEntityIOInputString(${4:ehandle_1},${6:string_2},${8:string_3})",
-        "description": " void FireEntityIOInputString(ehandle ehandle_1, string string_2, string string_3) \n Fire Entity's Action Input with passed String - you own the memory\n"
+        "body": "FireEntityIOInputString(${4:entityEhandle},${6:inputName},${8:value})",
+        "description": " void FireEntityIOInputString(EHANDLE entityEhandle, string inputName, string value) \n Fire Entity's Action Input with passed String - you own the memory\n"
     },
     "  FireEntityIOInputVec\n": {
         "prefix": "  FireEntityIOInputVec\n",
-        "body": "FireEntityIOInputVec(${4:ehandle_1},${6:string_2},${8:Vector_3})",
-        "description": " void FireEntityIOInputVec(ehandle ehandle_1, string string_2, Vector Vector_3) \n Fire Entity's Action Input with passed Vector ( hEntity, szActionName, vector )\n"
+        "body": "FireEntityIOInputVec(${4:entityEhandle},${6:inputName},${8:value})",
+        "description": " void FireEntityIOInputVec(EHANDLE entityEhandle, string inputName, Vector value) \n Fire Entity's Action Input with passed Vector ( hEntity, szActionName, vector )\n"
     },
     "  GetMaxOutputDelay\n": {
         "prefix": "  GetMaxOutputDelay\n",
-        "body": "GetMaxOutputDelay(${4:ehandle_1},${6:string_2})",
-        "description": " float GetMaxOutputDelay(ehandle ehandle_1, string string_2) \n Get the longest delay for all events attached to an output\n"
+        "body": "GetMaxOutputDelay(${4:entityEhandle},${6:inputName})",
+        "description": " float GetMaxOutputDelay(EHANDLE entityEhandle, string inputName) \n Get the longest delay for all events attached to an output\n"
     },
     "  GetPhysAngularVelocity\n": {
         "prefix": "  GetPhysAngularVelocity\n",
@@ -299,30 +369,25 @@
         "body": "GetPhysVelocity(${4:entity})",
         "description": " Vector GetPhysVelocity(CBaseEntity entity) \n Get Velocity for VPHYS or normal object.\n"
     },
-    "  GetPlayerFromUserID\n": {
-        "prefix": "  GetPlayerFromUserID\n",
-        "body": "GetPlayerFromUserID(${4:userID})",
-        "description": " CBasePlayer GetPlayerFromUserID(int userID) \n Given a user ID, return the script handle for the entity, or nil.\n"
-    },
     "  IsValidEntity\n": {
         "prefix": "  IsValidEntity\n",
-        "body": "IsValidEntity(${4:handle_1})",
-        "description": " bool IsValidEntity(handle handle_1) \n Checks to see if the given hScript is a valid entity\n"
+        "body": "IsValidEntity(${4:entity})",
+        "description": " bool IsValidEntity(CBaseEntity entity) \n Returns the validity of the entity. Opposite of IsNull()\n"
     },
     "  PlayerInstanceFromIndex\n": {
         "prefix": "  PlayerInstanceFromIndex\n",
-        "body": "PlayerInstanceFromIndex(${4:int_1})",
-        "description": " handle PlayerInstanceFromIndex(int int_1) \n Get a script instance of a player by index.\n"
+        "body": "PlayerInstanceFromIndex(${4:index})",
+        "description": " handle PlayerInstanceFromIndex(int index) \n Get a script instance of a player by player ID.\n"
     },
     "  PrecacheEntityFromTable\n": {
         "prefix": "  PrecacheEntityFromTable\n",
-        "body": "PrecacheEntityFromTable(${4:string_1},${6:handle_2},${8:handle_3})",
-        "description": " void PrecacheEntityFromTable(string string_1, handle handle_2, handle handle_3) \n Precache an entity from KeyValues in table\n"
+        "body": "PrecacheEntityFromTable(${4:classname},${6:spawnKeys},${8:context})",
+        "description": " void PrecacheEntityFromTable(string classname, table spawnKeys, handle context) \n Precache an entity from KeyValues in table\n"
     },
     "  PrecacheEntityListFromTable\n": {
         "prefix": "  PrecacheEntityListFromTable\n",
-        "body": "PrecacheEntityListFromTable(${4:handle_1},${6:handle_2})",
-        "description": " void PrecacheEntityListFromTable(handle handle_1, handle handle_2) \n Precache a list of entity KeyValues table's\n"
+        "body": "PrecacheEntityListFromTable(${4:groupSpawnTables},${6:context})",
+        "description": " void PrecacheEntityListFromTable(table groupSpawnTables, handle context) \n Precache a list of entity KeyValues tables\n"
     },
     "  PrecacheModel\n": {
         "prefix": "  PrecacheModel\n",
@@ -342,47 +407,47 @@
     "  SetRenderingEnabled\n": {
         "prefix": "  SetRenderingEnabled\n",
         "body": "SetRenderingEnabled(${4:entityEhandle},${6:enabled})",
-        "description": " void SetRenderingEnabled(ehandle entityEhandle, bool enabled) \n Set rendering on/off for an EHANDLE.  Bug:\u00c2\u00a0Unstable in Half-Life: Alyx. May cause hard crash.\n"
+        "description": " void SetRenderingEnabled(EHANDLE entityEhandle, bool enabled) \n Set rendering on/off for an EHANDLE.  Bug:\u00c2\u00a0Unstable in Half-Life: Alyx. May cause hard crash.\n"
     },
     "  SpawnEntityFromTableAsynchronous\n": {
         "prefix": "  SpawnEntityFromTableAsynchronous\n",
-        "body": "SpawnEntityFromTableAsynchronous(${4:string_1},${6:handle_2},${8:handle_3},${10:handle_4})",
-        "description": " void SpawnEntityFromTableAsynchronous(string string_1, handle handle_2, handle handle_3, handle handle_4)\n Asynchronously spawns a single entity from a table\n"
+        "body": "SpawnEntityFromTableAsynchronous(${4:classname},${6:spawnKeys},${8:callback},${10:unknown})",
+        "description": " void SpawnEntityFromTableAsynchronous(string classname, table spawnKeys, function callback, handle unknown)\n Asynchronously spawns a single entity from a table. A callback will be triggered when the spawning is complete, passing the handle of the entity as a parameter.\n"
     },
     "  SpawnEntityFromTableSynchronous\n": {
         "prefix": "  SpawnEntityFromTableSynchronous\n",
-        "body": "SpawnEntityFromTableSynchronous(${4:string_1},${6:handle_2})",
-        "description": " handle SpawnEntityFromTableSynchronous(string string_1, handle handle_2) \n Synchronously spawns a single entity from a table\n"
+        "body": "SpawnEntityFromTableSynchronous(${4:classname},${6:spawnKeys})",
+        "description": " handle SpawnEntityFromTableSynchronous(string classname, table spawnKeys) \n Synchronously spawns a single entity from a table\n"
     },
     "  SpawnEntityGroupFromTable\n": {
         "prefix": "  SpawnEntityGroupFromTable\n",
-        "body": "SpawnEntityGroupFromTable(${4:groupSpawnTables},${6:bAsync},${8:hCallback})",
-        "description": " bool SpawnEntityGroupFromTable(handle groupSpawnTables, bool bAsync, handle hCallback) \n Hierarchically spawn an entity group from a set of spawn tables.\n"
+        "body": "SpawnEntityGroupFromTable(${4:groupSpawnTables},${6:bAsync},${8:callback})",
+        "description": " bool SpawnEntityGroupFromTable(table groupSpawnTables, bool bAsync, handle callback) \n Hierarchically spawn an entity group from a set of spawn tables.\n"
     },
     "  SpawnEntityListFromTableAsynchronous\n": {
         "prefix": "  SpawnEntityListFromTableAsynchronous\n",
-        "body": "SpawnEntityListFromTableAsynchronous(${4:handle_1},${6:handle_2})",
-        "description": " int SpawnEntityListFromTableAsynchronous(handle handle_1, handle handle_2) \n Asynchronously spawn an entity group from a list of spawn table's. A callback will be triggered when the spawning is complete\n"
+        "body": "SpawnEntityListFromTableAsynchronous(${4:groupSpawnTables},${6:callback})",
+        "description": " int SpawnEntityListFromTableAsynchronous(table groupSpawnTables, handle callback) \n Asynchronously spawn an entity group from a list of spawn tables. A callback will be triggered when the spawning is complete, passing a list of spawned entities.\n"
     },
     "  SpawnEntityListFromTableSynchronous\n": {
         "prefix": "  SpawnEntityListFromTableSynchronous\n",
-        "body": "SpawnEntityListFromTableSynchronous(${4:handle_1})",
-        "description": " handle SpawnEntityListFromTableSynchronous(handle handle_1) \n Synchronously spawn an entity group from a list of spawn table's.\n"
+        "body": "SpawnEntityListFromTableSynchronous(${4:table})",
+        "description": " handle SpawnEntityListFromTableSynchronous((table groupSpawnTables) \n Synchronously spawn an entity group from a list of spawn tables.\n"
     },
     "  StopEffect\n": {
         "prefix": "  StopEffect\n",
-        "body": "StopEffect(${4:handle_1},${6:string_2})",
-        "description": " void StopEffect(handle handle_1, string string_2) \n (hEntity, szEffectName)\n"
+        "body": "StopEffect(${4:entity},${6:effectName})",
+        "description": " void StopEffect(handle entity, string effectName) \n\n"
     },
     "  UTIL_Remove\n": {
         "prefix": "  UTIL_Remove\n",
-        "body": "UTIL_Remove(${4:handle_1})",
-        "description": " void UTIL_Remove(handle handle_1) \n Removes the specified entity\n"
+        "body": "UTIL_Remove(${4:entity})",
+        "description": " void UTIL_Remove(handle entity) \n Deletes the entity\n"
     },
     "  UTIL_RemoveImmediate\n": {
         "prefix": "  UTIL_RemoveImmediate\n",
-        "body": "UTIL_RemoveImmediate(${4:handle_1})",
-        "description": " void UTIL_RemoveImmediate(handle handle_1) \n Do Not use this function.  Use UTIL_Remove() instead.  This will crash your game.\n"
+        "body": "UTIL_RemoveImmediate(${4:entity})",
+        "description": " void UTIL_RemoveImmediate(handle entity) \n Deletes the entity with no delay.  Warning:\u00c2\u00a0Incorrect usage may cause crashes\n"
     },
     "  TraceCollideable\n": {
         "prefix": "  TraceCollideable\n",
@@ -494,11 +559,6 @@
         "body": "DoUniqueString(${4:root})",
         "description": " string DoUniqueString(string root) \n Internal native function for UniqueString().\n"
     },
-    "  FileToString\n": {
-        "prefix": "  FileToString\n",
-        "body": "FileToString(${4:a})",
-        "description": " string FileToString(string a) \n Reads a string from a file to send to script\n"
-    },
     "  FireGameEvent\n": {
         "prefix": "  FireGameEvent\n",
         "body": "FireGameEvent(${4:eventName},${6:parameterTable})",
@@ -542,7 +602,7 @@
     "  InitLogFile\n": {
         "prefix": "  InitLogFile\n",
         "body": "InitLogFile(${4:string_1},${6:string_2})",
-        "description": " void InitLogFile(string string_1, string string_2) \n If the given file doesn't exist, creates it with the given contents; does nothing if it exists\n"
+        "description": " void InitLogFile(string string_1, string string_2) \n If the given file doesn't exist, creates it with the given contents; does nothing if it exists  Warning:\u00c2\u00a0Deprecated\n"
     },
     "  IsClient\n": {
         "prefix": "  IsClient\n",
@@ -571,8 +631,8 @@
     },
     "  ListenToGameEvent\n": {
         "prefix": "  ListenToGameEvent\n",
-        "body": "ListenToGameEvent(${4:EventName},${6:functionNameToCall},${8:context})",
-        "description": " int ListenToGameEvent(string EventName, handle functionNameToCall, handle context) \n Register as a listener for a game event from script.\n"
+        "body": "ListenToGameEvent(${4:eventname},${6:callback},${8:context})",
+        "description": " int ListenToGameEvent(string eventname, function callback, table context) \n Register as a listener for a game event from script.\n"
     },
     "  LoadKeyValues\n": {
         "prefix": "  LoadKeyValues\n",
@@ -666,18 +726,13 @@
     },
     "  StopListeningToAllGameEvents\n": {
         "prefix": "  StopListeningToAllGameEvents\n",
-        "body": "StopListeningToAllGameEvents(${4:handle_1})",
-        "description": " void StopListeningToAllGameEvents(handle handle_1) \n Stop listening to all game events within a specific context.\n"
+        "body": "StopListeningToAllGameEvents(${4:context})",
+        "description": " void StopListeningToAllGameEvents(table context) \n Stop listening to all game events within a specific context.\n"
     },
     "  StopListeningToGameEvent\n": {
         "prefix": "  StopListeningToGameEvent\n",
-        "body": "StopListeningToGameEvent(${4:int_1})",
-        "description": " bool StopListeningToGameEvent(int int_1) \n Stop listening to a particular game event.\n"
-    },
-    "  StringToFile\n": {
-        "prefix": "  StringToFile\n",
-        "body": "StringToFile(${4:a},${6:b})",
-        "description": " bool StringToFile(string a, string b) \n * Directory traversal doesn't seem to work. The characters '.', '/' and '\\\\' are ignored.\n"
+        "body": "StopListeningToGameEvent(${4:eventlistener})",
+        "description": " bool StopListeningToGameEvent(int eventlistener) \n Stop listening to a particular game event.\n"
     },
     "  Time\n": {
         "prefix": "  Time\n",
@@ -704,10 +759,95 @@
         "body": "UpdateEventPoints(${4:handle_1})",
         "description": " void UpdateEventPoints(handle handle_1) \n No Description Set\n"
     },
+    "  vlua.clear\n": {
+        "prefix": "  vlua.clear\n",
+        "body": "vlua.clear(${4:t})",
+        "description": " table vlua.clear(table t) \n Implements Squirrel clear table method.\n"
+    },
+    "  vlua.compare\n": {
+        "prefix": "  vlua.compare\n",
+        "body": "vlua.compare(${4:a},${6:b})",
+        "description": " int vlua.compare(float a, float b) \n Implements Squirrel three way compare operator ( <=> ).\n"
+    },
+    "  vlua.contains\n": {
+        "prefix": "  vlua.contains\n",
+        "body": "vlua.contains(${4:t},${6:key})",
+        "description": " bool vlua.contains(table t, variable key) \n Implements Squirrel in operator.\n"
+    },
+    "  vlua.delete\n": {
+        "prefix": "  vlua.delete\n",
+        "body": "vlua.delete(${4:t},${6:key})",
+        "description": " int vlua.delete(table t, variable key) \n Implements Squirrel slot delete operator.\n"
+    },
+    "  vlua.clone\n": {
+        "prefix": "  vlua.clone\n",
+        "body": "vlua.clone(${4:t})",
+        "description": " int vlua.clone(table t) \n Implements Squirrel clone operator.\n"
+    },
+    "  vlua.rawdelete\n": {
+        "prefix": "  vlua.rawdelete\n",
+        "body": "vlua.rawdelete(${4:t},${6:key})",
+        "description": " int vlua.rawdelete(table t, variable key) \n Implements Squirrel rawdelete library function.\n"
+    },
+    "  vlua.rawin\n": {
+        "prefix": "  vlua.rawin\n",
+        "body": "vlua.rawin(${4:t},${6:key})",
+        "description": " int vlua.rawin(table t, variable key) \n Implements Squirrel rawin library function.\n"
+    },
+    "  vlua.find\n": {
+        "prefix": "  vlua.find\n",
+        "body": "vlua.find(${4:o},${6:value},${8:startIndex]})",
+        "description": " variable vlua.find([table/string] o, variable value, [int startIndex]) \n Implements Squirrel find method for tables and strings. (o, substr, [startidx]) for strings, (o, value) for tables\n"
+    },
+    "  vlua.slice\n": {
+        "prefix": "  vlua.slice\n",
+        "body": "vlua.slice(${4:o},${6:startIndex},${8:endIndex]})",
+        "description": " variable vlua.slice([table/string] o, int startIndex, [int endIndex]) \n Implements Squirrel slice method for tables and strings.\n"
+    },
+    "  vlua.reverse\n": {
+        "prefix": "  vlua.reverse\n",
+        "body": "vlua.reverse(${4:o})",
+        "description": " table vlua.reverse(table o) \n Implements Squirrel reverse method for tables.\n"
+    },
+    "  vlua.resize\n": {
+        "prefix": "  vlua.resize\n",
+        "body": "vlua.resize(${4:o},${6:size},${8:fill]})",
+        "description": " table vlua.resize(string o, int size, [variable fill]) \n Implements Squirrel resize method for tables.\n"
+    },
+    "  vlua.extend\n": {
+        "prefix": "  vlua.extend\n",
+        "body": "vlua.extend(${4:o},${6:array})",
+        "description": " table vlua.extend(table o, array array) \n Implements Squirrel extend method for tables.\n"
+    },
+    "  vlua.map\n": {
+        "prefix": "  vlua.map\n",
+        "body": "vlua.map(${4:o},${6:mapFunc})",
+        "description": " table vlua.map(table o, function mapFunc) \n Implements Squirrel map method for tables.\n"
+    },
+    "  vlua.reduce\n": {
+        "prefix": "  vlua.reduce\n",
+        "body": "vlua.reduce(${4:o},${6:reduceFunc})",
+        "description": " table vlua.reduce(table o, function reduceFunc) \n Implements Squirrel reduce method for tables.\n"
+    },
+    "  vlua.tableadd\n": {
+        "prefix": "  vlua.tableadd\n",
+        "body": "vlua.tableadd(${4:t1},${6:t2})",
+        "description": " table vlua.tableadd (table t1, table t2) \n Implements tableadd function to support += paradigm used in Squirrel.\n"
+    },
+    "  vlua.split\n": {
+        "prefix": "  vlua.split\n",
+        "body": "vlua.split(${4:input},${6:separator})",
+        "description": " table vlua.split(string input, string separator) \n Implements Squirrel split function for strings.\n"
+    },
+    "  vlua.select\n": {
+        "prefix": "  vlua.select\n",
+        "body": "vlua.select(${4:conditional},${6:valueIfTrue},${8:valueIfFalse})",
+        "description": " variable vlua.select(bool conditional, variable valueIfTrue, variable valueIfFalse) \n Safe Ternary operator. The Lua version will return the wrong value if the value if true is nil.\n"
+    },
     "  AddEffects\n": {
         "prefix": "  AddEffects\n",
         "body": "AddEffects(${4:nFlags})",
-        "description": " void AddEffects(int nFlags) \n AddEffects( int ): Adds the render effect flag.\n"
+        "description": " void AddEffects(int nFlags) \n Adds the render effect flag.\n"
     },
     "  ApplyAbsVelocityImpulse\n": {
         "prefix": "  ApplyAbsVelocityImpulse\n",
@@ -767,12 +907,12 @@
     "  FirstMoveChild\n": {
         "prefix": "  FirstMoveChild\n",
         "body": "FirstMoveChild()",
-        "description": " handle FirstMoveChild() \n No Description Set\n"
+        "description": " handle FirstMoveChild() \n If in hierarchy, get the first move child.\n"
     },
     "  FollowEntity\n": {
         "prefix": "  FollowEntity\n",
         "body": "FollowEntity(${4:hEntity},${6:bBoneMerge})",
-        "description": " void FollowEntity(handle hEntity, bool bBoneMerge) \n hEntity to follow, bool bBoneMerge\n"
+        "description": " void FollowEntity(handle hEntity, bool bBoneMerge) \n\n"
     },
     "  GatherCriteria\n": {
         "prefix": "  GatherCriteria\n",
@@ -792,7 +932,7 @@
     "  GetAngles\n": {
         "prefix": "  GetAngles\n",
         "body": "GetAngles()",
-        "description": " QAngle GetAngles() \n No Description Set\n"
+        "description": " QAngle GetAngles() \n Get the entity pitch, yaw, roll as QAngle\n"
     },
     "  GetAnglesAsVector\n": {
         "prefix": "  GetAnglesAsVector\n",
@@ -832,12 +972,12 @@
     "  GetChildren\n": {
         "prefix": "  GetChildren\n",
         "body": "GetChildren()",
-        "description": " handle GetChildren() \n Get the entities parented to this entity.\n"
+        "description": " table GetChildren() \n Get the entities parented to this entity.\n"
     },
     "  GetContext\n": {
         "prefix": "  GetContext\n",
         "body": "GetContext(${4:name})",
-        "description": " table GetContext(string name) \n GetContext( name ): looks up a context and returns it if available. May return string, float, or nil (if the context isn't found)\n"
+        "description": " table GetContext(string name) \n Looks up a context and returns it if available. May return string, float, or nil (if the context isn't found)\n"
     },
     "  GetForwardVector\n": {
         "prefix": "  GetForwardVector\n",
@@ -957,7 +1097,7 @@
     "  IsAlive\n": {
         "prefix": "  IsAlive\n",
         "body": "IsAlive()",
-        "description": " bool IsAlive() \n No Description Set.\n"
+        "description": " bool IsAlive() \n Is the entity alive\n"
     },
     "  IsNPC\n": {
         "prefix": "  IsNPC\n",
@@ -967,22 +1107,22 @@
     "  IsNull\n": {
         "prefix": "  IsNull\n",
         "body": "IsNull()",
-        "description": " bool IsNull() \n Detect entity has been deleted from C++\n"
+        "description": " bool IsNull() \n Returns the invalidity of the entity. Opposite of IsValidEntity()\n"
     },
     "  IsPlayer\n": {
         "prefix": "  IsPlayer\n",
         "body": "IsPlayer()",
-        "description": " bool IsPlayer() \n Is this a player entity?\n"
+        "description": " bool IsPlayer() \n Is the entity a player\n"
     },
     "  Kill\n": {
         "prefix": "  Kill\n",
         "body": "Kill()",
-        "description": " void Kill() \n No Description Set\n"
+        "description": " void Kill() \n Deletes the entity (UTIL_Remove())\n"
     },
     "  NextMovePeer\n": {
         "prefix": "  NextMovePeer\n",
         "body": "NextMovePeer()",
-        "description": " handle NextMovePeer() \n No Description Set\n"
+        "description": " handle NextMovePeer() \n Return the next entity in the same movement hierarchy.\n"
     },
     "  OverrideFriction\n": {
         "prefix": "  OverrideFriction\n",
@@ -997,7 +1137,7 @@
     "  RemoveEffects\n": {
         "prefix": "  RemoveEffects\n",
         "body": "RemoveEffects(${4:nFlags})",
-        "description": " void RemoveEffects(int nFlags) \n RemoveEffects( int ): Removes the render effect flag.\n"
+        "description": " void RemoveEffects(int nFlags) \n Removes the render effect flag.\n"
     },
     "  SetAbsAngles\n": {
         "prefix": "  SetAbsAngles\n",
@@ -1012,7 +1152,7 @@
     "  SetAbsScale\n": {
         "prefix": "  SetAbsScale\n",
         "body": "SetAbsScale(${4:scale})",
-        "description": " void SetAbsScale(float scale) \n Set the absolute scale of the entity.\nTo do:\u00c2\u00a0 How to set non-uniform scale?\n\n"
+        "description": " void SetAbsScale(float scale) \n Set the absolute scale of the entity.\n"
     },
     "  SetAngles\n": {
         "prefix": "  SetAngles\n",
@@ -1046,8 +1186,8 @@
     },
     "  SetEntityName\n": {
         "prefix": "  SetEntityName\n",
-        "body": "SetEntityName(${4:pName})",
-        "description": " void SetEntityName(string pName) \n Set the name (targetname) of an entity.\n"
+        "body": "SetEntityName(${4:name})",
+        "description": " void SetEntityName(string name) \n Set entity targetname\n"
     },
     "  SetForwardVector\n": {
         "prefix": "  SetForwardVector\n",
@@ -1067,7 +1207,7 @@
     "  SetHealth\n": {
         "prefix": "  SetHealth\n",
         "body": "SetHealth(${4:hp})",
-        "description": " void SetHealth(int hp) \n No Description Set\n"
+        "description": " void SetHealth(int hp) \n Set entity health\n"
     },
     "  SetLocalAngles\n": {
         "prefix": "  SetLocalAngles\n",
@@ -1077,7 +1217,7 @@
     "  SetLocalOrigin\n": {
         "prefix": "  SetLocalOrigin\n",
         "body": "SetLocalOrigin(${4:origin})",
-        "description": " void SetLocalOrigin(Vector origin)\n Set the entity origin from a Vector, relative to the local space of the entity's parent or attachment point.\n"
+        "description": " void SetLocalOrigin(Vector origin)\n Set entity local origin. Relative to the local space of the entity's parent or attachment point.\n"
     },
     "  SetLocalScale\n": {
         "prefix": "  SetLocalScale\n",
@@ -1092,12 +1232,12 @@
     "  SetMaxHealth\n": {
         "prefix": "  SetMaxHealth\n",
         "body": "SetMaxHealth(${4:maxHP})",
-        "description": " void SetMaxHealth(int maxHP) \n No Description Set\n"
+        "description": " void SetMaxHealth(int maxHP) \n Set entity max health\n"
     },
     "  SetOrigin\n": {
         "prefix": "  SetOrigin\n",
         "body": "SetOrigin(${4:origin})",
-        "description": " void SetOrigin(Vector origin) \n No Description Set\n"
+        "description": " void SetOrigin(Vector origin) \n Set entity absolute origin\n"
     },
     "  SetOwner\n": {
         "prefix": "  SetOwner\n",
@@ -1112,7 +1252,7 @@
     "  SetTeam\n": {
         "prefix": "  SetTeam\n",
         "body": "SetTeam(${4:team})",
-        "description": " void SetTeam(int team) \n No Description Set\n"
+        "description": " void SetTeam(int team) \n Set entity team\n"
     },
     "  SetThink\n": {
         "prefix": "  SetThink\n",
@@ -1196,23 +1336,23 @@
     },
     "  ConnectOutput\n": {
         "prefix": "  ConnectOutput\n",
-        "body": "ConnectOutput(${4:string_1},${6:string_2})",
-        "description": " void ConnectOutput(string string_1, string string_2) \n Adds an I/O connection that will call the named function on this entity when the specified output fires.\n Bug:\u00c2\u00a0 This doesn't appear to work in Half-Life: Alyx scripts.  Use EntFire with the action \"AddOutput\" instead.  Select the \"AddOutput\" action in Hammer I/O for description\n"
+        "body": "ConnectOutput(${4:output},${6:functionName})",
+        "description": " void ConnectOutput(string output, string functionName) \n Adds an I/O connection that will call the named function on this entity when the specified output fires.\n Bug:\u00c2\u00a0 This doesn't appear to work in Half-Life: Alyx scripts.  Use RedirectOutput with thisEntity as the third parameter instead.\n"
     },
     "  Destroy\n": {
         "prefix": "  Destroy\n",
         "body": "Destroy()",
-        "description": " void Destroy() \n No Description Set\n"
+        "description": " void Destroy() \n Deletes the entity (UTIL_Remove())\n"
     },
     "  DisconnectOutput\n": {
         "prefix": "  DisconnectOutput\n",
-        "body": "DisconnectOutput(${4:string_1},${6:string_2})",
-        "description": " void DisconnectOutput(string string_1, string string_2) \n Removes a connected script function from an I/O event on this entity.\n"
+        "body": "DisconnectOutput(${4:output},${6:functionName})",
+        "description": " void DisconnectOutput(string output, string functionName) \n Removes a connected script function from an I/O event on this entity.\n"
     },
     "  DisconnectRedirectedOutput\n": {
         "prefix": "  DisconnectRedirectedOutput\n",
-        "body": "DisconnectRedirectedOutput(${4:string_1},${6:string_2},${8:handle_3})",
-        "description": " void DisconnectRedirectedOutput(string string_1, string string_2, handle handle_3) \n Removes a connected script function from an I/O event on the passed entity.\n"
+        "body": "DisconnectRedirectedOutput(${4:output},${6:functionName},${8:entity})",
+        "description": " void DisconnectRedirectedOutput(string output, string functionName, CBaseEntity entity) \n Removes a connected script function from an I/O event on the passed entity.\n"
     },
     "  entindex\n": {
         "prefix": "  entindex\n",
@@ -1246,8 +1386,8 @@
     },
     "  GetIntAttr\n": {
         "prefix": "  GetIntAttr\n",
-        "body": "GetIntAttr(${4:string_1})",
-        "description": " int GetIntAttr(string string_1) \n Get Integer Attribute\n"
+        "body": "GetIntAttr(${4:key})",
+        "description": " int GetIntAttr(string key) \n Get Integer Attribute\n"
     },
     "  GetName\n": {
         "prefix": "  GetName\n",
@@ -1276,18 +1416,18 @@
     },
     "  RedirectOutput\n": {
         "prefix": "  RedirectOutput\n",
-        "body": "RedirectOutput(${4:string_1},${6:string_2},${8:handle_3})",
-        "description": " void RedirectOutput(string string_1, string string_2, handle handle_3) \n Adds an I/O connection that will call the named function on the passed entity when the specified output fires.\n"
+        "body": "RedirectOutput(${4:output},${6:functionName},${8:entity})",
+        "description": " void RedirectOutput(string output, string functionName, CBaseEntity entity) \n Adds an I/O connection that will call the named function on the passed entity when the specified output fires.\n"
     },
     "  RemoveSelf\n": {
         "prefix": "  RemoveSelf\n",
         "body": "RemoveSelf()",
-        "description": " void RemoveSelf() \n Delete this entity\n"
+        "description": " void RemoveSelf() \n Deletes the entity (UTIL_Remove())\n"
     },
     "  SetIntAttr\n": {
         "prefix": "  SetIntAttr\n",
-        "body": "SetIntAttr(${4:string_1},${6:int_2})",
-        "description": " void SetIntAttr(string string_1, int int_2) \n Set Integer Attribute\n"
+        "body": "SetIntAttr(${4:key},${6:value})",
+        "description": " void SetIntAttr(string key, int value) \n Set Integer Attribute\n"
     },
     "  GetMaterialGroupHash\n": {
         "prefix": "  GetMaterialGroupHash\n",
@@ -2176,8 +2316,8 @@
     },
     "  Triangle\n": {
         "prefix": "  Triangle\n",
-        "body": "Triangle(${4:Vector_1},${6:Vector_2},${8:Vector_3},${10:int_4},${12:int_5},${14:int_6},${16:int_7},${18:bool_8},${20:float_9})",
-        "description": " void Triangle(Vector Vector_1, Vector Vector_2, Vector Vector_3, int int_4, int int_5, int int_6, int int_7, bool bool_8, float float_9) \n Draws a filled triangle. Specify vertices in world space.\n"
+        "body": "Triangle(${4:point1},${6:point2},${8:point3},${10:red},${12:green},${14:blue},${16:alpha},${18:disableDepthCheck},${20:seconds})",
+        "description": " void Triangle(Vector point1, Vector point2, Vector point3, int red, int green, int blue, int alpha, bool disableDepthCheck, float seconds) \n Draws a filled triangle in world space for the specific amount of seconds (-1 means forever).\n"
     },
     "  UnitTestCycleOverlayRenderType\n": {
         "prefix": "  UnitTestCycleOverlayRenderType\n",
@@ -2804,6 +2944,15 @@
         "body": "Up()",
         "description": " Vector Up() \n Returns the up vector.\n"
     },
+    " x \n": {
+        "prefix": " x \n"
+    },
+    " y \n": {
+        "prefix": " y \n"
+    },
+    " z \n": {
+        "prefix": " z \n"
+    },
     "  __div\n": {
         "prefix": "  __div\n",
         "body": "__div(${4:a},${6:b})",
@@ -2844,14 +2993,162 @@
         "body": "Length2D()",
         "description": " float Length2D() \n Length of the Vector in the XY plane.\n"
     },
-    "  Lerp\n": {
-        "prefix": "  Lerp\n",
-        "body": "Lerp(${4:target},${6:t})",
-        "description": " Vector Lerp(Vector target, float t) \n Linear interpolation between the vector and the passed in target over t = [0,1].\n"
-    },
     "  Normalized\n": {
         "prefix": "  Normalized\n",
         "body": "Normalized()",
         "description": " Vector Normalized() \n Returns the vector normalized.\n"
+    },
+    "\n": {
+        "prefix": "\n"
+    },
+    " ACTIVATE_TYPE_INITIAL_CREATION\n": {
+        "prefix": " ACTIVATE_TYPE_INITIAL_CREATION\n"
+    },
+    " ACTIVATE_TYPE_DATAUPDATE_CREATION\n": {
+        "prefix": " ACTIVATE_TYPE_DATAUPDATE_CREATION\n"
+    },
+    " ACTIVATE_TYPE_ONRESTORE\n": {
+        "prefix": " ACTIVATE_TYPE_ONRESTORE\n"
+    },
+    " DMG_GENERIC\n": {
+        "prefix": " DMG_GENERIC\n"
+    },
+    " DMG_CRUSH\n": {
+        "prefix": " DMG_CRUSH\n"
+    },
+    " DMG_BULLET\n": {
+        "prefix": " DMG_BULLET\n"
+    },
+    " DMG_SLASH\n": {
+        "prefix": " DMG_SLASH\n"
+    },
+    " DMG_BURN\n": {
+        "prefix": " DMG_BURN\n"
+    },
+    " DMG_VEHICLE\n": {
+        "prefix": " DMG_VEHICLE\n"
+    },
+    " DMG_FALL\n": {
+        "prefix": " DMG_FALL\n"
+    },
+    " DMG_BLAST\n": {
+        "prefix": " DMG_BLAST\n"
+    },
+    " DMG_CLUB\n": {
+        "prefix": " DMG_CLUB\n"
+    },
+    " DMG_SHOCK\n": {
+        "prefix": " DMG_SHOCK\n"
+    },
+    " DMG_SONIC\n": {
+        "prefix": " DMG_SONIC\n"
+    },
+    " DMG_ENERGYBEAM\n": {
+        "prefix": " DMG_ENERGYBEAM\n"
+    },
+    " DMG_PREVENT_PHYSICS_FORCE\n": {
+        "prefix": " DMG_PREVENT_PHYSICS_FORCE\n"
+    },
+    " DMG_NEVERGIB\n": {
+        "prefix": " DMG_NEVERGIB\n"
+    },
+    " DMG_ALWAYSGIB\n": {
+        "prefix": " DMG_ALWAYSGIB\n"
+    },
+    " DMG_DROWN\n": {
+        "prefix": " DMG_DROWN\n"
+    },
+    " DMG_PARALYZE\n": {
+        "prefix": " DMG_PARALYZE\n"
+    },
+    " DMG_NERVEGAS\n": {
+        "prefix": " DMG_NERVEGAS\n"
+    },
+    " DMG_POISON\n": {
+        "prefix": " DMG_POISON\n"
+    },
+    " DMG_RADIATION\n": {
+        "prefix": " DMG_RADIATION\n"
+    },
+    " DMG_DROWNRECOVER\n": {
+        "prefix": " DMG_DROWNRECOVER\n"
+    },
+    " DMG_ACID\n": {
+        "prefix": " DMG_ACID\n"
+    },
+    " DMG_SLOWBURN\n": {
+        "prefix": " DMG_SLOWBURN\n"
+    },
+    " DMG_REMOVENORAGDOLL\n": {
+        "prefix": " DMG_REMOVENORAGDOLL\n"
+    },
+    " DMG_PHYSGUN\n": {
+        "prefix": " DMG_PHYSGUN\n"
+    },
+    " DMG_PLASMA\n": {
+        "prefix": " DMG_PLASMA\n"
+    },
+    " DMG_AIRBOAT\n": {
+        "prefix": " DMG_AIRBOAT\n"
+    },
+    " DMG_DISSOLVE\n": {
+        "prefix": " DMG_DISSOLVE\n"
+    },
+    " DMG_BLAST_SURFACE\n": {
+        "prefix": " DMG_BLAST_SURFACE\n"
+    },
+    " DMG_DIRECT\n": {
+        "prefix": " DMG_DIRECT\n"
+    },
+    " PATTACH_INVALID\n": {
+        "prefix": " PATTACH_INVALID\n"
+    },
+    " PATTACH_ABSORIGIN\n": {
+        "prefix": " PATTACH_ABSORIGIN\n"
+    },
+    " PATTACH_ABSORIGIN_FOLLOW\n": {
+        "prefix": " PATTACH_ABSORIGIN_FOLLOW\n"
+    },
+    " PATTACH_CUSTOMORIGIN\n": {
+        "prefix": " PATTACH_CUSTOMORIGIN\n"
+    },
+    " PATTACH_CUSTOMORIGIN_FOLLOW\n": {
+        "prefix": " PATTACH_CUSTOMORIGIN_FOLLOW\n"
+    },
+    " PATTACH_POINT\n": {
+        "prefix": " PATTACH_POINT\n"
+    },
+    " PATTACH_POINT_FOLLOW\n": {
+        "prefix": " PATTACH_POINT_FOLLOW\n"
+    },
+    " PATTACH_EYES_FOLLOW\n": {
+        "prefix": " PATTACH_EYES_FOLLOW\n"
+    },
+    " PATTACH_OVERHEAD_FOLLOW\n": {
+        "prefix": " PATTACH_OVERHEAD_FOLLOW\n"
+    },
+    " PATTACH_WORLDORIGIN\n": {
+        "prefix": " PATTACH_WORLDORIGIN\n"
+    },
+    " PATTACH_ROOTBONE_FOLLOW\n": {
+        "prefix": " PATTACH_ROOTBONE_FOLLOW\n"
+    },
+    " PATTACH_RENDERORIGIN_FOLLOW\n": {
+        "prefix": " PATTACH_RENDERORIGIN_FOLLOW\n"
+    },
+    " (PATTACH_MAIN_VIEW)\n": {
+        "prefix": " (PATTACH_MAIN_VIEW)\n"
+    },
+    " (PATTACH_WATERWAKE)\n": {
+        "prefix": " (PATTACH_WATERWAKE)\n"
+    },
+    " (PATTACH_CENTER_FOLLOW)\n": {
+        "prefix": " (PATTACH_CENTER_FOLLOW)\n"
+    },
+    " (PATTACH_CUSTOM_GAME_STATE_1)\n": {
+        "prefix": " (PATTACH_CUSTOM_GAME_STATE_1)\n"
+    },
+    " MAX_PATTACH_TYPES\n": {
+        "prefix": " MAX_PATTACH_TYPES\n"
     }
 }
