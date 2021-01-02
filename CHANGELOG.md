@@ -31,3 +31,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.1.4]
 
 - Updated functions to the newest version from the Wiki (03.01.2021)
+
+## [0.1.5]
+
+- fixed EntFireByHandle Function having a extra Argument
