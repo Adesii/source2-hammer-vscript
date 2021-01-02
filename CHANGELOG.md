@@ -27,3 +27,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.1.3]
 
 -  Updated functions to the newest version from the Wiki
+
+## [0.1.4]
+
+- Updated functions to the newest version from the Wiki (03.01.2021)

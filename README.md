@@ -9,11 +9,5 @@ https://developer.valvesoftware.com/wiki/Half-Life_Alyx_Scripting_API
 
 # Known Issues
 Code Snippets aren't Class or Type dependent therefore you can autocomplete any function on any type even if it doesn't work in Hammer
-# Release Notes
-
-* [0.0.1]
-Initial release of Source2 Hammer Vscript
-* [0.0.2]
-uploaded Project to Github
 
 ### Enjoy!
