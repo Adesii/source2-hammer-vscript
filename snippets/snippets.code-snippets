@@ -331,7 +331,7 @@
     },
     " EntFireByHandle\n": {
         "prefix": " EntFireByHandle\n",
-        "body": "EntFireByHandle(${4:self},${6:target},${8:action},${10:value},${14:delay},${18:activator},${20:self})",
+        "body": "EntFireByHandle(${4:self},${6:target},${8:action},${10:value},${14:delay},${18:activator})",
         "description": "void EntFireByHandle(handle self, handle target, string action, string value = \"\", float delay = 0.0, handle activator = self) \nGenerate an entity I/O event on the specified entity. The calling entity should be passed to the first parameter.\n"
     },
     " EntIndexToHScript\n": {
